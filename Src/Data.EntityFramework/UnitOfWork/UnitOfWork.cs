@@ -1,0 +1,34 @@
+﻿using Data.Seedwork;
+
+namespace Data.EntityFramework.UnitOfWork
+{
+    public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : IContext
+    {
+        public TContext Context { get; private set; }
+
+        public UnitOfWork(TContext context)
+        {
+            Context = context;
+        }
+
+        public void Dispose()
+        {
+            Context.Dispose();
+        }
+
+        public void BeginTransaction()
+        {
+            Context.ExecuteCommand("BEGIN TRANSACTION");
+        }
+
+        public void Commit()
+        {
+            Context.ExecuteCommand("COMMIT");
+        }
+
+        public void Rollback()
+        {
+            Context.ExecuteCommand("ROLLBACK");
+        }
+    }
+}
