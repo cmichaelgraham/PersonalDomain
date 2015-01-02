@@ -8,6 +8,7 @@ namespace PersonalDomain.UI.Web
         {
             var cssBundle = new StyleBundle("~/Content/css")
                                 .Include("~/Content/css/bootstrap/bootstrap.css")
+                                .Include("~/Content/css/font-awesome/font-awesome.css")
                                 .Include("~/Content/css/site.css");
 
             var appBundle = new ScriptBundle("~/Scripts/app")
