@@ -71,3 +71,4 @@ Src/Tools.TypescriptGenerator/obj/
 Src/Tools.TypescriptGenerator/bin/
 Src/PersonalDomain.UI.Web/app/*.js
 Src/PersonalDomain.UI.Web/app/*.js.map
+*.user
