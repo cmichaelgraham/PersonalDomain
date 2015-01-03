@@ -10,7 +10,7 @@ namespace PersonalDomain.Application.Blogging.Services
         IPostRepository PostRepository { get; }
 
         PostDTO GetPost(Int32 postId);
-        PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber);
+        PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 25);
         IResponse SavePost(PostDTO post);
         IResponse SaveComment(Int32 postId, CommentDTO comment);
     }

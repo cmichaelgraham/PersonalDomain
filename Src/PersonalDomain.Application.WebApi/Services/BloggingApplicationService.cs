@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Application.Seedwork.Operations.Response;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
@@ -22,10 +23,12 @@ namespace PersonalDomain.Application.WebApi.Services
             return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Content = p.Content });
         }
 
-        public PostSummaryDTO[] GetPostSummariesByPage(int pageNumber)
+        public PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 10)
         {
-            //return PostRepository.Select(p => new PostSummaryDTO{ Title = p.Title, Subtitle = p.Subtitle })
-            throw new NotImplementedException();
+            return PostRepository.Select(p => new PostSummaryDTO { Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
+                                 .Skip((pageNumber - 1) * pageSize)
+                                 .Take(pageSize)
+                                 .ToArray();
         }
 
         public IResponse SavePost(PostDTO post)

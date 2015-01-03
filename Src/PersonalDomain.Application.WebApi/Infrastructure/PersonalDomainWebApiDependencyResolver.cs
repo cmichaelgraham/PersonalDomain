@@ -31,6 +31,8 @@ namespace PersonalDomain.Application.WebApi.Infrastructure
             
             //$jchadwick- TODO: Update so Operations are Registered via Reflection
             ContainerBuilder.RegisterType<GetPost>().PropertiesAutowired();
+            ContainerBuilder.RegisterType<GetPostSummariesByPage>().PropertiesAutowired();
+            ContainerBuilder.RegisterType<SaveComment>().PropertiesAutowired();
             ContainerBuilder.RegisterType<SavePost>().PropertiesAutowired();
         }
 
@@ -38,6 +40,7 @@ namespace PersonalDomain.Application.WebApi.Infrastructure
         {
             //$jchadwick- TODO: Update so Operations are Registered via Reflection
             _webApiMethodMap.Add("GetPost", new WebApiMethod{ Operation = typeof(GetPost), Request = typeof(ByIdRequest), Response = typeof(PostDTO)});
+            _webApiMethodMap.Add("GetPostSummariesByPage", new WebApiMethod { Operation = typeof(GetPostSummariesByPage), Request = typeof(ByIdRequest), Response = typeof(PostSummaryDTO[]) });
             _webApiMethodMap.Add("SaveComment", new WebApiMethod { Operation = typeof(SaveComment), Request = typeof(SaveCommentRequest), Response = typeof(OperationResponse) });
             _webApiMethodMap.Add("SavePost", new WebApiMethod { Operation = typeof(SavePost), Request = typeof(PostDTO), Response = typeof(OperationResponse) });
         }

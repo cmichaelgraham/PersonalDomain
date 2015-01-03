@@ -4,12 +4,22 @@
         constructor(private $http: ng.IHttpService) {
         }
 
-        public GetPostById: (id: number) => any = (id) => { 
+        public GetPost: (id: number) => any = (id) => { 
             return this.$http({
                 method: "post",
                 url: "/api/GetPost",
                 data: { Id: id }
-            }).then((data) => {
+            }).then((data: any) => {
+                return data;
+            });
+        }
+
+        public GetPostsByPage: (pageNumber: number) => any = (pageNumber) => {
+            return this.$http({
+                method: "post",
+                url: "/api/GetPostSummariesByPage",
+                data: { Id: pageNumber }
+            }).then((data: any) => {
                 return data;
             });
         }
@@ -19,7 +29,7 @@
                 method: "post",
                 url: "/api/SavePost",
                 data: undefined
-            }).then((response) => {
+            }).then((response: any) => {
                 return response;
             });
         }
