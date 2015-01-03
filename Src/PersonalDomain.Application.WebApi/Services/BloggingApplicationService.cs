@@ -22,6 +22,12 @@ namespace PersonalDomain.Application.WebApi.Services
             return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Content = p.Content });
         }
 
+        public PostSummaryDTO[] GetPostSummariesByPage(int pageNumber)
+        {
+            //return PostRepository.Select(p => new PostSummaryDTO{ Title = p.Title, Subtitle = p.Subtitle })
+            throw new NotImplementedException();
+        }
+
         public IResponse SavePost(PostDTO post)
         {
             if (post.Id == 0)

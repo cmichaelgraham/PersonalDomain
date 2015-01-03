@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Blogging\Models\CommentDTO.cs" />
     <Compile Include="Blogging\Models\PostDTO.cs" />
+    <Compile Include="Blogging\Models\PostSummaryDTO.cs" />
     <Compile Include="Blogging\Services\IBloggingApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

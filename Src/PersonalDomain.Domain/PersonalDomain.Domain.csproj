@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Blogging\Post\Entities\Author.cs" />
     <Compile Include="Blogging\Post\Entities\Comment.cs" />
     <Compile Include="Blogging\Post\Entities\Post.cs" />
     <Compile Include="Blogging\Post\Factory\PostFactory.cs" />

@@ -2,11 +2,11 @@
 
 namespace PersonalDomain.UI.Web
 {
-    public class HomeController : Controller
+    public class BlogController : Controller
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "James Chadwick";
             return View();
         }
     }

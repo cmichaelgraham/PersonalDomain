@@ -7,29 +7,19 @@ module PersonalDomain.Blogging {
             angular.module("Blogging", [ "ngAnimate", "ngRoute", "ngSanitize", "ngResource" ])
                    .controller("bloggingController", BloggingController)
                    .service("bloggingService", BloggingService)
-
-
-                .filter("filtered", () => {
-                    var filteredFilter = (input: string) => { return "Filtered"; };
-                    return filteredFilter;
-                })
                    .config([ "$routeProvider", ($routeProvider: ng.route.IRouteProvider) => {
                         $routeProvider
-                            .when("/blog",
+                            .when("/",
                             {
                                 controller: "bloggingController",
                                 controllerAs: "myController",
                                 templateUrl: "app/blogging/blog.html"
                             })
                             .otherwise({
-                                redirectTo: "/blog"
+                                redirectTo: "/"
                             });
                         } ])
-                    .run([
-                        "$route", $route => {
-                            // Include $route to kick start the router.
-                        }
-                    ]);
+                    .run([ "$route", $route => { } ]);
         }
 
         public start() {

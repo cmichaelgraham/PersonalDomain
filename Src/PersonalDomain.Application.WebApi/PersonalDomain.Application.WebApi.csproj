@@ -115,6 +115,7 @@
     <Compile Include="Operations\Command\SaveComment.cs" />
     <Compile Include="Operations\Command\SavePost.cs" />
     <Compile Include="Operations\Query\GetPost.cs" />
+    <Compile Include="Operations\Query\GetPostSummariesByPage.cs" />
     <Compile Include="Operations\Request\ByIdRequest.cs" />
     <Compile Include="Operations\Request\SaveCommentRequest.cs" />
     <Compile Include="Operations\Response\OperationResponse.cs" />

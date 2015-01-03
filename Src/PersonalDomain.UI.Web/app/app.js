@@ -5,7 +5,6 @@
             function BloggingController($scope, bloggingService) {
                 this.$scope = $scope;
                 this.bloggingService = bloggingService;
-                bloggingService.SavePost(undefined);
             }
             BloggingController.$inject = ["$scope", "bloggingService"];
             return BloggingController;
@@ -53,25 +52,17 @@ var PersonalDomain;
     (function (Blogging) {
         var BloggingModule = (function () {
             function BloggingModule() {
-                angular.module("Blogging", ["ngAnimate", "ngRoute", "ngSanitize", "ngResource"]).controller("bloggingController", Blogging.BloggingController).service("bloggingService", Blogging.BloggingService).filter("filtered", function () {
-                    var filteredFilter = function (input) {
-                        return "Filtered";
-                    };
-                    return filteredFilter;
-                }).config([
+                angular.module("Blogging", ["ngAnimate", "ngRoute", "ngSanitize", "ngResource"]).controller("bloggingController", Blogging.BloggingController).service("bloggingService", Blogging.BloggingService).config([
                     "$routeProvider", function ($routeProvider) {
-                        $routeProvider.when("/blog", {
+                        $routeProvider.when("/", {
                             controller: "bloggingController",
                             controllerAs: "myController",
                             templateUrl: "app/blogging/blog.html"
                         }).otherwise({
-                            redirectTo: "/blog"
+                            redirectTo: "/"
                         });
-                    }]).run([
-                    "$route", function ($route) {
-                        // Include $route to kick start the router.
-                    }
-                ]);
+                    }]).run(["$route", function ($route) {
+                    }]);
             }
             BloggingModule.prototype.start = function () {
                 $(document).ready(function () {

@@ -7,12 +7,7 @@ namespace PersonalDomain.Application.WebApi.Operations.Command
 {
     public class SaveComment : WebApiCommand<SaveCommentRequest, OperationResponse>
     {
-        public IBloggingApplicationService BloggingApplicationService { get; private set; }
-
-        public SaveComment(IBloggingApplicationService bloggingApplicationService)
-        {
-            BloggingApplicationService = bloggingApplicationService;
-        }
+        public IBloggingApplicationService BloggingApplicationService { get; set; }
 
         public override OperationResponse Execute(SaveCommentRequest request)
         {

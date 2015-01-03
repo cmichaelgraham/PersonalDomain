@@ -42,7 +42,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-*.map
 Src/PersonalDomain.v12.suo
 Src/Application.Seedwork/bin/
 Src/Application.Seedwork/obj/
@@ -69,3 +68,6 @@ Src/PersonalDomain.Infrastructure/obj/
 Src/PersonalDomain.UI.Web/bin/
 Src/PersonalDomain.UI.Web/obj/
 Src/Tools.TypescriptGenerator/obj/
+Src/Tools.TypescriptGenerator/bin/
+Src/PersonalDomain.UI.Web/app/*.js
+Src/PersonalDomain.UI.Web/app/*.js.map
