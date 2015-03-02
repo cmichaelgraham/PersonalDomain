@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using Data.Seedwork;
 using Domain.Seedwork.Entities;
 
@@ -17,7 +17,7 @@ namespace Data.EntityFramework.Repository
 
         public abstract void Add(TEntity entity);
         public abstract void Delete(TEntity entity);
-        public abstract IQueryable<TResult> Select<TResult>(Func<TEntity, TResult> selector);
+        public abstract IEnumerable<TResult> Select<TResult>(Func<TEntity, TResult> selector);
         public abstract void Update(TEntity entity);
     }
 }

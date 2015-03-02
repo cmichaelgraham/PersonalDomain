@@ -46,10 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataMapper\AuthorDataMapper.cs" />
     <Compile Include="DataMapper\CommentDataMapper.cs" />
     <Compile Include="DataMapper\PostDataMapper.cs" />
     <Compile Include="Context\BloggingContext.cs" />
-    <Compile Include="Initializer\Initialier.cs" />
+    <Compile Include="Initializer\BloggingContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="UnitOfWork\BloggingUnitOfWork.cs" />

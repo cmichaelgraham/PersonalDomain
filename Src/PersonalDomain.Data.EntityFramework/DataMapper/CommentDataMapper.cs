@@ -8,6 +8,7 @@ namespace PersonalDomain.Data.EntityFramework.DataMapper
     {
         public override void Map()
         {
+            HasRequired(c => c.Author).WithMany(c => c.Comments).HasForeignKey(c => c.AuthorId);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 using Domain.Seedwork.Entities;
 
 namespace Data.Seedwork
@@ -11,7 +11,7 @@ namespace Data.Seedwork
 
         void Add(TEntity entity);
         void Delete(TEntity entity);
-        IQueryable<TResult> Select<TResult>(Func<TEntity, TResult> selector);
+        IEnumerable<TResult> Select<TResult>(Func<TEntity, TResult> selector);
         void Update(TEntity entity);
     }
 }

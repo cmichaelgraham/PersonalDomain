@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Data.EntityFramework.Repository;
 using PersonalDomain.Data.Blogging.DbContext;
@@ -23,9 +24,9 @@ namespace PersonalDomain.Data.EntityFramework.Repository
             Context.Posts.Remove(entity);
         }
 
-        public override IQueryable<TResult> Select<TResult>(Func<Post, TResult> selector)
+        public override IEnumerable<TResult> Select<TResult>(Func<Post, TResult> selector)
         {
-            return Context.Posts.Select(selector).AsQueryable();
+            return Context.Posts.Select(selector);
         }
 
         public TResult SelectById<TResult>(Int32 id, Func<Post, TResult> selector)

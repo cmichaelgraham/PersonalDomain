@@ -1,0 +1,19 @@
+{
+  "name": "PersonalDomain",
+  "version": "1.0.0",
+  "description": "Personal Domain of James P Chadwick",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamesChadwick/PersonalDomain.git"
+  },
+  "author": "James P Chadwick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesChadwick/PersonalDomain/issues"
+  },
+  "homepage": "https://github.com/JamesChadwick/PersonalDomain"
+}

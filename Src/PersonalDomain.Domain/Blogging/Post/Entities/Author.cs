@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Domain.Seedwork.Entities;
 
 namespace PersonalDomain.Domain.Blogging.Post
@@ -12,5 +13,8 @@ namespace PersonalDomain.Domain.Blogging.Post
         {
             get { return String.Format("{0} {1}", FirstName, LastName); }
         }
+
+        public IList<Post> Posts { get; set; }
+        public IList<Comment> Comments { get; set; }
     }
 }
