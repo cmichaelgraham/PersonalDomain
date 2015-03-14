@@ -127,7 +127,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\blogging\blog.html" />
+    <Content Include="app\blog\directives\ng-post-summary\post-summary.html" />
+    <Content Include="app\blog\views\detail\detail.html" />
+    <Content Include="app\blog\views\index\index.html" />
     <Content Include="Content\css\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\css\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap\bootstrap.css" />
@@ -238,10 +240,13 @@
     <Content Include="Scripts\jquery\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\blogging\IBloggingScope.ts" />
-    <TypeScriptCompile Include="app\blogging\blogging-controller.ts" />
-    <TypeScriptCompile Include="app\blogging\blogging-module.ts" />
-    <TypeScriptCompile Include="app\blogging\blogging-service.ts" />
+    <TypeScriptCompile Include="app\blog\blog-controller.ts" />
+    <TypeScriptCompile Include="app\blog\blog.d.ts" />
+    <TypeScriptCompile Include="app\blog\directives\ng-post-summary\post-summary.ts" />
+    <TypeScriptCompile Include="app\blog\views\detail\detail-controller.ts" />
+    <TypeScriptCompile Include="app\blog\views\index\index-controller.ts" />
+    <TypeScriptCompile Include="app\blog\blog-module.ts" />
+    <TypeScriptCompile Include="app\blog\blog-service.ts" />
     <TypeScriptCompile Include="app\start.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular-cookies.d.ts" />
@@ -251,7 +256,9 @@
     <TypeScriptCompile Include="Scripts\angular\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\jquery\jquery.d.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app\blog\directives\ng-post-detail\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

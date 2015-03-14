@@ -2,6 +2,7 @@
 using Data.EntityFramework.Context;
 using PersonalDomain.Data.Blogging.DbContext;
 using PersonalDomain.Data.EntityFramework.DataMapper;
+using PersonalDomain.Data.EntityFramework.Initializer;
 using PersonalDomain.Domain.Blogging.Post;
 
 namespace PersonalDomain.Data.EntityFramework.Context
@@ -11,6 +12,11 @@ namespace PersonalDomain.Data.EntityFramework.Context
         public IDbSet<Author> Authors { get; set; }
         public IDbSet<Post> Posts { get; set; }
         public IDbSet<Comment> Comments { get; set; }
+
+        public BloggingContext()
+        {
+            Database.SetInitializer(new BloggingContextInitializer());
+        }
 
         public override void MapEntities()
         {

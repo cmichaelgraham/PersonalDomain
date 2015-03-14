@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Data.EntityFramework.Repository;
 using PersonalDomain.Data.Blogging.DbContext;
@@ -26,7 +27,7 @@ namespace PersonalDomain.Data.EntityFramework.Repository
 
         public override IEnumerable<TResult> Select<TResult>(Func<Post, TResult> selector)
         {
-            return Context.Posts.Select(selector);
+            return Context.Posts.Include("Author").Select(selector);
         }
 
         public TResult SelectById<TResult>(Int32 id, Func<Post, TResult> selector)
