@@ -6,9 +6,8 @@
         constructor(public $scope: IBlogIndexScope, public bloggingService: IBlogService) {
             super($scope, bloggingService);
 
-            bloggingService.GetPostSummariesByPage(0).then((response: any[]) => {
+            bloggingService.GetPostSummariesByPage(0).then((response: ng.IHttpPromiseCallbackArg<any[]>) => {
                 $scope.postSummaries = response.data;
-                debugger;
             });
         }
     }
