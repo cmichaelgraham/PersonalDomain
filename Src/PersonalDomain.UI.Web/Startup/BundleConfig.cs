@@ -11,9 +11,6 @@ namespace PersonalDomain.UI.Web
                                 .Include("~/Content/css/font-awesome/font-awesome.css")
                                 .Include("~/Content/css/site.css");
 
-            var appBundle = new ScriptBundle("~/Scripts/app")
-                                .Include("~/app/app.js");
-
             var angularBundle = new ScriptBundle("~/Scripts/angular")
                                 .Include("~/Scripts/angular/angular.js")
                                 .Include("~/Scripts/angular/angular-animate.js")
@@ -33,7 +30,6 @@ namespace PersonalDomain.UI.Web
                                       .Include("~/Scripts/modernizer/modernizr-{version}.js");
 
             bundles.Add(cssBundle);
-            bundles.Add(appBundle);
             bundles.Add(angularBundle);
             bundles.Add(bootstrapBundle);
             bundles.Add(jqueryBundle);

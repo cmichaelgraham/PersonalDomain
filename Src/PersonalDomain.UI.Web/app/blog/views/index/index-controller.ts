@@ -1,14 +1,26 @@
 ﻿module PersonalDomain.Blog.Index {
     export class BlogIndexController extends PersonalDomain.Blog.BlogController {
+        private pageNumber: number = 0;
 
-        static $inject = ["$scope", "blogService"];
+        static $inject = ["$scope", "$routeParams", "blogService"];
+        constructor(public $scope: IBlogIndexScope, private $routeParams: any, public blogService: IBlogService) {
+            super($scope, blogService);
 
-        constructor(public $scope: IBlogIndexScope, public bloggingService: IBlogService) {
-            super($scope, bloggingService);
+            if (!!$routeParams.pageNumber) {
+                this.pageNumber = $routeParams.pageNumber;                
+            }
 
-            bloggingService.GetPostSummariesByPage(0).then((response: ng.IHttpPromiseCallbackArg<any[]>) => {
-                $scope.postSummaries = response.data;
+            this.LoadPostSummariesByPage(this.pageNumber);
+        }
+
+        private LoadPostSummariesByPage = (pageIndex: number) => {
+            this.blogService.GetPostSummariesByPage(pageIndex).then((response: ng.IHttpPromiseCallbackArg<any[]>) => {
+                this.$scope.postSummaries = response.data;
             });
+        }
+
+        public OnNextButtonClick: () => {
+            
         }
     }
 } 

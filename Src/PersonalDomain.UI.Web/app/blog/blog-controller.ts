@@ -1,6 +1,6 @@
 ﻿module PersonalDomain.Blog {
     export class BlogController {
-        constructor(public $scope: IBlogScope, public bloggingService: IBlogService) {
+        constructor(public $scope: IBlogScope, public blogService: IBlogService) {
         }
     }
 } 

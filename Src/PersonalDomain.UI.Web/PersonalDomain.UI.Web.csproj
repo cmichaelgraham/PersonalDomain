@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\blog\directives\ng-post-detail\post-detail.html" />
     <Content Include="app\blog\directives\ng-post-summary\post-summary.html" />
     <Content Include="app\blog\views\detail\detail.html" />
     <Content Include="app\blog\views\index\index.html" />
@@ -242,6 +243,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\blog\blog-controller.ts" />
     <TypeScriptCompile Include="app\blog\blog.d.ts" />
+    <TypeScriptCompile Include="app\blog\directives\ng-post-detail\post-detail.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-summary\post-summary.ts" />
     <TypeScriptCompile Include="app\blog\views\detail\detail-controller.ts" />
     <TypeScriptCompile Include="app\blog\views\index\index-controller.ts" />
@@ -256,15 +258,14 @@
     <TypeScriptCompile Include="Scripts\angular\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\jquery\jquery.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="app\blog\directives\ng-post-detail\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
     <TypeScriptOutFile>app/app.js</TypeScriptOutFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">

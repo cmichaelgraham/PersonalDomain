@@ -29,7 +29,7 @@
                 </div>
             </div>
         </nav>        
-        <header class="intro-header" style="background-image: url('../../Content/images/home-bg.jpg')">
+        @*<header class="intro-header" style="background-image: url('../../Content/images/home-bg.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -41,8 +41,9 @@
                     </div>
                 </div>
             </div>
-        </header>
-        <div class="container" ng-app>
+        </header>*@
+        @*<div class="container" ng-app>*@
+        <div ng-app>
             <section ng-view>
                 @RenderBody()
             </section>
@@ -84,7 +85,8 @@
             </div>
         </footer>
 
-        @Scripts.Render("~/Scripts/jquery", "~/Scripts/angular", "~/Scripts/app")
+        @Scripts.Render("~/Scripts/jquery", "~/Scripts/angular")
         @RenderSection("scripts", required: false)
+        <script type="text/javascript" src="~/app/app.js"></script>
     </body>
 </html>

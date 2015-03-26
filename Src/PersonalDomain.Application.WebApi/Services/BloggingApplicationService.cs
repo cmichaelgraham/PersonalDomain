@@ -20,12 +20,12 @@ namespace PersonalDomain.Application.WebApi.Services
 
         public PostDTO GetPost(Int32 postId)
         {
-            return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Content = p.Content });
+            return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
         }
 
         public PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 10)
         {
-            return PostRepository.Select(p => new PostSummaryDTO { Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
+            return PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
                                  .Skip((pageNumber - 1) * pageSize)
                                  .Take(pageSize)
                                  .ToArray();

@@ -7,21 +7,20 @@ interface IBlogIndexScope extends IBlogScope {
 }
 
 interface IBlogDetailScope extends IBlogScope {
-    
+    post: any;
 }
 
 interface IPostDetailScope {
-    post: string;
+
 }
 
 interface IPostSummaryScope {
-    post: string;
+    post: any;
 }
 
 interface IBlogService {
-    //GetPost: (id: number) => any;
-    //GetPostSummariesByPage: (pageNumber: number) => any[];
-    //SavePost: (data: any) => any;
-
+    GetPost: (id: number) => ng.IHttpPromise<any>;
     GetPostSummariesByPage: (pageNumber: number) => ng.IHttpPromise<any>;
+    GetPostSummaryCount: () => ng.IHttpPromise<any>;
+    SavePost: (data: any) => ng.IHttpPromise<any>;
 }

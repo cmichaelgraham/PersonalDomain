@@ -4,6 +4,14 @@
         constructor(private $http: ng.IHttpService) {
         }
 
+        public GetPost: (id: number) => ng.IHttpPromise<any> = (id) => {
+            return this.$http({
+                method: "post",
+                url: "/api/GetPost",
+                data: { Id: id }
+            });
+        }
+
         public GetPostSummariesByPage: (pageNumber: number) => ng.IHttpPromise<any> = (pageNumber) => {
             return this.$http({
                 method: "post",
@@ -12,34 +20,19 @@
             });
         }
 
-        //public GetPost: (id: number) => any = (id) => { 
-        //    return this.$http({
-        //        method: "post",
-        //        url: "/api/GetPost",
-        //        data: { Id: id }
-        //    }).then((data: any) => {
-        //        return data;
-        //    });
-        //}
+        public GetPostSummaryCount: () => ng.IHttpPromise<number> = () => {
+            return this.$http({
+                method: "post",
+                url: "/api/GetPostSummaryCount",
+            });
+        }
 
-        //public GetPostSummariesByPage: (pageNumber: number) => any = (pageNumber) => {
-        //    return this.$http({
-        //        method: "post",
-        //        url: "/api/GetPostSummariesByPage",
-        //        data: { Id: pageNumber }
-        //    }).then((data: any) => {
-        //        return data;
-        //    });
-        //}
-
-        //public SavePost: (data: any) => any = (data) => {
-        //    return this.$http({
-        //        method: "post",
-        //        url: "/api/SavePost",
-        //        data: undefined
-        //    }).then((response: any) => {
-        //        return response;
-        //    });
-        //}
+        public SavePost: (data: any) => ng.IHttpPromise<any> = (data) => {
+            return this.$http({
+                method: "post",
+                url: "/api/SavePost",
+                data: undefined
+            });
+        }
     }
 }  
