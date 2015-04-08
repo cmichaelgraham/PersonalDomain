@@ -1,13 +1,10 @@
-﻿interface IBlogScope {
-    
+﻿interface IBlogDetailScope {
+    Post: any;
 }
 
-interface IBlogIndexScope extends IBlogScope {
-    postSummaries: any[];
-}
-
-interface IBlogDetailScope extends IBlogScope {
-    post: any;
+interface IBlogIndexScope {
+    PostSummaries: any[];
+    Next: () => void;
 }
 
 interface IPostDetailScope {

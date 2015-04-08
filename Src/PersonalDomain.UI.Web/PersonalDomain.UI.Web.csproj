@@ -179,6 +179,7 @@
     <Content Include="Scripts\respond\respond.js" />
     <Content Include="Scripts\respond\respond.min.js" />
     <Content Include="web.config" />
+    <Content Include="tslint.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -241,7 +242,6 @@
     <Content Include="Scripts\jquery\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\blog\blog-controller.ts" />
     <TypeScriptCompile Include="app\blog\blog.d.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-detail\post-detail.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-summary\post-summary.ts" />
@@ -249,6 +249,7 @@
     <TypeScriptCompile Include="app\blog\views\index\index-controller.ts" />
     <TypeScriptCompile Include="app\blog\blog-module.ts" />
     <TypeScriptCompile Include="app\blog\blog-service.ts" />
+    <TypeScriptCompile Include="app\layout\layout-controller.ts" />
     <TypeScriptCompile Include="app\start.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular-cookies.d.ts" />

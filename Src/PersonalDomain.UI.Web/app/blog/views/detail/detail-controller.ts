@@ -1,16 +1,17 @@
 ﻿module PersonalDomain.Blog.Detail {
-    export class BlogDetailController extends PersonalDomain.Blog.BlogController {
+    export class BlogDetailController implements IBlogDetailScope {
+        public Post: any;
 
-        static $inject = ["$scope", "$routeParams", "blogService"];
-        constructor(public $scope: IBlogDetailScope, private $routeParams: any, public blogService: IBlogService) {
-            super($scope, blogService);
+        static $inject = ['$routeParams', 'blogService'];
+        constructor(private $routeParams: any, private blogService: IBlogService) {
+            var vm = this;
 
             this.LoadPostById($routeParams.postId);
         }
 
-        private LoadPostById = (postId: number) => {
+        public LoadPostById = (postId: number) => {
             this.blogService.GetPost(postId).then((response: ng.IHttpPromiseCallbackArg<any>) => {
-                this.$scope.post = response.data;
+                this.Post = response.data;
             });
         }
     }
