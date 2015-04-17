@@ -39,10 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blogging\Models\CommentDTO.cs" />
-    <Compile Include="Blogging\Models\PostDTO.cs" />
-    <Compile Include="Blogging\Models\PostSummaryCountDTO.cs" />
-    <Compile Include="Blogging\Models\PostSummaryDTO.cs" />
+    <Compile Include="Blogging\Models\ICommentDTO.cs" />
+    <Compile Include="Blogging\Models\IPostDTO.cs" />
+    <Compile Include="Blogging\Models\IPostSummaryCountDTO.cs" />
+    <Compile Include="Blogging\Models\IPostSummaryDTO.cs" />
+    <Compile Include="Blogging\Operations\Command\ISaveComment.cs" />
+    <Compile Include="Blogging\Operations\Command\ISavePost.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPost.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostSummariesByPage.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostSummaryCount.cs" />
+    <Compile Include="Blogging\Operations\Request\IByIdRequest.cs" />
+    <Compile Include="Blogging\Operations\Request\INullRequest.cs" />
+    <Compile Include="Blogging\Operations\Request\ISaveCommentRequest.cs" />
+    <Compile Include="Blogging\Operations\Response\IOperationResponse.cs" />
     <Compile Include="Blogging\Services\IBloggingApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,6 +60,7 @@
     <ProjectReference Include="..\Application.Seedwork\Application.Seedwork.csproj">
       <Project>{3cd419f7-bcb6-463e-999e-8a81c69a5f7a}</Project>
       <Name>Application.Seedwork</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
     <ProjectReference Include="..\Data.Seedwork\Data.Seedwork.csproj">
       <Project>{2EB542F3-4D54-48F9-A9CF-A164876FEA9D}</Project>

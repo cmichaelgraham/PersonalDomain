@@ -1,8 +1,9 @@
 ﻿using System;
+using PersonalDomain.Application.Blogging.Models;
 
-namespace PersonalDomain.Application.Blogging.Models
+namespace PersonalDomain.Application.WebApi.Models
 {
-    public class CommentDTO
+    public class CommentDTO : ICommentDTO
     {
         public Int32 Id { get; set; }
         public Int32 UserId { get; set; }

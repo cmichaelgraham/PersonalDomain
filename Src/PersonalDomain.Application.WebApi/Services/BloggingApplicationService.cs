@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Linq;
-using Application.Seedwork.Operations.Response;
 using PersonalDomain.Application.Blogging.Models;
+using PersonalDomain.Application.Blogging.Operations.Response;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.WebApi.Operations.Response;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Domain.Blogging.Post;
+using PostDTO = PersonalDomain.Application.WebApi.Models.PostDTO;
+using PostSummaryDTO = PersonalDomain.Application.WebApi.Models.PostSummaryDTO;
 
 namespace PersonalDomain.Application.WebApi.Services
 {
@@ -18,12 +20,12 @@ namespace PersonalDomain.Application.WebApi.Services
             PostRepository = postRepository;
         }
 
-        public PostDTO GetPost(Int32 postId)
+        public IPostDTO GetPost(Int32 postId)
         {
             return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
         }
 
-        public PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 10)
+        public IPostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 25)
         {
             return PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
                                  .Skip((pageNumber - 1) * pageSize)
@@ -31,7 +33,7 @@ namespace PersonalDomain.Application.WebApi.Services
                                  .ToArray();
         }
 
-        public IResponse SavePost(PostDTO post)
+        public IOperationResponse SavePost(IPostDTO post)
         {
             if (post.Id == 0)
             {
@@ -45,7 +47,7 @@ namespace PersonalDomain.Application.WebApi.Services
             return new OperationResponse { IsSuccess = true };
         }
 
-        public IResponse SaveComment(Int32 postId, CommentDTO comment)
+        public IOperationResponse SaveComment(Int32 postId, ICommentDTO comment)
         {
             var post = PostRepository.SelectById(postId, p => new PostDTO());
             post.Comments.Add(comment);

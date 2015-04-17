@@ -1,7 +1,7 @@
 ﻿using Application.WebApi.Operations.Query;
-using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.WebApi.Operations.Request;
+using PostDTO = PersonalDomain.Application.WebApi.Models.PostDTO;
 
 namespace PersonalDomain.Application.WebApi.Operations.Query
 {
@@ -11,7 +11,7 @@ namespace PersonalDomain.Application.WebApi.Operations.Query
 
         public override PostDTO Execute(ByIdRequest request)
         {
-            return BloggingApplicationService.GetPost(request.Id);
+            return (PostDTO)BloggingApplicationService.GetPost(request.Id);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.UI.Web", "PersonalDomain.UI.Web\PersonalDomain.UI.Web.csproj", "{E8DE76ED-4A64-407C-BAD1-C3B45F704F5B}"
 EndProject
@@ -38,10 +38,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application", "PersonalDomain.Application\PersonalDomain.Application.csproj", "{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.WebApi", "Application.WebApi\Application.WebApi.csproj", "{2987A9BE-9FEF-4FAB-B276-407589F80DF9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C6B64D93-D502-4A31-8D94-D482F70EC516}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools.TypescriptGenerator", "Tools.TypescriptGenerator\Tools.TypescriptGenerator.csproj", "{84D6AF27-0166-4FBA-8FE7-A2D6EDD23727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,10 +93,6 @@ Global
 		{2987A9BE-9FEF-4FAB-B276-407589F80DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2987A9BE-9FEF-4FAB-B276-407589F80DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2987A9BE-9FEF-4FAB-B276-407589F80DF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{84D6AF27-0166-4FBA-8FE7-A2D6EDD23727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84D6AF27-0166-4FBA-8FE7-A2D6EDD23727}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84D6AF27-0166-4FBA-8FE7-A2D6EDD23727}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84D6AF27-0166-4FBA-8FE7-A2D6EDD23727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +110,5 @@ Global
 		{D4490446-58B7-4229-ABC0-5D37201E19BD} = {F647B7E4-4214-4CFC-AAD7-4FBC6855EE8D}
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
 		{2987A9BE-9FEF-4FAB-B276-407589F80DF9} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
-		{84D6AF27-0166-4FBA-8FE7-A2D6EDD23727} = {C6B64D93-D502-4A31-8D94-D482F70EC516}
 	EndGlobalSection
 EndGlobal

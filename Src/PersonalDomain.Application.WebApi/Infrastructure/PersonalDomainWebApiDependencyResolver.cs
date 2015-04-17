@@ -3,7 +3,6 @@ using Application.WebApi.Controllers;
 using Application.WebApi.Infrastructure;
 using Autofac;
 using Data.Seedwork;
-using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.WebApi.Controllers;
 using PersonalDomain.Application.WebApi.Operations.Command;
@@ -16,6 +15,9 @@ using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Data.EntityFramework.Context;
 using PersonalDomain.Data.EntityFramework.Repository;
 using PersonalDomain.Data.EntityFramework.UnitOfWork;
+using PostDTO = PersonalDomain.Application.WebApi.Models.PostDTO;
+using PostSummaryCountDTO = PersonalDomain.Application.WebApi.Models.PostSummaryCountDTO;
+using PostSummaryDTO = PersonalDomain.Application.WebApi.Models.PostSummaryDTO;
 
 namespace PersonalDomain.Application.WebApi.Infrastructure
 {

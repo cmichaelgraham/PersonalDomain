@@ -112,6 +112,10 @@
     </Compile>
     <Compile Include="Infrastructure\PersonalDomainWebApiDependencyResolver.cs" />
     <Compile Include="Controllers\PersonalDomainController.cs" />
+    <Compile Include="Models\CommentDTO.cs" />
+    <Compile Include="Models\PostDTO.cs" />
+    <Compile Include="Models\PostSummaryCountDTO.cs" />
+    <Compile Include="Models\PostSummaryDTO.cs" />
     <Compile Include="Operations\Command\SaveComment.cs" />
     <Compile Include="Operations\Command\SavePost.cs" />
     <Compile Include="Operations\Query\GetPost.cs" />
