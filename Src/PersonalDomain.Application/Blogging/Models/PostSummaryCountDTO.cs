@@ -2,8 +2,8 @@
 
 namespace PersonalDomain.Application.Blogging.Models
 {
-    public interface IPostSummaryCountDTO
+    public class PostSummaryCountDTO
     {
-        Int32 Count { get; }
+        public Int32 Count { get; set; }
     }
 }

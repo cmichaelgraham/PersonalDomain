@@ -1,23 +1,21 @@
 ﻿using Application.Seedwork;
 using Application.WebApi.Controllers;
 using Application.WebApi.Infrastructure;
+using Application.WebApi.Operations.Request;
+using Application.WebApi.Operations.Response;
 using Autofac;
 using Data.Seedwork;
+using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.WebApi.Controllers;
 using PersonalDomain.Application.WebApi.Operations.Command;
 using PersonalDomain.Application.WebApi.Operations.Query;
-using PersonalDomain.Application.WebApi.Operations.Request;
-using PersonalDomain.Application.WebApi.Operations.Response;
 using PersonalDomain.Application.WebApi.Services;
 using PersonalDomain.Data.Blogging.DbContext;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Data.EntityFramework.Context;
 using PersonalDomain.Data.EntityFramework.Repository;
 using PersonalDomain.Data.EntityFramework.UnitOfWork;
-using PostDTO = PersonalDomain.Application.WebApi.Models.PostDTO;
-using PostSummaryCountDTO = PersonalDomain.Application.WebApi.Models.PostSummaryCountDTO;
-using PostSummaryDTO = PersonalDomain.Application.WebApi.Models.PostSummaryDTO;
 
 namespace PersonalDomain.Application.WebApi.Infrastructure
 {
@@ -45,7 +43,7 @@ namespace PersonalDomain.Application.WebApi.Infrastructure
             _webApiMethodMap.Add("GetPost", new WebApiMethod{ Operation = typeof(GetPost), Request = typeof(ByIdRequest), Response = typeof(PostDTO)});
             _webApiMethodMap.Add("GetPostSummariesByPage", new WebApiMethod { Operation = typeof(GetPostSummariesByPage), Request = typeof(ByIdRequest), Response = typeof(PostSummaryDTO[]) });
             _webApiMethodMap.Add("GetPostSummaryCount", new WebApiMethod { Operation = typeof(GetPostSummaryCount), Request = typeof(NullRequest), Response = typeof(PostSummaryCountDTO) });
-            _webApiMethodMap.Add("SaveComment", new WebApiMethod { Operation = typeof(SaveComment), Request = typeof(SaveCommentRequest), Response = typeof(OperationResponse) });
+            _webApiMethodMap.Add("SaveComment", new WebApiMethod { Operation = typeof(SaveComment), Request = typeof(CommentDTO), Response = typeof(OperationResponse) });
             _webApiMethodMap.Add("SavePost", new WebApiMethod { Operation = typeof(SavePost), Request = typeof(PostDTO), Response = typeof(OperationResponse) });
         }
     }

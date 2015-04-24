@@ -2,7 +2,7 @@
 
 namespace PersonalDomain.Application.WebApi.Configuration
 {
-    public static class WebApiConfig
+    public static class PersonalDomainWebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {

@@ -1,10 +1,7 @@
-﻿using System;
-using Application.Seedwork.Operations.Response;
-
-namespace Application.WebApi.Operations.Response
+﻿namespace Application.WebApi.Operations.Response
 {
-    public abstract class WebApiResponse : IResponse
+    public abstract class WebApiResponse : Seedwork.Operations.Response.Response
     {
-        public Boolean IsSuccess { get; set; }
+
     }
 }

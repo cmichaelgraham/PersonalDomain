@@ -77,12 +77,12 @@ namespace Domain.Seedwork.Entities
             return hashCode;
         }
 
-        public static Boolean operator ==(EquatableDomainObject<T> left, EquatableDomainObject<T> right)
+        public static Boolean operator == (EquatableDomainObject<T> left, EquatableDomainObject<T> right)
         {
             return Equals(left, null) ? (Equals(right, null)) : left.Equals(right);
         }
 
-        public static Boolean operator !=(EquatableDomainObject<T> left, EquatableDomainObject<T> right)
+        public static Boolean operator != (EquatableDomainObject<T> left, EquatableDomainObject<T> right)
         {
             return !(left == right);
         }

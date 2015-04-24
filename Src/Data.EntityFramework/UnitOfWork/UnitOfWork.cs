@@ -2,11 +2,11 @@
 
 namespace Data.EntityFramework.UnitOfWork
 {
-    public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : IContext
+    public abstract class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext : IContext
     {
         public TContext Context { get; private set; }
 
-        public UnitOfWork(TContext context)
+        protected UnitOfWork(TContext context)
         {
             Context = context;
         }

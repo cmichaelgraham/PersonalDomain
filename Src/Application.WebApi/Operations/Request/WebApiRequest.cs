@@ -1,8 +1,6 @@
-﻿using Application.Seedwork.Operations.Request;
-
-namespace Application.WebApi.Operations.Request
+﻿namespace Application.WebApi.Operations.Request
 {
-    public abstract class WebApiRequest : IRequest
+    public abstract class WebApiRequest : Seedwork.Operations.Request.Request
     {
     }
 }

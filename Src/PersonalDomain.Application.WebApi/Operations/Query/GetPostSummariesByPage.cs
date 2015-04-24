@@ -1,7 +1,7 @@
 ﻿using Application.WebApi.Operations.Query;
+using Application.WebApi.Operations.Request;
+using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
-using PersonalDomain.Application.WebApi.Operations.Request;
-using PostSummaryDTO = PersonalDomain.Application.WebApi.Models.PostSummaryDTO;
 
 namespace PersonalDomain.Application.WebApi.Operations.Query
 {
@@ -11,7 +11,7 @@ namespace PersonalDomain.Application.WebApi.Operations.Query
 
         public override PostSummaryDTO[] Execute(ByIdRequest request)
         {
-            return (PostSummaryDTO[])BloggingApplicationService.GetPostSummariesByPage(request.Id);
+            return BloggingApplicationService.GetPostSummariesByPage(request.Id);
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using System;
-using PersonalDomain.Application.Blogging.Models;
 
-namespace PersonalDomain.Application.WebApi.Models
+namespace PersonalDomain.Application.Blogging.Models
 {
-    public class PostSummaryDTO : IPostSummaryDTO
+    public class PostSummaryDTO
     {
         public Int32 Id { get; set; }
         public String Title { get; set; }

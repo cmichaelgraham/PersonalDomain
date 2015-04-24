@@ -1,12 +1,10 @@
 ﻿using Application.Seedwork.Operations.Query;
+using Application.Seedwork.Operations.Request;
 using PersonalDomain.Application.Blogging.Models;
-using PersonalDomain.Application.Blogging.Operations.Request;
-using PersonalDomain.Application.Blogging.Services;
 
 namespace PersonalDomain.Application.Blogging.Operations.Query
 {
-    public interface IGetPost : IQuery<IByIdRequest, IPostDTO>
+    public interface IGetPost : IQuery<Request, PostDTO>
     {
-        IBloggingApplicationService BloggingApplicationService { get; }
     }
 }

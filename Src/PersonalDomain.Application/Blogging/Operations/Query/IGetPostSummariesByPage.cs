@@ -1,12 +1,10 @@
 ﻿using Application.Seedwork.Operations.Query;
+using Application.Seedwork.Operations.Request;
 using PersonalDomain.Application.Blogging.Models;
-using PersonalDomain.Application.Blogging.Operations.Request;
-using PersonalDomain.Application.Blogging.Services;
 
 namespace PersonalDomain.Application.Blogging.Operations.Query
 {
-    public interface IGetPostSummariesByPage : IQuery<IByIdRequest, IPostSummaryDTO[]>
+    public interface IGetPostSummariesByPage : IQuery<Request, PostSummaryDTO[]>
     {
-        IBloggingApplicationService BloggingApplicationService { get; }
     }
 }

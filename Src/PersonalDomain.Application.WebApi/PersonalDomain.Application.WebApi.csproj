@@ -106,25 +106,17 @@
     <Content Include="Global.asax" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\WebApiConfig.cs" />
+    <Compile Include="Configuration\PersonalDomainWebApiConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\PersonalDomainWebApiDependencyResolver.cs" />
     <Compile Include="Controllers\PersonalDomainController.cs" />
-    <Compile Include="Models\CommentDTO.cs" />
-    <Compile Include="Models\PostDTO.cs" />
-    <Compile Include="Models\PostSummaryCountDTO.cs" />
-    <Compile Include="Models\PostSummaryDTO.cs" />
     <Compile Include="Operations\Command\SaveComment.cs" />
     <Compile Include="Operations\Command\SavePost.cs" />
     <Compile Include="Operations\Query\GetPost.cs" />
     <Compile Include="Operations\Query\GetPostSummariesByPage.cs" />
     <Compile Include="Operations\Query\GetPostSummaryCount.cs" />
-    <Compile Include="Operations\Request\ByIdRequest.cs" />
-    <Compile Include="Operations\Request\NullRequest.cs" />
-    <Compile Include="Operations\Request\SaveCommentRequest.cs" />
-    <Compile Include="Operations\Response\OperationResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BloggingApplicationService.cs" />
   </ItemGroup>

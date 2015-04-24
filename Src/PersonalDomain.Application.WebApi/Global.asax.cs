@@ -9,7 +9,7 @@ namespace PersonalDomain.Application.WebApi
     {
         protected override void Application_Start()
         {
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configure(PersonalDomainWebApiConfig.Register);
         }
     }
 }

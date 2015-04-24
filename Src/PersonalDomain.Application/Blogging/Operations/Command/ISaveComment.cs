@@ -1,12 +1,10 @@
 ﻿using Application.Seedwork.Operations.Command;
-using PersonalDomain.Application.Blogging.Operations.Request;
-using PersonalDomain.Application.Blogging.Operations.Response;
-using PersonalDomain.Application.Blogging.Services;
+using Application.Seedwork.Operations.Response;
+using PersonalDomain.Application.Blogging.Models;
 
 namespace PersonalDomain.Application.Blogging.Operations.Command
 {
-    public interface ISaveComment : ICommand<ISaveCommentRequest, IOperationResponse>
+    public interface ISaveComment : ICommand<CommentDTO, Response>
     {
-        IBloggingApplicationService BloggingApplicationService { get; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Application.WebApi.Operations.Query;
+using Application.WebApi.Operations.Request;
+using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
-using PersonalDomain.Application.WebApi.Operations.Request;
-using PostSummaryCountDTO = PersonalDomain.Application.WebApi.Models.PostSummaryCountDTO;
 
 namespace PersonalDomain.Application.WebApi.Operations.Query
 {

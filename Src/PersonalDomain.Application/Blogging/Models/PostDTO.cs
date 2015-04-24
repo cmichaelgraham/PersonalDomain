@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using PersonalDomain.Application.Blogging.Models;
 
-namespace PersonalDomain.Application.WebApi.Models
+namespace PersonalDomain.Application.Blogging.Models
 {
-    public class PostDTO : IPostDTO
+    public class PostDTO
     {
         public Int32 Id { get; set; }
         public String Title { get; set; }
         public String Subtitle { get; set; }
         public String Content { get; set; }
-        public IList<ICommentDTO> Comments { get; set; }
+        public IList<CommentDTO> Comments { get; set; }
     }
 }
