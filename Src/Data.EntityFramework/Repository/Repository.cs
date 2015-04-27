@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Seedwork;
+using Data.Seedwork.Context;
+using Data.Seedwork.Repository;
 using Domain.Seedwork.Entities;
 
 namespace Data.EntityFramework.Repository

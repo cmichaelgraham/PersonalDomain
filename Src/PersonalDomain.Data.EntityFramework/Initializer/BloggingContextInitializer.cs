@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using Data.EntityFramework.Initializer;
-using PersonalDomain.Data.EntityFramework.Context;
 using PersonalDomain.Data.Blogging.Initializer;
+using PersonalDomain.Data.Context;
 using PersonalDomain.Domain.Blogging.Post;
 
-namespace PersonalDomain.Data.EntityFramework.Initializer
+namespace PersonalDomain.Data.Initializer
 {
     public class BloggingContextInitializer : ContextInitializer<BloggingContext>, IBloggingContextInitializer  
     {

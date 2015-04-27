@@ -1,11 +1,12 @@
-﻿using Application.WebApi.Operations.Command;
-using Application.WebApi.Operations.Response;
+﻿using Application.WebApi.Operations;
 using PersonalDomain.Application.Blogging.Models;
+using PersonalDomain.Application.Blogging.Operations;
 using PersonalDomain.Application.Blogging.Services;
+using PersonalDomain.Application.Operations.Response;
 
-namespace PersonalDomain.Application.WebApi.Operations.Command
+namespace PersonalDomain.Application.Operations
 {
-    public class SavePost : WebApiCommand<PostDTO, OperationResponse>
+    public class SavePost : WebApiCommand<PostDTO, OperationResponse>, ISavePost<PostDTO, OperationResponse>
     {
         public IBloggingApplicationService BloggingApplicationService { get; set; }
 

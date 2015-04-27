@@ -1,6 +1,6 @@
 ﻿using System;
-using Data.Seedwork;
-using PersonalDomain.Data.Blogging.DbContext;
+using Data.Seedwork.Repository;
+using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Domain.Blogging.Post;
 
 namespace PersonalDomain.Data.Blogging.Repository

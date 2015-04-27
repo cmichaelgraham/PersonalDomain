@@ -1,4 +1,5 @@
-﻿using Data.Seedwork;
+﻿using Data.Seedwork.Context;
+using Data.Seedwork.UnitOfWork;
 
 namespace Application.Seedwork
 {

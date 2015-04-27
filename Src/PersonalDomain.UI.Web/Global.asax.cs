@@ -1,9 +1,9 @@
 ﻿using Autofac.Integration.Mvc;
+using PersonalDomain.Application.Infrastructure;
 using PersonalDomain.Application.WebApi;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using PersonalDomain.Application.WebApi.Infrastructure;
 
 namespace PersonalDomain.UI.Web
 {

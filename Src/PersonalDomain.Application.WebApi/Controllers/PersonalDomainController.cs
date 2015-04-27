@@ -1,7 +1,7 @@
 ﻿using Application.WebApi.Controllers;
-using PersonalDomain.Data.Blogging.DbContext;
+using PersonalDomain.Data.Blogging.Context;
 
-namespace PersonalDomain.Application.WebApi.Controllers
+namespace PersonalDomain.Application.Controllers
 {
     public class PersonalDomainController : WebApiController<IBloggingContext>
     {

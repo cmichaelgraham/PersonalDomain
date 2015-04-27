@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 using Application.WebApi;
-using PersonalDomain.Application.WebApi.Configuration;
+using PersonalDomain.Application.Configuration;
 
 
 namespace PersonalDomain.Application.WebApi

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Linq;
-using Application.Seedwork.Operations.Response;
-using Application.WebApi.Operations.Response;
+using Application.Seedwork.Operations;
+using Application.WebApi.Operations;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
+using PersonalDomain.Application.Operations.Response;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Domain.Blogging.Post;
 
-namespace PersonalDomain.Application.WebApi.Services
+namespace PersonalDomain.Application.Services
 {
     public class BloggingApplicationService : IBloggingApplicationService
     {

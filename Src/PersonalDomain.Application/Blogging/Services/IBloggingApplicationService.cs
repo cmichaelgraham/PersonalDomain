@@ -1,5 +1,5 @@
 ﻿using System;
-using Application.Seedwork.Operations.Response;
+using Application.Seedwork.Operations;
 using PersonalDomain.Application.Blogging.Models;
 
 namespace PersonalDomain.Application.Blogging.Services

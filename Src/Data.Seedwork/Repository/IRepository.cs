@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Data.Seedwork.Context;
 using Domain.Seedwork.Entities;
 
-namespace Data.Seedwork
+namespace Data.Seedwork.Repository
 {
     public interface IRepository<TEntity, TContext> where TEntity : Entity
                                                     where TContext : IContext

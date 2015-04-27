@@ -67,8 +67,6 @@ Src/PersonalDomain.Infrastructure/bin/
 Src/PersonalDomain.Infrastructure/obj/
 Src/PersonalDomain.UI.Web/bin/
 Src/PersonalDomain.UI.Web/obj/
-Src/Tools.TypescriptGenerator/obj/
-Src/Tools.TypescriptGenerator/bin/
 Src/PersonalDomain.UI.Web/app/**/*.js
 Src/PersonalDomain.UI.Web/app/**/*.js.map
 *.user

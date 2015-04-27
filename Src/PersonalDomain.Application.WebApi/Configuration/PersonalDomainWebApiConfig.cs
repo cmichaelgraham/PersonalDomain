@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace PersonalDomain.Application.WebApi.Configuration
+namespace PersonalDomain.Application.Configuration
 {
     public static class PersonalDomainWebApiConfig
     {

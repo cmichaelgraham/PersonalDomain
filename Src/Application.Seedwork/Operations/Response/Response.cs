@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Application.Seedwork.Operations.Response
+namespace Application.Seedwork.Operations
 {
     public abstract class Response
     {

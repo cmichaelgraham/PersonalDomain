@@ -1,6 +1,6 @@
-﻿namespace Application.WebApi.Operations.Response
+﻿namespace Application.WebApi.Operations
 {
-    public abstract class WebApiResponse : Seedwork.Operations.Response.Response
+    public abstract class WebApiResponse : Seedwork.Operations.Response
     {
 
     }

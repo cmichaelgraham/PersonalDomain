@@ -1,6 +1,7 @@
 ﻿using System;
+using Application.WebApi.Operations;
 
-namespace Application.WebApi.Operations.Response
+namespace PersonalDomain.Application.Operations.Response
 {
     public class OperationResponse : WebApiResponse
     {

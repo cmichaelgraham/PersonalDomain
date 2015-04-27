@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Data.Seedwork;
+using Data.Seedwork.DataMapper;
 using Domain.Seedwork.Entities;
 
 namespace Data.EntityFramework.DataMapper

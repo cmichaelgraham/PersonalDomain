@@ -1,6 +1,7 @@
 ﻿using System;
+using Data.Seedwork.Context;
 
-namespace Data.Seedwork
+namespace Data.Seedwork.UnitOfWork
 {
     public interface IUnitOfWork<TContext> : IDisposable where TContext : IContext
     {

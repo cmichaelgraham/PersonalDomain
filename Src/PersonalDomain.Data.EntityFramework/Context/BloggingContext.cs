@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity;
 using Data.EntityFramework.Context;
-using PersonalDomain.Data.Blogging.DbContext;
-using PersonalDomain.Data.EntityFramework.DataMapper;
-using PersonalDomain.Data.EntityFramework.Initializer;
+using PersonalDomain.Data.Blogging.Context;
+using PersonalDomain.Data.DataMapper;
+using PersonalDomain.Data.Initializer;
 using PersonalDomain.Domain.Blogging.Post;
 
-namespace PersonalDomain.Data.EntityFramework.Context
+namespace PersonalDomain.Data.Context
 {
     public class BloggingContext : DatabaseContext, IBloggingContext
     {

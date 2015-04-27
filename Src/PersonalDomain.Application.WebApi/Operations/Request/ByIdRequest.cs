@@ -1,6 +1,7 @@
 ﻿using System;
+using Application.WebApi.Operations;
 
-namespace Application.WebApi.Operations.Request
+namespace PersonalDomain.Application.Operations.Request
 {
     public class ByIdRequest : WebApiRequest
     {

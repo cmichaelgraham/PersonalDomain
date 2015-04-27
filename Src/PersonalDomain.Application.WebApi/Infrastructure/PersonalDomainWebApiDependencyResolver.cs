@@ -1,23 +1,23 @@
 ﻿using Application.Seedwork;
 using Application.WebApi.Controllers;
 using Application.WebApi.Infrastructure;
-using Application.WebApi.Operations.Request;
-using Application.WebApi.Operations.Response;
+using Application.WebApi.Operations;
 using Autofac;
-using Data.Seedwork;
+using Data.Seedwork.UnitOfWork;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
-using PersonalDomain.Application.WebApi.Controllers;
-using PersonalDomain.Application.WebApi.Operations.Command;
-using PersonalDomain.Application.WebApi.Operations.Query;
-using PersonalDomain.Application.WebApi.Services;
-using PersonalDomain.Data.Blogging.DbContext;
+using PersonalDomain.Application.Controllers;
+using PersonalDomain.Application.Operations;
+using PersonalDomain.Application.Operations.Request;
+using PersonalDomain.Application.Operations.Response;
+using PersonalDomain.Application.Services;
+using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Data.Blogging.Repository;
-using PersonalDomain.Data.EntityFramework.Context;
-using PersonalDomain.Data.EntityFramework.Repository;
-using PersonalDomain.Data.EntityFramework.UnitOfWork;
+using PersonalDomain.Data.Context;
+using PersonalDomain.Data.Repository;
+using PersonalDomain.Data.UnitOfWork;
 
-namespace PersonalDomain.Application.WebApi.Infrastructure
+namespace PersonalDomain.Application.Infrastructure
 {
     public class PersonalDomainWebApiDependencyResolver : WebApiDependencyResolver
     {

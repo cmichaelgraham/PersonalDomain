@@ -1,10 +1,11 @@
-﻿using Application.Seedwork.Operations.Query;
-using Application.Seedwork.Operations.Request;
-using PersonalDomain.Application.Blogging.Models;
+﻿using Application.Seedwork.Operations;
+using TypeScriptGenerator.Seedwork.Attributes;
 
-namespace PersonalDomain.Application.Blogging.Operations.Query
+namespace PersonalDomain.Application.Blogging.Operations
 {
-    public interface IGetPostSummariesByPage : IQuery<Request, PostSummaryDTO[]>
+    [ApiOperation("BlogService")]
+    public interface IGetPostSummariesByPage<TRequest, TResponse> : IQuery<TRequest, TResponse> where TRequest : Request 
+                                                                                                where TResponse : class
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Seedwork
+namespace Data.Seedwork.Context
 {
     public interface IContext: IDisposable
     {

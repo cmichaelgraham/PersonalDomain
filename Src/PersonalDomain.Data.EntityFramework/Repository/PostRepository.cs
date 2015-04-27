@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Data.EntityFramework.Repository;
-using PersonalDomain.Data.Blogging.DbContext;
+using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Domain.Blogging.Post;
 
-namespace PersonalDomain.Data.EntityFramework.Repository
+namespace PersonalDomain.Data.Repository
 {
     public class PostRepository : BaseRepository<Post, IBloggingContext>, IPostRepository
     {

@@ -94,9 +94,6 @@
     </Compile>
     <Compile Include="Infrastructure\WebApiDependencyResolver.cs" />
     <Compile Include="Operations\Command\WebApiCommand.cs" />
-    <Compile Include="Operations\Request\ByIdRequest.cs" />
-    <Compile Include="Operations\Request\NullRequest.cs" />
-    <Compile Include="Operations\Response\OperationResponse.cs" />
     <Compile Include="Operations\Response\WebApiResponse.cs" />
     <Compile Include="Operations\WebApiOperation.cs" />
     <Compile Include="Operations\Query\WebApiQuery.cs" />

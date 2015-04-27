@@ -1,10 +1,11 @@
-﻿using Application.Seedwork.Operations.Command;
-using Application.Seedwork.Operations.Response;
-using PersonalDomain.Application.Blogging.Models;
+﻿using Application.Seedwork.Operations;
+using TypeScriptGenerator.Seedwork.Attributes;
 
-namespace PersonalDomain.Application.Blogging.Operations.Command
+namespace PersonalDomain.Application.Blogging.Operations
 {
-    public interface ISaveComment : ICommand<CommentDTO, Response>
+    [ApiOperation("BlogService")]
+    public interface ISaveComment<TRequest, TResponse> : ICommand<TRequest, TResponse> where TRequest : class 
+                                                                                       where TResponse : Response
     {
     }
 }

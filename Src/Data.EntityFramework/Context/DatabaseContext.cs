@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Data.Seedwork;
+using Data.Seedwork.Context;
 
 namespace Data.EntityFramework.Context
 {

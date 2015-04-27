@@ -1,4 +1,4 @@
-﻿namespace Application.Seedwork.Operations.Request
+﻿namespace Application.Seedwork.Operations
 {
     public abstract class Request
     {

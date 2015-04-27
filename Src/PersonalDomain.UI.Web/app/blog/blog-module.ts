@@ -6,7 +6,7 @@
                    .controller('detailController', PersonalDomain.Blog.Detail.BlogDetailController)
                    .directive('postDetail', () => { return new PersonalDomain.Blog.PostDetailDirective(); })
                    .directive('postSummary', () => { return new PersonalDomain.Blog.PostSummaryDirective(); })
-                   .service('blogService', BlogService)
+                   .service('blogService', PersonalDomain.Application.Operations.BlogService)
                    .config([ '$routeProvider', ($routeProvider: ng.route.IRouteProvider) => {
                         $routeProvider
                             .when('/index/:pageNumber?',

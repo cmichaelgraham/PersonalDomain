@@ -7,7 +7,7 @@
     <ProjectGuid>{BB31D9BE-9E43-4AD3-A2B4-5BC4A30C15C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PersonalDomain.Data.EntityFramework</RootNamespace>
+    <RootNamespace>PersonalDomain.Data</RootNamespace>
     <AssemblyName>PersonalDomain.Data.EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
