@@ -1,6 +1,6 @@
 ﻿module PersonalDomain.Blog.Detail {
     export class BlogDetailController implements IBlogDetailScope {
-        public Post: any;
+        public Post: PersonalDomain.Application.Blogging.Models.PostDTO;
 
         static $inject = ['$routeParams', 'blogService'];
         constructor(private $routeParams: any, private blogService: PersonalDomain.Application.Operations.BlogService) {
@@ -10,9 +10,9 @@
         }
 
         public LoadPostById = (postId: number) => {
-            //this.blogService.GetPost(postId).then((response: ng.IHttpPromiseCallbackArg<any>) => {
-            //    this.Post = response.data;
-            //});
+            this.blogService.GetPost({ Id: postId }).then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostDTO>) => {
+                this.Post = response.data;
+            });
         }
     }
 } 

@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Operations\Command\ICommand.cs" />
     <Compile Include="Operations\Response\Response.cs" />
-    <Compile Include="IController.cs" />
+    <Compile Include="Controllers\IController.cs" />
     <Compile Include="Operations\IOperation.cs" />
     <Compile Include="Operations\Request\Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

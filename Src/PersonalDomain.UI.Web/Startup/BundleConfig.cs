@@ -26,13 +26,16 @@ namespace PersonalDomain.UI.Web
             var jqueryBundle = new ScriptBundle("~/Scripts/jquery")   
                                    .Include("~/Scripts/jquery/jquery-{version}.js");
 
+            var lodashBundle = new ScriptBundle("~/Scripts/lodash")
+                                      .Include("~/Scripts/lodash/lodash-{version}.js");
+
             var modernierBundle = new ScriptBundle("~/Scripts/modernizer")   
                                       .Include("~/Scripts/modernizer/modernizr-{version}.js");
-
             bundles.Add(cssBundle);
             bundles.Add(angularBundle);
             bundles.Add(bootstrapBundle);
             bundles.Add(jqueryBundle);
+            bundles.Add(lodashBundle);
             bundles.Add(modernierBundle);
 
             BundleTable.EnableOptimizations = false;

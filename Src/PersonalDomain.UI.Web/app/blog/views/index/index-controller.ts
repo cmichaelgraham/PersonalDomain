@@ -1,6 +1,6 @@
 ﻿module PersonalDomain.Blog.Index {
     export class BlogIndexController implements IBlogIndexScope {
-        public PostSummaries: any[];
+        public PostSummaries: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
         private _pageNumber: number;
 
         static $inject = ['$routeParams', 'blogService'];
@@ -12,9 +12,9 @@
         }
 
         public LoadPostSummariesByPage = (pageIndex: number) => {
-            //this.blogService.GetPostSummariesByPage(pageIndex).then((response: ng.IHttpPromiseCallbackArg<any[]>) => {
-            //    this.PostSummaries = response.data;
-            //});
+            this.blogService.GetPostSummariesByPage({ Id: pageIndex }).then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostSummaryDTO[]>) => {
+                this.PostSummaries = response.data;
+            });
         }
 
         public Next = () => {

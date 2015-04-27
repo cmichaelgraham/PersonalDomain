@@ -1,7 +1,7 @@
 ﻿using Data.Seedwork.Context;
 using Data.Seedwork.UnitOfWork;
 
-namespace Application.Seedwork
+namespace Application.Seedwork.Controllers
 {
     public interface IController<TContext> where TContext : IContext
     {

@@ -175,6 +175,7 @@
     <None Include="Scripts\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\lodash\lodash-3.6.0.js" />
     <Content Include="Scripts\modernizer\modernizr-2.7.2.js" />
     <Content Include="Scripts\respond\respond.js" />
     <Content Include="Scripts\respond\respond.min.js" />
@@ -260,6 +261,7 @@
     <TypeScriptCompile Include="Scripts\angular\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\lodash\lodash.d.ts" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

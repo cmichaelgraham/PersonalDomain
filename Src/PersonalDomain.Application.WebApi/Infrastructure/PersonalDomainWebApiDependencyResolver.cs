@@ -1,7 +1,6 @@
-﻿using Application.Seedwork;
+﻿using Application.Seedwork.Controllers;
 using Application.WebApi.Controllers;
 using Application.WebApi.Infrastructure;
-using Application.WebApi.Operations;
 using Autofac;
 using Data.Seedwork.UnitOfWork;
 using PersonalDomain.Application.Blogging.Models;

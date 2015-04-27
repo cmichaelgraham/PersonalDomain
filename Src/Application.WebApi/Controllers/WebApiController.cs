@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Web.Http;
-using Application.Seedwork;
+using Application.Seedwork.Controllers;
 using Application.WebApi.Infrastructure;
-using Data.Seedwork;
 using Data.Seedwork.Context;
 using Data.Seedwork.UnitOfWork;
 using Newtonsoft.Json.Linq;
