@@ -23,6 +23,11 @@ namespace PersonalDomain.Application.Services
             return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
         }
 
+        public Int32 GetPostCount()
+        {
+            return PostRepository.Select(p => p.Id).Count();
+        }
+
         public PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 25)
         {
             return PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})

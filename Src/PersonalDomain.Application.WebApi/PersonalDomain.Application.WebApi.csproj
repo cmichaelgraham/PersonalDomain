@@ -114,10 +114,10 @@
     <Compile Include="Controllers\PersonalDomainController.cs" />
     <Compile Include="Operations\Command\SaveComment.cs" />
     <Compile Include="Operations\Command\SavePost.cs" />
-    <Compile Include="Operations\Query\GetPost.cs" />
-    <Compile Include="Operations\Query\GetPostSummariesByPage.cs" />
-    <Compile Include="Operations\Query\GetPostSummaryCount.cs" />
+    <Compile Include="Operations\Query\GetPostDetailById.cs" />
+    <Compile Include="Operations\Query\GetPostIndexByPage.cs" />
     <Compile Include="Operations\Request\ByIdRequest.cs" />
+    <Compile Include="Operations\Request\GetPostIndexByPageRequest.cs" />
     <Compile Include="Operations\Request\NullRequest.cs" />
     <Compile Include="Operations\Response\OperationResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

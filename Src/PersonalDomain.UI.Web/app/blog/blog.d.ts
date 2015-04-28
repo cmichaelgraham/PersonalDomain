@@ -1,10 +1,11 @@
 ﻿interface IBlogDetailScope {
-    Post: any;
+    Post: PersonalDomain.Application.Blogging.Models.PostDTO;
 }
 
 interface IBlogIndexScope {
-    PostSummaries: any[];
+    IsNextButtonVisible: () => boolean;
     Next: () => void;
+    PostSummaries: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
 }
 
 interface IPostDetailScope {

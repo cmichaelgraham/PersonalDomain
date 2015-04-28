@@ -10,7 +10,7 @@
         }
 
         public LoadPostById = (postId: number) => {
-            this.blogService.GetPost({ Id: postId }).then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostDTO>) => {
+            this.blogService.GetPostDetailById({ Id: postId }).then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostDTO>) => {
                 this.Post = response.data;
             });
         }

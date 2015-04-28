@@ -6,13 +6,13 @@ using PersonalDomain.Application.Operations.Request;
 
 namespace PersonalDomain.Application.Operations
 {
-    public class GetPostSummaryCount : WebApiQuery<ByIdRequest, PostSummaryCountDTO>, IGetPostSummaryCount<ByIdRequest, PostSummaryCountDTO>
+    public class GetPostDetailById : WebApiQuery<ByIdRequest, PostDTO>, IGetPostDetailById<ByIdRequest, PostDTO>
     {
         public IBloggingApplicationService BloggingApplicationService { get; set; }
 
-        public override PostSummaryCountDTO Execute(ByIdRequest request)
+        public override PostDTO Execute(ByIdRequest request)
         {
-            return null;
+            return BloggingApplicationService.GetPost(request.Id);
         }
     }
 }

@@ -43,16 +43,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blogging\Models\CommentDTO.cs" />
-    <Compile Include="Blogging\Models\PostDTO.cs" />
-    <Compile Include="Blogging\Models\PostSummaryCountDTO.cs" />
-    <Compile Include="Blogging\Models\PostSummaryDTO.cs" />
     <Compile Include="Blogging\Operations\Command\ISaveComment.cs" />
     <Compile Include="Blogging\Operations\Command\ISavePost.cs" />
-    <Compile Include="Blogging\Operations\Query\IGetPost.cs" />
-    <Compile Include="Blogging\Operations\Query\IGetPostSummariesByPage.cs" />
-    <Compile Include="Blogging\Operations\Query\IGetPostSummaryCount.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostDetailById.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostIndexByPage.cs" />
     <Compile Include="Blogging\Services\IBloggingApplicationService.cs" />
+    <Compile Include="Blogging\Models\CommentDTO.cs" />
+    <Compile Include="Blogging\Models\PostDTO.cs" />
+    <Compile Include="Blogging\Models\PostIndexDTO.cs" />
+    <Compile Include="Blogging\Models\PostSummaryDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
