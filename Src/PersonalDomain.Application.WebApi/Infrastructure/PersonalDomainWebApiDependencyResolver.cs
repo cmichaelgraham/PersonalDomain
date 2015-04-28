@@ -1,20 +1,20 @@
-﻿using Application.Seedwork.Controllers;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using Application.Seedwork.Controllers;
 using Application.WebApi.Controllers;
 using Application.WebApi.Infrastructure;
 using Autofac;
 using Data.Seedwork.UnitOfWork;
-using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.Controllers;
-using PersonalDomain.Application.Operations;
-using PersonalDomain.Application.Operations.Request;
-using PersonalDomain.Application.Operations.Response;
 using PersonalDomain.Application.Services;
 using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Data.Context;
 using PersonalDomain.Data.Repository;
 using PersonalDomain.Data.UnitOfWork;
+using TypeScriptGenerator.Seedwork.Attributes;
 
 namespace PersonalDomain.Application.Infrastructure
 {
@@ -27,21 +27,25 @@ namespace PersonalDomain.Application.Infrastructure
             ContainerBuilder.RegisterType<PostRepository>().As<IPostRepository>();
             ContainerBuilder.RegisterType<BloggingApplicationService>().As<IBloggingApplicationService>();
             ContainerBuilder.RegisterType<PersonalDomainController>().As<IController<IBloggingContext>>();
-            
-            //$jchadwick- TODO: Update so Operations are Registered via Reflection
-            ContainerBuilder.RegisterType<GetPostDetailById>().PropertiesAutowired();
-            ContainerBuilder.RegisterType<GetPostIndexByPage>().PropertiesAutowired();
-            ContainerBuilder.RegisterType<SaveComment>().PropertiesAutowired();
-            ContainerBuilder.RegisterType<SavePost>().PropertiesAutowired();
         }
+        private void RegisterOperation(Type operation)
+        {
+            ContainerBuilder.RegisterType(operation).PropertiesAutowired();
 
+            var requestType = operation.BaseType.GetGenericArguments()[0];
+            var responseType = operation.BaseType.GetGenericArguments()[1];
+            _webApiMethodMap.Add(operation.Name, new WebApiMethod { Operation = operation, Request = requestType, Response = responseType });
+        }
         public override void RegisterOperations()
         {
-            //$jchadwick- TODO: Update so Operations are Registered via Reflection
-            _webApiMethodMap.Add("GetPostDetailById", new WebApiMethod { Operation = typeof(GetPostDetailById), Request = typeof(ByIdRequest), Response = typeof(PostDTO) });
-            _webApiMethodMap.Add("GetPostIndexByPage", new WebApiMethod { Operation = typeof(GetPostIndexByPage), Request = typeof(GetPostIndexByPageRequest), Response = typeof(PostIndexDTO) });
-            _webApiMethodMap.Add("SaveComment", new WebApiMethod { Operation = typeof(SaveComment), Request = typeof(CommentDTO), Response = typeof(OperationResponse) });
-            _webApiMethodMap.Add("SavePost", new WebApiMethod { Operation = typeof(SavePost), Request = typeof(PostDTO), Response = typeof(OperationResponse) });
+            var apiOperations = Assembly.GetExecutingAssembly()
+                                        .GetTypes()
+                                        .Where(t => t.GetInterfaces().Any(i => i.GetCustomAttribute(typeof(ApiOperation)) != null))
+                                        .ToArray();
+
+            foreach (var apiOperation in apiOperations) {
+                RegisterOperation(apiOperation);
+            }
         }
     }
 }
