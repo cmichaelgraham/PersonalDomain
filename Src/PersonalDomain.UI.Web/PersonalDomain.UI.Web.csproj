@@ -130,6 +130,7 @@
     <Content Include="app\blog\directives\ng-post-detail\post-detail.html" />
     <Content Include="app\blog\directives\ng-post-summary\post-summary.html" />
     <Content Include="app\blog\views\about\about.html" />
+    <Content Include="app\blog\views\contact\contact.html" />
     <Content Include="app\blog\views\detail\detail.html" />
     <Content Include="app\blog\views\index\index.html" />
     <Content Include="Content\css\bootstrap\bootstrap-theme.css" />
@@ -251,6 +252,7 @@
     <TypeScriptCompile Include="app\blog\domain\models.d.ts" />
     <TypeScriptCompile Include="app\blog\domain\service.ts" />
     <TypeScriptCompile Include="app\blog\views\about\about-controller.ts" />
+    <TypeScriptCompile Include="app\blog\views\contact\contact-controller.ts" />
     <TypeScriptCompile Include="app\blog\views\detail\detail-controller.ts" />
     <TypeScriptCompile Include="app\blog\views\index\index-controller.ts" />
     <TypeScriptCompile Include="app\blog\blog-module.ts" />

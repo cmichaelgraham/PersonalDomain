@@ -3,6 +3,7 @@
         constructor() {
             angular.module('Blog', ['ngAnimate', 'ngRoute', 'ngSanitize', 'ngResource'])
                    .controller('aboutController', PersonalDomain.Blog.About.BlogAboutController)
+                   .controller('contactController', PersonalDomain.Blog.About.BlogContactController)
                    .controller('indexController', PersonalDomain.Blog.Index.BlogIndexController)
                    .controller('detailController', PersonalDomain.Blog.Detail.BlogDetailController)
                    .directive('postDetail', () => { return new PersonalDomain.Blog.PostDetailDirective(); })
@@ -16,6 +17,12 @@
                                 controllerAs: 'vm',
                                 templateUrl: '/app/blog/views/about/about.html'                                   
                             })
+                           .when('/contact',
+                           {
+                               controller: 'contactController',
+                               controllerAs: 'vm',
+                               templateUrl: '/app/blog/views/contact/contact.html'
+                           })
                             .when('/detail/:postId',
                             {
                                 controller: 'detailController',

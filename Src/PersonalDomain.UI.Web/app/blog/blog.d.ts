@@ -4,6 +4,14 @@
     Bio: string;
 }
 
+interface IBlogContactScope {
+    Name: string;
+    Email: string;
+    Phone: string;
+    Message: string;
+    sendContactRequest: () => void;
+}
+
 interface IBlogDetailScope {
     Post: PersonalDomain.Application.Blogging.Models.PostDTO;
 }
