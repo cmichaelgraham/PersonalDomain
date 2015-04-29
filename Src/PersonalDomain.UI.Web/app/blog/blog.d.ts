@@ -1,4 +1,10 @@
-﻿interface IBlogDetailScope {
+﻿interface IBlogAboutScope {
+    Name: string;
+    Tagline: string;
+    Bio: string;
+}
+
+interface IBlogDetailScope {
     Post: PersonalDomain.Application.Blogging.Models.PostDTO;
 }
 

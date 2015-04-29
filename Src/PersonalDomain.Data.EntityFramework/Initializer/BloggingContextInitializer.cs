@@ -13,7 +13,7 @@ namespace PersonalDomain.Data.Initializer
 
         public void InitializeAuthors()
         {
-            _context.Authors.Add(new Author { FirstName = "James", LastName = "Chadwick", InsertDate = DateTime.Now });
+            _context.Authors.Add(new Author { FirstName = "James", LastName = "Chadwick", Tagline = "Tagline", Bio = "James Chadwick Bio", InsertDate = DateTime.Now });
             _context.SaveChanges();
         }
 

@@ -11,16 +11,23 @@ namespace PersonalDomain.Application.Services
 {
     public class BloggingApplicationService : IBloggingApplicationService
     {
+        public IAuthorRepository AuthorRepository { get; private set; }
         public IPostRepository PostRepository { get; private set; }
 
-        public BloggingApplicationService(IPostRepository postRepository)
+        public BloggingApplicationService(IAuthorRepository authorRepository, IPostRepository postRepository)
         {
+            AuthorRepository = authorRepository;
             PostRepository = postRepository;
         }
 
-        public PostDTO GetPost(Int32 postId)
+        public AuthorDTO GetAuthor(Int32 id)
         {
-            return PostRepository.SelectById(postId, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
+            return AuthorRepository.SelectById(id, a => new AuthorDTO { FullName = a.FirstName, Tagline = a.Tagline, Bio = a.Bio });
+        }
+
+        public PostDTO GetPost(Int32 id)
+        {
+            return PostRepository.SelectById(id, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
         }
 
         public Int32 GetPostCount()

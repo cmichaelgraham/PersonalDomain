@@ -24,6 +24,7 @@ namespace PersonalDomain.Application.Infrastructure
         {
             ContainerBuilder.RegisterType<BloggingContext>().As<IBloggingContext>();
             ContainerBuilder.RegisterType<BloggingUnitOfWork>().As<IUnitOfWork<IBloggingContext>>();
+            ContainerBuilder.RegisterType<AuthorRepository>().As<IAuthorRepository>();
             ContainerBuilder.RegisterType<PostRepository>().As<IPostRepository>();
             ContainerBuilder.RegisterType<BloggingApplicationService>().As<IBloggingApplicationService>();
             ContainerBuilder.RegisterType<PersonalDomainController>().As<IController<IBloggingContext>>();

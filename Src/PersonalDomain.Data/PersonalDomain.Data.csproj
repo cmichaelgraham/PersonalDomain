@@ -47,6 +47,7 @@
     <Compile Include="Blogging\DataMappers\IPostMapper.cs" />
     <Compile Include="Blogging\Context\IBloggingContext.cs" />
     <Compile Include="Blogging\Initializer\IBloggingContextInitializer.cs" />
+    <Compile Include="Blogging\Repository\IAuthorRepository.cs" />
     <Compile Include="Blogging\Repository\IPostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

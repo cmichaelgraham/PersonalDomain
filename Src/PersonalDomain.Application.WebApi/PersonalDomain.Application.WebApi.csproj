@@ -118,6 +118,7 @@
     <Compile Include="Controllers\PersonalDomainController.cs" />
     <Compile Include="Operations\Command\SaveComment.cs" />
     <Compile Include="Operations\Command\SavePost.cs" />
+    <Compile Include="Operations\Query\GetAuthorById.cs" />
     <Compile Include="Operations\Query\GetPostDetailById.cs" />
     <Compile Include="Operations\Query\GetPostIndexByPage.cs" />
     <Compile Include="Operations\Request\ByIdRequest.cs" />

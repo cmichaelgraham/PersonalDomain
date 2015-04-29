@@ -52,6 +52,7 @@
     <Compile Include="Context\BloggingContext.cs" />
     <Compile Include="Initializer\BloggingContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AuthorRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="UnitOfWork\BloggingUnitOfWork.cs" />
   </ItemGroup>
