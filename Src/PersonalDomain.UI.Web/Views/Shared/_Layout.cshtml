@@ -7,7 +7,7 @@
         @Styles.Render("~/Content/css")
     </head>
     <body ng-controller="LayoutController">
-        <title>{{Header.Title}}</title>        
+        <title ng-bind="Header.Title"></title>        
         <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header page-scroll">
