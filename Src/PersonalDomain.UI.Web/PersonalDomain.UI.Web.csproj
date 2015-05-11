@@ -141,6 +141,8 @@
     <Content Include="Content\css\font-awesome\font-awesome.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\css\site.min.css" />
+    <Content Include="Content\css\toastr\toastr.css" />
+    <Content Include="Content\css\toastr\toastr.min.css" />
     <Content Include="Content\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\font-awesome\fontawesome-webfont.svg" />
     <Content Include="Content\images\about-bg.jpg" />
@@ -184,6 +186,8 @@
     <Content Include="Scripts\modernizer\modernizr-2.7.2.js" />
     <Content Include="Scripts\respond\respond.js" />
     <Content Include="Scripts\respond\respond.min.js" />
+    <Content Include="Scripts\toastr\toastr.js" />
+    <Content Include="Scripts\toastr\toastr.min.js" />
     <Content Include="web.config" />
     <Content Include="tslint.json" />
     <None Include="Web.Debug.config">
@@ -272,6 +276,7 @@
     <TypeScriptCompile Include="Scripts\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\lodash\lodash.d.ts" />
     <TypeScriptCompile Include="Scripts\marked\marked.d.ts" />
+    <TypeScriptCompile Include="Scripts\toastr\toastr.d.ts" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

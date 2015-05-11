@@ -1,2 +1,1 @@
-﻿/// <reference path="blog/blog-module.ts" />
-new PersonalDomain.Blog.BlogModule().start();
+﻿new PersonalDomain.Blog.BlogModule().start();

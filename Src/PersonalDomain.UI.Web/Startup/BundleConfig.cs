@@ -9,6 +9,7 @@ namespace PersonalDomain.UI.Web
             var cssBundle = new StyleBundle("~/Content/css")
                                 .Include("~/Content/css/bootstrap/bootstrap.css")
                                 .Include("~/Content/css/font-awesome/font-awesome.css")
+                                .Include("~/Content/css/toastr/toastr.css")
                                 .Include("~/Content/css/site.css");
 
             var angularBundle = new ScriptBundle("~/Scripts/angular")
@@ -31,12 +32,16 @@ namespace PersonalDomain.UI.Web
 
             var modernierBundle = new ScriptBundle("~/Scripts/modernizer")   
                                       .Include("~/Scripts/modernizer/modernizr-{version}.js");
+
+            var toastrBundle = new ScriptBundle("~/Scripts/toastr")
+                                      .Include("~/Scripts/toastr/toastr.js");
             bundles.Add(cssBundle);
             bundles.Add(angularBundle);
             bundles.Add(bootstrapBundle);
             bundles.Add(jqueryBundle);
             bundles.Add(lodashBundle);
             bundles.Add(modernierBundle);
+            bundles.Add(toastrBundle);
 
             BundleTable.EnableOptimizations = false;
         }
