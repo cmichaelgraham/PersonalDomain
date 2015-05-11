@@ -148,6 +148,7 @@
     <Content Include="Content\images\home-bg.jpg" />
     <Content Include="Content\images\post-bg.jpg" />
     <Content Include="Content\images\post-sample-image.jpg" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
