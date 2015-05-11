@@ -1,51 +1,32 @@
-﻿<header class="intro-header" style="background-image: url('../../../../Content/images/contact-bg.jpg'); ">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Contact Me</h1>
-                    <hr class="small">
-                    <span class="subheading">Have questions? I have answers (maybe).</span>
-                </div>
-            </div>
+﻿<form name="contactForm">
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Name</label>
+            <input placeholder="Name" class="form-control" ng-model="vm.Name" required />
         </div>
     </div>
-</header>
-<div class="container">
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Email</label>
+            <input placeholder="Email" class="form-control" ng-model="vm.Email" required />
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Phone</label>
+            <input placeholder="Phone" class="form-control" ng-model="vm.Phone" required />
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Message" class="form-control" ng-model="vm.Message" required></textarea>
+        </div>
+    </div>
+    <br />
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <form name="contactForm">
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Name</label>
-                        <input placeholder="Name" class="form-control" ng-model="vm.Name" required />
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Email</label>
-                        <input placeholder="Email" class="form-control" ng-model="vm.Email" required />
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Phone</label>
-                        <input placeholder="Phone" class="form-control" ng-model="vm.Phone" required />
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Message</label>
-                        <textarea rows="5" placeholder="Message" class="form-control" ng-model="vm.Message" required></textarea>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="form-group col-xs-12">
-                        <button type="submit" class="btn btn-default" ng-click="vm.sendContactRequest()" ng-disabled="!contactForm.$valid">Send</button>
-                    </div>
-                </div>
-            </form>
+        <div class="form-group col-xs-12">
+            <button type="submit" class="btn btn-default" ng-click="vm.sendContactRequest()" ng-disabled="!contactForm.$valid">Send</button>
         </div>
     </div>
-</div>
+</form>

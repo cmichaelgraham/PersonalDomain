@@ -5,13 +5,21 @@
         public Phone: string;
         public Message: string;
 
-        static $inject = ['$routeParams', 'blogService'];
-        constructor(private $routeParams: any, private blogService: PersonalDomain.Application.Operations.BlogService) {
+        static $inject = ['$routeParams', 'header', 'blogService'];
+        constructor(private $routeParams: any, private header: IHeader, private blogService: PersonalDomain.Application.Operations.BlogService) {
             var vm = this;
+
+            this.SetHeaderInfo();
         }
 
-        public sendContactRequest = () => {
+        public SendContactRequest = () => {
             //$jchadwick TODO: Figure out how I'm going to actually send emails from an Azure website / private domain
+        }
+
+        public SetHeaderInfo = () => {
+            this.header.Title = "Contact Me";
+            this.header.SubTitle = "Have questions? I have answers (maybe).";
+            this.header.ImageUrl = "../../../../Content/images/contact-bg.jpg";
         }
     }
 } 

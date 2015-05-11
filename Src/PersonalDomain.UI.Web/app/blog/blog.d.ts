@@ -1,6 +1,4 @@
 ﻿interface IBlogAboutScope {
-    Name: string;
-    Tagline: string;
     Bio: string;
 }
 
@@ -9,7 +7,7 @@ interface IBlogContactScope {
     Email: string;
     Phone: string;
     Message: string;
-    sendContactRequest: () => void;
+    SendContactRequest: () => void;
 }
 
 interface IBlogDetailScope {

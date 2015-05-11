@@ -4,11 +4,10 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@ViewBag.Title</title>
         @Styles.Render("~/Content/css")
-        @Scripts.Render("~/Scripts/modernizer")
     </head>
-    <body>
+    <body ng-controller="LayoutController">
+        <title>{{Header.Title}}</title>        
         <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header page-scroll">
@@ -28,24 +27,25 @@
                 </div>
             </div>
         </nav>        
-        @*<header class="intro-header" style="background-image: url('../../Content/images/home-bg.jpg')">
+        <header class="intro-header" style="background-image: url({{Header.ImageUrl}}); ">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="site-heading">
-                            <h1>James Chadwick</h1>
+                            <h1>{{Header.Title}}</h1>
                             <hr class="small">
-                            <span class="subheading">Self-proclaimed gentleman, with a nerdy inner child, and a passion for all things Science, Technology, and Productivity</span>
+                            <span class="subheading">{{Header.SubTitle}}</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>*@
-        @*<div class="container" ng-app>*@
-        <div ng-app>
-            <section ng-view>
-                @RenderBody()
-            </section>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" ng-view>
+                    @RenderBody()
+                </div>
+            </div>
         </div>
         <hr>
         <footer>
@@ -83,9 +83,7 @@
                 </div>
             </div>
         </footer>
-
         @Scripts.Render("~/Scripts/angular", "~/Scripts/jquery", "~/Scripts/bootstrap", "~/Scripts/lodash", "~/Scripts/modernizer")
-        @RenderSection("scripts", required: false)
         <script type="text/javascript" src="~/app/app.js"></script>
     </body>
 </html>

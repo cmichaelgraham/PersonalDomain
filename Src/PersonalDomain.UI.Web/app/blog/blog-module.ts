@@ -1,51 +1,53 @@
 ﻿module PersonalDomain.Blog {
     export class BlogModule {
         constructor() {
-            angular.module('Blog', ['ngAnimate', 'ngRoute', 'ngSanitize', 'ngResource'])
-                   .controller('aboutController', PersonalDomain.Blog.About.BlogAboutController)
-                   .controller('contactController', PersonalDomain.Blog.About.BlogContactController)
-                   .controller('indexController', PersonalDomain.Blog.Index.BlogIndexController)
-                   .controller('detailController', PersonalDomain.Blog.Detail.BlogDetailController)
+            angular.module('blog', ['ngAnimate', 'ngRoute', 'ngSanitize', 'ngResource'])
+                   .controller("LayoutController",PersonalDomain.Application.Layout.LayoutController)
+                   .controller('AboutController', PersonalDomain.Blog.About.BlogAboutController)
+                   .controller('ContactController', PersonalDomain.Blog.About.BlogContactController)
+                   .controller('IndexController', PersonalDomain.Blog.Index.BlogIndexController)
+                   .controller('DetailController', PersonalDomain.Blog.Detail.BlogDetailController)
                    .directive('postDetail', () => { return new PersonalDomain.Blog.PostDetailDirective(); })
                    .directive('postSummary', () => { return new PersonalDomain.Blog.PostSummaryDirective(); })
                    .service('blogService', PersonalDomain.Application.Operations.BlogService)
+                   .factory('header', () => { return new PersonalDomain.Application.Layout.Factories.Header(); })
                    .config([ '$routeProvider', ($routeProvider: ng.route.IRouteProvider) => {
                        $routeProvider
-                            .when('/about',
-                            {
-                                controller: 'aboutController',
-                                controllerAs: 'vm',
-                                templateUrl: '/app/blog/views/about/about.html'                                   
-                            })
+                           .when('/about',
+                           {
+                               controller: 'AboutController',
+                               controllerAs: 'vm',
+                               templateUrl: '/app/blog/views/about/about.html'                                   
+                           })
                            .when('/contact',
                            {
-                               controller: 'contactController',
+                               controller: 'ContactController',
                                controllerAs: 'vm',
                                templateUrl: '/app/blog/views/contact/contact.html'
                            })
-                            .when('/detail/:postId',
-                            {
-                                controller: 'detailController',
-                                controllerAs: 'vm',
-                                templateUrl: '/app/blog/views/detail/detail.html'
-                            })
-                            .when('/index/:pageNumber?',
-                            {
-                                controller: 'indexController',
-                                controllerAs: 'vm',
-                                templateUrl: '/app/blog/views/index/index.html'
-                            })
-                            .otherwise({
-                                redirectTo: '/index'
-                            });
-                        } ])
-                    .run([ '$route', $route => { } ]);
+                           .when('/detail/:postId',
+                           {
+                               controller: 'DetailController',
+                               controllerAs: 'vm',
+                               templateUrl: '/app/blog/views/detail/detail.html'
+                           })
+                           .when('/index/:pageNumber?',
+                           {
+                               controller: 'IndexController',
+                               controllerAs: 'vm',
+                               templateUrl: '/app/blog/views/index/index.html'
+                           })
+                           .otherwise({
+                               redirectTo: '/index'
+                           });
+                        }])
+                    .run([ '$route' , $route => { } ]);
         }
 
         public start() {
             $(document).ready(() => {
-                console.log('booting ' + 'Blog');
-                angular.bootstrap(document, ['Blog']);
+                console.log('booting ' + 'blog');
+                angular.bootstrap(document, ['blog']);
             });
         }
     }

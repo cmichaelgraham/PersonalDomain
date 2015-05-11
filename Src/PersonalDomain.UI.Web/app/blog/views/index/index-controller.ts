@@ -6,11 +6,12 @@
         public PostSummaries: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
         public PostSummaryCount: number;
 
-        static $inject = ['$routeParams', 'blogService'];
-        constructor(private $routeParams: any, private blogService: PersonalDomain.Application.Operations.BlogService) {
+        static $inject = ['$routeParams', 'header', 'blogService'];
+        constructor(private $routeParams: any, private header: IHeader, private blogService: PersonalDomain.Application.Operations.BlogService) {
             var vm = this;
 
             this._pageNumber = (!!$routeParams.pageNumber) ? $routeParams.pageNumber : 1;
+            this.SetHeaderInfo();
             this.LoadPostIndexByPage();
         }
 
@@ -33,6 +34,12 @@
         public Next = () => {
             this._pageNumber++;
             this.LoadPostIndexByPage();
+        }
+
+        private SetHeaderInfo = () => {
+            this.header.Title = "James Chadwick";
+            this.header.SubTitle = "Full-Stack Developer";
+            this.header.ImageUrl = "../../../Content/images/home-bg.jpg";
         }
     }
 } 
