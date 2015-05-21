@@ -1,0 +1,9 @@
+﻿<div class="row">
+    <div class="col-sm-6">
+        <textarea class="form-control" ng-model="vm.ContentMarkdown"></textarea>
+    </div>
+    <div class="col-sm-6">
+        <div ng-bind-html="vm.GetContentMarkup()"></div>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="vm.Save()">Save</button>
+</div>

@@ -3,6 +3,7 @@ import LayoutController = require('../layout/views/layout-controller');
 import BlogAboutController = require('./views/about/about-controller');
 import BlogContactController = require('./views/contact/contact-controller');
 import BlogDetailController = require('./views/detail/detail-controller');
+import BlogEditController = require('./views/edit/edit-controller');
 import BlogIndexController = require('./views/index/index-controller');
 
 //Directives
@@ -21,8 +22,9 @@ class BlogModule {
             .controller("LayoutController", LayoutController)
             .controller('AboutController', BlogAboutController)
             .controller('ContactController', BlogContactController)
-            .controller('IndexController', BlogIndexController)
             .controller('DetailController', BlogDetailController)
+            .controller('EditController', BlogEditController)
+            .controller('IndexController', BlogIndexController)
             .directive('postDetail', () => { return new PostDetailDirective(); })
             .directive('postSummary', () => { return new PostSummaryDirective(); })
             .service('blogService', BlogService)
@@ -46,6 +48,11 @@ class BlogModule {
                         controller: 'DetailController',
                         controllerAs: 'vm',
                         templateUrl: '/app/blog/views/detail/detail.html'
+                    })
+                    .when('/edit/:postId?', {
+                        controller: 'EditController',
+                        controllerAs: 'vm',
+                        templateUrl: '/app/blog/views/edit/edit.html'
                     })
                     .when('/index/:pageNumber?',
                     {

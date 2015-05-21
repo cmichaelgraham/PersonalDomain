@@ -132,6 +132,7 @@
     <Content Include="app\blog\views\about\about.html" />
     <Content Include="app\blog\views\contact\contact.html" />
     <Content Include="app\blog\views\detail\detail.html" />
+    <Content Include="app\blog\views\edit\edit.html" />
     <Content Include="app\blog\views\index\index.html" />
     <Content Include="app\main.js" />
     <Content Include="Content\css\bootstrap\bootstrap-theme.css" />
@@ -256,19 +257,18 @@
     <Content Include="Scripts\jquery\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\blog\blog.d.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-detail\post-detail.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-summary\post-summary.ts" />
     <TypeScriptCompile Include="app\blog\domain\enums.ts" />
     <TypeScriptCompile Include="app\blog\domain\models.d.ts" />
     <TypeScriptCompile Include="app\blog\domain\service.ts" />
+    <TypeScriptCompile Include="app\blog\views\edit\edit-controller.ts" />
     <TypeScriptCompile Include="app\layout\factories\header.ts" />
     <TypeScriptCompile Include="app\blog\views\about\about-controller.ts" />
     <TypeScriptCompile Include="app\blog\views\contact\contact-controller.ts" />
     <TypeScriptCompile Include="app\blog\views\detail\detail-controller.ts" />
     <TypeScriptCompile Include="app\blog\views\index\index-controller.ts" />
     <TypeScriptCompile Include="app\blog\blog-module.ts" />
-    <TypeScriptCompile Include="app\layout\layout.d.ts" />
     <TypeScriptCompile Include="app\layout\views\layout-controller.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\angular\angular-cookies.d.ts" />

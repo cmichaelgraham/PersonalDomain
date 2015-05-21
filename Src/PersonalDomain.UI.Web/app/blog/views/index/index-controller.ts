@@ -1,6 +1,7 @@
 ﻿import BlogService = require('../../domain/service');
+import Header = require('../../../layout/factories/header');
 
-class BlogIndexController implements IBlogIndexScope {
+class BlogIndexController {
     private _pageNumber: number;
     private _pageSize: number = 10;
 
@@ -8,7 +9,7 @@ class BlogIndexController implements IBlogIndexScope {
     public PostSummaryCount: number;
 
     static $inject = ['$routeParams', 'header', 'blogService'];
-    constructor(private $routeParams: any, private header: IHeader, private blogService: BlogService) {
+    constructor(private $routeParams: any, private header: Header, private blogService: BlogService) {
         var vm = this;
 
         this._pageNumber = (!!$routeParams.pageNumber) ? $routeParams.pageNumber : 1;
@@ -26,9 +27,9 @@ class BlogIndexController implements IBlogIndexScope {
             PageSize: this._pageSize
         }
 
-            this.blogService.GetPostIndexByPage(request).then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostIndexDTO>) => {
-            this.PostSummaries = response.data.PostSummaries;
-            this.PostSummaryCount = response.data.PostSummaryCount;
+        this.blogService.GetPostIndexByPage(request).then((postIndex: PersonalDomain.Application.Blogging.Models.PostIndexDTO) => {
+            this.PostSummaries = postIndex.PostSummaries;
+            this.PostSummaryCount = postIndex.PostSummaryCount;
         });
     }
 
