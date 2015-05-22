@@ -1,5 +1,5 @@
-﻿import BlogService = require('../../domain/service');
-import Header = require('../../../layout/factories/header');
+﻿import BlogService = require('blog/domain/service');
+import Header = require('layout/factories/header');
 
 class BlogDetailController {
     public Post: PersonalDomain.Application.Blogging.Models.PostDTO;

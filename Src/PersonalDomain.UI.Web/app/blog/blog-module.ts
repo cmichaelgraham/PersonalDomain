@@ -1,20 +1,20 @@
 ﻿//Controllers
-import LayoutController = require('../layout/views/layout-controller');
-import BlogAboutController = require('./views/about/about-controller');
-import BlogContactController = require('./views/contact/contact-controller');
-import BlogDetailController = require('./views/detail/detail-controller');
-import BlogEditController = require('./views/edit/edit-controller');
-import BlogIndexController = require('./views/index/index-controller');
+import LayoutController = require('layout/views/layout-controller');
+import BlogAboutController = require('blog/views/about/about-controller');
+import BlogContactController = require('blog/views/contact/contact-controller');
+import BlogDetailController = require('blog/views/detail/detail-controller');
+import BlogEditController = require('blog/views/edit/edit-controller');
+import BlogIndexController = require('blog/views/index/index-controller');
 
 //Directives
-import PostDetailDirective = require('./directives/ng-post-detail/post-detail');
-import PostSummaryDirective = require('./directives/ng-post-summary/post-summary');
+import PostDetailDirective = require('blog/directives/ng-post-detail/post-detail');
+import PostSummaryDirective = require('blog/directives/ng-post-summary/post-summary');
 
 //Services
-import BlogService = require('./domain/service');
+import BlogService = require('blog/domain/service');
 
 //Factories
-import Header = require('../layout/factories/header')
+import Header = require('layout/factories/header')
 
 class BlogModule {
     constructor() {

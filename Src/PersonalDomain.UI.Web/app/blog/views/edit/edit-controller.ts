@@ -1,13 +1,12 @@
-﻿import BlogService = require('../../domain/service');
-import Header = require('../../../layout/factories/header');
+﻿import BlogService = require('blog/domain/service');
+import Header = require('layout/factories/header');
+import MarkupGenerator = require('infrastructure/markup-generator/markup-generator');
 
 class BlogEditController {
     public Id: number;
     public Title: string;
     public Subtitle: string;
     public ContentMarkdown: string;
-
-    private _markedOptions: MarkedOptions = { gfm: true, tables: true, breaks: false, pedantic: false, sanitize: false, smartLists: true, smartypants: false };
 
     static $inject = ['$routeParams', 'header', 'blogService'];
     constructor(private $routeParams: any, private header: Header, private blogService: BlogService) {
@@ -16,8 +15,8 @@ class BlogEditController {
         this.SetHeaderInfo();
     }
 
-    public GetContentMarkup: () => string = () => {
-        return marked(this.ContentMarkdown, this._markedOptions);
+    public ContentMarkup: () => string = () => {
+        return MarkupGenerator.GenerateMarkup(this.ContentMarkdown);
     }
 
     public LoadPostById = (postId: number) => {

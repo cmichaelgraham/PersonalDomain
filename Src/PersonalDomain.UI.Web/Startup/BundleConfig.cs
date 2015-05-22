@@ -9,6 +9,7 @@ namespace PersonalDomain.UI.Web
             var cssBundle = new StyleBundle("~/Content/css")
                                     .Include("~/Content/css/bootstrap/bootstrap.css")
                                     .Include("~/Content/css/font-awesome/font-awesome.css")
+                                    .Include("~/Content/css/highlight/default.css")
                                     .Include("~/Content/css/toastr/toastr.css")
                                     .Include("~/Content/css/site.css");
 
@@ -24,6 +25,9 @@ namespace PersonalDomain.UI.Web
                                     .Include("~/Scripts/bootstrap/bootstrap.js")
                                     .Include("~/Scripts/respond/respond.js");
 
+            var highlightBundle = new ScriptBundle("~/Scripts/highlight")
+                                    .Include("~/Scripts/highlight/highlight.js");
+
             var jqueryBundle = new ScriptBundle("~/Scripts/jquery")   
                                     .Include("~/Scripts/jquery/jquery-{version}.js");
 
@@ -37,10 +41,12 @@ namespace PersonalDomain.UI.Web
                                     .Include("~/Scripts/modernizer/modernizr-{version}.js");
 
             var toastrBundle = new ScriptBundle("~/Scripts/toastr")
-                                      .Include("~/Scripts/toastr/toastr.js");
+                                    .Include("~/Scripts/toastr/toastr.js");
+
             bundles.Add(cssBundle);
             bundles.Add(angularBundle);
             bundles.Add(bootstrapBundle);
+            bundles.Add(highlightBundle);
             bundles.Add(jqueryBundle);
             bundles.Add(lodashBundle);
             bundles.Add(markedBundle);
