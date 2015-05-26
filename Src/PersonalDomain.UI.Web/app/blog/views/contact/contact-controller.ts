@@ -7,8 +7,8 @@ class BlogContactController {
     public Phone: string;
     public Message: string;
 
-    static $inject = ['$routeParams', 'header', 'blogService'];
-    constructor(private $routeParams: any, private header: Header, private blogService: BlogService) {
+    static $inject = ['header', 'blogService'];
+    constructor(private header: Header, private blogService: BlogService) {
         var vm = this;
 
         this.SetHeaderInfo();

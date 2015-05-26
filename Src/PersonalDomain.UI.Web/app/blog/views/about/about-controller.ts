@@ -4,8 +4,8 @@ import Header = require('layout/factories/header');
 class BlogAboutController {
     public Bio: string;
 
-    static $inject = ['$routeParams', 'header', 'blogService'];
-    constructor(private $routeParams: any, private header: Header, private blogService: BlogService) {
+    static $inject = ['header', 'blogService'];
+    constructor(private header: Header, private blogService: BlogService) {
         var vm = this;
 
         this.LoadAuthorById(1);
