@@ -24,10 +24,18 @@ namespace PersonalDomain.Data.Initializer
         public void InitializePosts()
         {
             var authorId = _context.Authors.Select(a => a.Id).First();
-            _context.Posts.Add(new Post { AuthorId = authorId, Title = "Man must explore", Subtitle = "Problems look mighty small from 150 miles up...", InsertDate = DateTime.Now });
-            _context.Posts.Add(new Post { AuthorId = authorId, Title = "Don't waste my time", InsertDate = DateTime.Now });
-            _context.Posts.Add(new Post { AuthorId = authorId, Title = "Science has not yet mastered prophecy", Subtitle = "We predict too much...", InsertDate = DateTime.Now });
-            _context.Posts.Add(new Post { AuthorId = authorId, Title = "Failure is not an option", Subtitle = "Many say exploration is part of our destiny...", InsertDate = DateTime.Now });
+
+            var randomNumberGenerator = new Random();
+            var blogPostSeed = randomNumberGenerator.Next(25, 50);
+
+            for (int i = 0; i < blogPostSeed; i++)
+            {
+                var title = String.Format("Blog Post {0}", i);
+                var subTitle = String.Format("Sub Title For Blog Post {0}", i);
+
+                _context.Posts.Add(new Post { AuthorId = authorId, Title = title, Subtitle = subTitle, InsertDate = DateTime.Now });
+            }
+
             _context.SaveChanges();
         }
 
