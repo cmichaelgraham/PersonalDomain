@@ -1,5 +1,26 @@
-﻿<div class="row">
-    <textarea class="form-control" ng-model="vm.ContentMarkdown"></textarea><br/>
-    <div ng-bind-html="vm.ContentMarkup()"></div>
-    <button type="submit" class="btn btn-default" ng-click="vm.Save()">Save</button>
-</div>
+﻿<form name="editForm">
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Title</label>
+            <input placeholder="Title" class="form-control" ng-model="vm.Title" required />
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Subtitle</label>
+            <input placeholder="Subtitle" class="form-control" ng-model="vm.Subtitle" required />
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Content</label>
+            <input placeholder="Content" class="form-control" ng-model="vm.Content" required />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <button type="submit" class="btn btn-default" ng-click="vm.Save()">Save</button>
+        </div>
+    </div>
+</form>

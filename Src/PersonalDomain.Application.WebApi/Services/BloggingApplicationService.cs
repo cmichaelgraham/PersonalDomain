@@ -45,13 +45,14 @@ namespace PersonalDomain.Application.Services
 
         public Response SavePost(PostDTO post)
         {
-            if (post.Id == 0)
+            var postEntity = PostFactory.Create(post.Id, 1, post.Title, post.Subtitle, post.Content);
+            if (postEntity.Id == 0)
             {
-                PostRepository.Add(PostFactory.Create());
+                PostRepository.Add(postEntity);
             }
             else
             {
-                PostRepository.Update(PostFactory.Create());
+                PostRepository.Update(postEntity);
             }
 
             return new OperationResponse { IsSuccess = true };

@@ -22,7 +22,7 @@ namespace PersonalDomain.Application.Infrastructure
     {
         public override void RegisterComponents()
         {
-            ContainerBuilder.RegisterType<BloggingContext>().As<IBloggingContext>();
+            ContainerBuilder.RegisterType<BloggingContext>().As<IBloggingContext>().InstancePerRequest();
             ContainerBuilder.RegisterType<BloggingUnitOfWork>().As<IUnitOfWork<IBloggingContext>>();
             ContainerBuilder.RegisterType<AuthorRepository>().As<IAuthorRepository>();
             ContainerBuilder.RegisterType<PostRepository>().As<IPostRepository>();

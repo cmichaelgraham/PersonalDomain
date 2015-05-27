@@ -24,7 +24,7 @@ namespace Data.EntityFramework.UnitOfWork
 
         public void Commit()
         {
-            Context.ExecuteCommand("COMMIT");
+            Context.SaveChanges();
         }
 
         public void Rollback()

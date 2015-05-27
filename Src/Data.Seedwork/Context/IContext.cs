@@ -6,5 +6,6 @@ namespace Data.Seedwork.Context
     {
         void ExecuteCommand(String sqlCommand, params Object[] parameters);
         void MapEntities();
+        void SaveChanges();
     }
 }

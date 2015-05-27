@@ -6,33 +6,38 @@ class BlogEditController {
     public Id: number;
     public Title: string;
     public Subtitle: string;
-    public ContentMarkdown: string;
+    public Content: string;
 
     static $inject = ['$routeParams', 'header', 'blogService'];
     constructor(private $routeParams: any, private header: Header, private blogService: BlogService) {
         var vm = this;
 
+        this.Id = (!!$routeParams.postId) ? $routeParams.postId : 0;
+        if (this.Id != 0) {
+            this.LoadPostById(this.Id);
+        }
+
         this.SetHeaderInfo();
     }
 
-    public ContentMarkup: () => string = () => {
-        return MarkupGenerator.GenerateMarkup(this.ContentMarkdown);
+    public Markup: () => string = () => {
+        return MarkupGenerator.GenerateMarkup(this.Content);
     }
 
     public LoadPostById = (postId: number) => {
         this.blogService.GetPostDetailById({ Id: postId }).then((post: PersonalDomain.Application.Blogging.Models.PostDTO) => {
             this.Title = post.Title;
             this.Subtitle = post.Subtitle;
-            this.ContentMarkdown = post.Content;
+            this.Content = post.Content;
         });
     }
 
     public Save = () => {
         var postDto: PersonalDomain.Application.Blogging.Models.PostDTO = {
-            Id: 999, //this.Id,
-            Title: "New Title", //this.Title,
-            Subtitle: "New Subtitle", //this.Subtitle,
-            Content: this.ContentMarkdown,
+            Id: this.Id,
+            Title: this.Title,
+            Subtitle: this.Subtitle,
+            Content: this.Content,
             Comments: []
         };
 

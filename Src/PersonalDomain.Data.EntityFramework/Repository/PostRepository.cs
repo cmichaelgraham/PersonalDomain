@@ -17,6 +17,8 @@ namespace PersonalDomain.Data.Repository
 
         public override void Add(Post entity)
         {
+            entity.InsertDate = DateTime.Now;
+
             Context.Posts.Add(entity);
         }
 
@@ -37,6 +39,11 @@ namespace PersonalDomain.Data.Repository
 
         public override void Update(Post entity)
         {
+            var dbPost = Context.Posts.Single(p => p.Id == entity.Id);
+            dbPost.Title = entity.Title;
+            dbPost.Subtitle = entity.Subtitle;
+            dbPost.Content = entity.Content;
+            dbPost.UpdateDate = DateTime.Now;
         }
     }
 }

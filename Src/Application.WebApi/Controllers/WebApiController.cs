@@ -34,7 +34,7 @@ namespace Application.WebApi.Controllers
             try
             {
                 var response = operation.Execute((TRequest)request);
-                //UnitOfWork.Commit();
+                UnitOfWork.Commit();
                 return response;
             }
             catch (Exception)
