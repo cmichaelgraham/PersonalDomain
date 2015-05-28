@@ -8,8 +8,8 @@ class BlogIndexController {
     public PostSummaries: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
     public PostSummaryCount: number;
 
-    static $inject = ['$routeParams', 'header', 'blogService'];
-    constructor(private $routeParams: any, private header: Header, private blogService: BlogService) {
+    static $inject = ['$routeParams', '$location', 'header', 'blogService'];
+    constructor(private $routeParams: any, private $location: ng.ILocationService, private header: Header, private blogService: BlogService) {
         var vm = this;
 
         this._pageNumber = (!!$routeParams.pageNumber) ? $routeParams.pageNumber : 1;
@@ -35,7 +35,7 @@ class BlogIndexController {
 
     public Next = () => {
         this._pageNumber++;
-        this.LoadPostIndexByPage();
+        this.$location.path('/index/' + this._pageNumber);
     }
 
     private SetHeaderInfo = () => {
