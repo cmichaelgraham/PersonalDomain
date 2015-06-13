@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using Data.Seedwork.Context;
+using Framework.Core.Data.Context;
 using PersonalDomain.Domain.Blogging.Post;
 
 namespace PersonalDomain.Data.Blogging.Context

@@ -1,4 +1,4 @@
-﻿using Data.EntityFramework.DataMapper;
+﻿using Framework.DataAcess.EntityFramework.DataMapper;
 using PersonalDomain.Data.Blogging.DataMappers;
 using PersonalDomain.Domain.Blogging.Post;
 

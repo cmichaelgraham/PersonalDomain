@@ -1,5 +1,5 @@
 ﻿using System;
-using Data.Seedwork.Repository;
+using Framework.Core.Data.Repository;
 using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Domain.Blogging.Post;
 

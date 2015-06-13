@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Application.Seedwork.Operations;
+using Framework.Core.Application.Operations;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.Operations.Response;

@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Framework.Core.Application">
+      <HintPath>..\packages\Framework.Core.Application.1.0.0.0\lib\net45\Framework.Core.Application.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.Core.Data">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.Core.Domain">
+      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,25 +68,8 @@
     <Compile Include="Blogging\Models\PostSummaryDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Application.Seedwork\Application.Seedwork.csproj">
-      <Project>{3cd419f7-bcb6-463e-999e-8a81c69a5f7a}</Project>
-      <Name>Application.Seedwork</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </ProjectReference>
-    <ProjectReference Include="..\Data.Seedwork\Data.Seedwork.csproj">
-      <Project>{2EB542F3-4D54-48F9-A9CF-A164876FEA9D}</Project>
-      <Name>Data.Seedwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.Seedwork\Domain.Seedwork.csproj">
-      <Project>{d9cbacd1-b854-42f9-914a-510cf581eb21}</Project>
-      <Name>Domain.Seedwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonalDomain.Data\PersonalDomain.Data.csproj">
-      <Project>{E4727D14-1AA2-4B25-8DA3-481BB87E348B}</Project>
-      <Name>PersonalDomain.Data</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

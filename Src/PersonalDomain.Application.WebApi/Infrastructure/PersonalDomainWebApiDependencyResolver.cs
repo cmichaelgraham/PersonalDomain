@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using Application.Seedwork.Controllers;
-using Application.WebApi.Controllers;
-using Application.WebApi.Infrastructure;
 using Autofac;
-using Data.Seedwork.UnitOfWork;
+using Framework.Application.WebApi.Controllers;
+using Framework.Application.WebApi.Infrastructure;
+using Framework.Core.Application.Controllers;
+using Framework.Core.Data.UnitOfWork;
 using PersonalDomain.Application.Blogging.Services;
 using PersonalDomain.Application.Controllers;
 using PersonalDomain.Application.Services;

@@ -33,6 +33,12 @@
     <Reference Include="EntityFramework">
       <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Framework.Core.Data">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core.Domain">
+      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,16 +57,10 @@
     <Compile Include="Blogging\Repository\IPostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Data.Seedwork\Data.Seedwork.csproj">
-      <Project>{2eb542f3-4d54-48f9-a9cf-a164876fea9d}</Project>
-      <Name>Data.Seedwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.Seedwork\Domain.Seedwork.csproj">
-      <Project>{D9CBACD1-B854-42F9-914A-510CF581EB21}</Project>
-      <Name>Domain.Seedwork</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\PersonalDomain.Domain\PersonalDomain.Domain.csproj">
       <Project>{1881c8c5-d180-4346-8faa-8d9f6de5c841}</Project>
       <Name>PersonalDomain.Domain</Name>

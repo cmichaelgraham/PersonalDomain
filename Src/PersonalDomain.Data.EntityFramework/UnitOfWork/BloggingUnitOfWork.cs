@@ -1,4 +1,4 @@
-﻿using Data.EntityFramework.UnitOfWork;
+﻿using Framework.DataAcess.EntityFramework.UnitOfWork;
 using PersonalDomain.Data.Blogging.Context;
 
 namespace PersonalDomain.Data.UnitOfWork

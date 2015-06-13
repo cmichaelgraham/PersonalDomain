@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Domain.Seedwork.Entities;
+using Framework.Core.Domain.Entities;
 
 namespace PersonalDomain.Domain.Blogging.Post
 {

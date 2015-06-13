@@ -1,4 +1,4 @@
-﻿using Application.WebApi.Operations;
+﻿using Framework.Application.WebApi.Operations;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Operations;
 using PersonalDomain.Application.Blogging.Services;

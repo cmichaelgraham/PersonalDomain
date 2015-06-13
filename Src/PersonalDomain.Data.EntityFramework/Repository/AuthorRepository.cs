@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Data.EntityFramework.Repository;
+using Framework.DataAcess.EntityFramework.Repository;
 using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Domain.Blogging.Post;

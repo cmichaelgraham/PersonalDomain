@@ -30,11 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\..\Lib\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core.Data">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core.Domain">
+      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DataAccess.EntityFramework">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.0\lib\Framework.DataAccess.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,20 +66,12 @@
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="UnitOfWork\BloggingUnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Data.EntityFramework\Data.EntityFramework.csproj">
-      <Project>{D4490446-58B7-4229-ABC0-5D37201E19BD}</Project>
-      <Name>Data.EntityFramework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data.Seedwork\Data.Seedwork.csproj">
-      <Project>{2EB542F3-4D54-48F9-A9CF-A164876FEA9D}</Project>
-      <Name>Data.Seedwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.Seedwork\Domain.Seedwork.csproj">
-      <Project>{D9CBACD1-B854-42F9-914A-510CF581EB21}</Project>
-      <Name>Domain.Seedwork</Name>
-    </ProjectReference>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\PersonalDomain.Data\PersonalDomain.Data.csproj">
       <Project>{E4727D14-1AA2-4B25-8DA3-481BB87E348B}</Project>
       <Name>PersonalDomain.Data</Name>

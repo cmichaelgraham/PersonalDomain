@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Data.EntityFramework.Initializer;
+using Framework.DataAcess.EntityFramework.Initializer;
 using PersonalDomain.Data.Blogging.Initializer;
 using PersonalDomain.Data.Context;
 using PersonalDomain.Domain.Blogging.Post;

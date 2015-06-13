@@ -40,24 +40,44 @@
   <ItemGroup>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Autofac.dll</HintPath>
+      <HintPath>..\packages\Framework.Infrastructure.1.0.0\lib\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.WebApi">
-      <HintPath>..\..\Lib\Autofac.Integration.WebApi.dll</HintPath>
+      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Application.WebApi">
+      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Framework.Application.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.Core.Application">
+      <HintPath>..\packages\Framework.Core.Application.1.0.0.0\lib\net45\Framework.Core.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core.Data">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core.Domain">
+      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DataAccess.EntityFramework">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.0\lib\Framework.DataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Infrastructure">
+      <HintPath>..\packages\Framework.Infrastructure.1.0.0\lib\Framework.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -72,17 +92,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Web.Http.dll</HintPath>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\..\Lib\System.Web.Optimization.dll</HintPath>
@@ -129,26 +149,6 @@
     <Compile Include="Services\BloggingApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Application.Seedwork\Application.Seedwork.csproj">
-      <Project>{3CD419F7-BCB6-463E-999E-8A81C69A5F7A}</Project>
-      <Name>Application.Seedwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Application.WebApi\Application.WebApi.csproj">
-      <Project>{2987A9BE-9FEF-4FAB-B276-407589F80DF9}</Project>
-      <Name>Application.WebApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data.EntityFramework\Data.EntityFramework.csproj">
-      <Project>{D4490446-58B7-4229-ABC0-5D37201E19BD}</Project>
-      <Name>Data.EntityFramework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data.Seedwork\Data.Seedwork.csproj">
-      <Project>{2EB542F3-4D54-48F9-A9CF-A164876FEA9D}</Project>
-      <Name>Data.Seedwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.Seedwork\Domain.Seedwork.csproj">
-      <Project>{D9CBACD1-B854-42F9-914A-510CF581EB21}</Project>
-      <Name>Domain.Seedwork</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PersonalDomain.Application\PersonalDomain.Application.csproj">
       <Project>{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}</Project>
       <Name>PersonalDomain.Application</Name>
@@ -165,10 +165,9 @@
       <Project>{1881C8C5-D180-4346-8FAA-8D9F6DE5C841}</Project>
       <Name>PersonalDomain.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PersonalDomain.Infrastructure\PersonalDomain.Infrastructure.csproj">
-      <Project>{56186f62-f94d-4251-ab03-5ef9614ce8fd}</Project>
-      <Name>PersonalDomain.Infrastructure</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
