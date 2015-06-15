@@ -40,9 +40,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\..\Lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Framework.Infrastructure.1.0.0\lib\Autofac.dll</HintPath>
@@ -50,68 +47,23 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\..\Lib\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Autofac.Integration.WebApi.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\AuthenticationAPI\Lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\Lib\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\AuthenticationAPI\Lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Framework.Application.WebApi">
       <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Framework.Application.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Application">
-      <HintPath>..\packages\Framework.Core.Application.1.0.0.0\lib\net45\Framework.Core.Application.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Data">
-      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Domain">
-      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
     </Reference>
     <Reference Include="Framework.Infrastructure">
       <HintPath>..\packages\Framework.Infrastructure.1.0.0\lib\Framework.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.WebRequest" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Web.Http.WebHost.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\System.Web.Mvc.dll</HintPath>
@@ -119,31 +71,17 @@
     <Reference Include="System.Web.Optimization">
       <HintPath>..\..\Lib\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Web.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\System.Web.WebPages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="WebGrease">
-      <HintPath>..\..\Lib\WebGrease.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\blog\directives\ng-post-detail\post-detail.html" />
@@ -237,14 +175,6 @@
     <ProjectReference Include="..\PersonalDomain.Application.WebApi\PersonalDomain.Application.WebApi.csproj">
       <Project>{76c77360-97e3-4075-aca4-e3790f34d4d6}</Project>
       <Name>PersonalDomain.Application.WebApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonalDomain.Application\PersonalDomain.Application.csproj">
-      <Project>{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}</Project>
-      <Name>PersonalDomain.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PersonalDomain.Data\PersonalDomain.Data.csproj">
-      <Project>{E4727D14-1AA2-4B25-8DA3-481BB87E348B}</Project>
-      <Name>PersonalDomain.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
