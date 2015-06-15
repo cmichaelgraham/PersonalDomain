@@ -49,16 +49,27 @@
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\AuthenticationAPI\Lib\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\..\AuthenticationAPI\Lib\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Framework.Application.WebApi">
       <HintPath>..\packages\Framework.Application.WebApi.1.0.0.0\lib\Framework.Application.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="Framework.DataAccess.EntityFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\Framework.DataAccess.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Framework.Infrastructure">
       <HintPath>..\packages\Framework.Infrastructure.1.0.0\lib\Framework.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.Abstractions" />
