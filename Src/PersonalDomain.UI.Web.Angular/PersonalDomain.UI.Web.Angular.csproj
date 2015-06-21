@@ -130,6 +130,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\account\account-module.ts" />
+    <TypeScriptCompile Include="app\account\domain\enums.ts" />
+    <TypeScriptCompile Include="app\account\domain\models.d.ts" />
+    <TypeScriptCompile Include="app\account\domain\service.ts" />
     <TypeScriptCompile Include="app\blog\blog-module.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-detail\post-detail.ts" />
     <TypeScriptCompile Include="app\blog\directives\ng-post-summary\post-summary.ts" />
@@ -155,6 +159,9 @@
     <TypeScriptCompile Include="scripts\lodash\lodash.d.ts" />
     <TypeScriptCompile Include="scripts\marked\marked.d.ts" />
     <TypeScriptCompile Include="scripts\toastr\toastr.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\account\views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

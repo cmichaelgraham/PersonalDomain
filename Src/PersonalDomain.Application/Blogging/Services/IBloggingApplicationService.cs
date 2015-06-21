@@ -10,7 +10,7 @@ namespace PersonalDomain.Application.Blogging.Services
         PostDTO GetPost(Int32 id);
         Int32 GetPostCount();
         PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize);
-        Response SavePost(PostDTO post);
-        Response SaveComment(CommentDTO comment);
+        void SavePost(PostDTO post);
+        void SaveComment(CommentDTO comment);
     }
 }

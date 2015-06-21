@@ -12,7 +12,8 @@ namespace PersonalDomain.Application.Operations
 
         public override OperationResponse Execute(CommentDTO request)
         {
-            return (OperationResponse) BloggingApplicationService.SaveComment(request);
+            BloggingApplicationService.SaveComment(request);
+            return new OperationResponse{ IsSuccess = true };
         }
     }
 }

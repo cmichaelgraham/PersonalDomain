@@ -43,7 +43,7 @@ namespace PersonalDomain.Application.Services
                                  .ToArray();
         }
 
-        public Response SavePost(PostDTO post)
+        public void SavePost(PostDTO post)
         {
             var postEntity = PostFactory.Create(post.Id, 1, post.Title, post.Subtitle, post.Content);
             if (postEntity.Id == 0)
@@ -54,15 +54,12 @@ namespace PersonalDomain.Application.Services
             {
                 PostRepository.Update(postEntity);
             }
-
-            return new OperationResponse { IsSuccess = true };
         }
 
-        public Response SaveComment(CommentDTO comment)
+        public void SaveComment(CommentDTO comment)
         {
             var post = PostRepository.SelectById(comment.PostId, p => new PostDTO());
             post.Comments.Add(comment);
-            return new OperationResponse { IsSuccess = true };
         }
     }
 }

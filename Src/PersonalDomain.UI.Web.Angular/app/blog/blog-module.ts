@@ -14,7 +14,7 @@ import PostSummaryDirective = require('blog/directives/ng-post-summary/post-summ
 import BlogService = require('blog/domain/service');
 
 //Factories
-import Header = require('layout/factories/header')
+import Header = require('layout/factories/header');
 
 class BlogModule {
     constructor() {

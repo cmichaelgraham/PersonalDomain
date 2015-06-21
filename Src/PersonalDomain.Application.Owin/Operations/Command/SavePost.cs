@@ -12,7 +12,8 @@ namespace PersonalDomain.Application.Operations
 
         public override OperationResponse Execute(PostDTO request)
         {
-            return (OperationResponse) BloggingApplicationService.SavePost(request);
+            BloggingApplicationService.SavePost(request);
+            return new OperationResponse { IsSuccess = true };
         }
     }
 }
