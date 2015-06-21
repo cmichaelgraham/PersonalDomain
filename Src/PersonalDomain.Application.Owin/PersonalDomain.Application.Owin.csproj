@@ -55,7 +55,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthenticationApplicationStartup.cs" />
+    <Compile Include="PersonalDomainApplicationStartup.cs" />
     <Compile Include="Configuration\PersonalDomainWebApiConfig.cs" />
     <Compile Include="Controllers\PersonalDomainController.cs" />
     <Compile Include="Infrastructure\PersonalDomainOwinDependencyResolver.cs" />
