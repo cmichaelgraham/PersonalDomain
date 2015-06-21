@@ -6,35 +6,35 @@ class BlogService {
     }
 
     public SaveComment: (request: PersonalDomain.Application.Blogging.Models.CommentDTO) => ng.IPromise<PersonalDomain.Application.Operations.Response.OperationResponse> = (request) => {
-	    return this.$http({ method: 'post', url: '/api/SaveComment', data: request})
+	    return this.$http({ method: 'post', url: 'http://blog.jamespchadwick.com/api/SaveComment', data: request})
                    .then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Operations.Response.OperationResponse>): PersonalDomain.Application.Operations.Response.OperationResponse => {
                         return <PersonalDomain.Application.Operations.Response.OperationResponse>response.data;
                     });
     }
 
     public SavePost: (request: PersonalDomain.Application.Blogging.Models.PostDTO) => ng.IPromise<PersonalDomain.Application.Operations.Response.OperationResponse> = (request) => {
-	    return this.$http({ method: 'post', url: '/api/SavePost', data: request})
+        return this.$http({ method: 'post', url: 'http://blog.jamespchadwick.com/api/SavePost', data: request})
                    .then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Operations.Response.OperationResponse>): PersonalDomain.Application.Operations.Response.OperationResponse => {
                         return <PersonalDomain.Application.Operations.Response.OperationResponse>response.data;
                     });
     }
 
     public GetAuthorById: (request: PersonalDomain.Application.Operations.Request.ByIdRequest) => ng.IPromise<PersonalDomain.Application.Blogging.Models.AuthorDTO> = (request) => {
-	    return this.$http({ method: 'post', url: '/api/GetAuthorById', data: request})
+        return this.$http({ method: 'post', url: 'http://blog.jamespchadwick.com/api/GetAuthorById', data: request})
                    .then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.AuthorDTO>): PersonalDomain.Application.Blogging.Models.AuthorDTO => {
                         return <PersonalDomain.Application.Blogging.Models.AuthorDTO>response.data;
                     });
     }
 
     public GetPostDetailById: (request: PersonalDomain.Application.Operations.Request.ByIdRequest) => ng.IPromise<PersonalDomain.Application.Blogging.Models.PostDTO> = (request) => {
-	    return this.$http({ method: 'post', url: '/api/GetPostDetailById', data: request})
+        return this.$http({ method: 'post', url: 'http://blog.jamespchadwick.com/api/GetPostDetailById', data: request})
                    .then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostDTO>): PersonalDomain.Application.Blogging.Models.PostDTO => {
                         return <PersonalDomain.Application.Blogging.Models.PostDTO>response.data;
                     });
     }
 
     public GetPostIndexByPage: (request: PersonalDomain.Application.Operations.Request.GetPostIndexByPageRequest) => ng.IPromise<PersonalDomain.Application.Blogging.Models.PostIndexDTO> = (request) => {
-	    return this.$http({ method: 'post', url: '/api/GetPostIndexByPage', data: request})
+        return this.$http({ method: 'post', url: 'http://blog.jamespchadwick.com/api/GetPostIndexByPage', data: request})
                    .then((response: ng.IHttpPromiseCallbackArg<PersonalDomain.Application.Blogging.Models.PostIndexDTO>): PersonalDomain.Application.Blogging.Models.PostIndexDTO => {
                         return <PersonalDomain.Application.Blogging.Models.PostIndexDTO>response.data;
                     });

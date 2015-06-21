@@ -48,5 +48,5 @@ Temporary Items
 Src/packages
 Src/*/bin
 Src/*/obj
-Src/PersonalDomain.UI.Web/app/**/*.js
-Src/PersonalDomain.UI.Web/app/**/*.js.map
+Src/PersonalDomain.UI.Web.Angular/app/**/*.js
+Src/PersonalDomain.UI.Web.Angular/app/**/*.js.map
