@@ -49,8 +49,11 @@
     <Content Include="content\fonts\bootstrap\glyphicons-halflings-regular.woff" />
     <Content Include="content\fonts\font-awesome\fontawesome-webfont.eot" />
     <Content Include="content\fonts\font-awesome\fontawesome-webfont.ttf" />
-    <Content Include="content\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="content\fonts\font-awesome\fontawesome-webfont.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="content\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="favicon.ico" />
     <Content Include="scripts\angular\angular-animate.min.js.map" />
     <Content Include="scripts\angular\angular-cookies.min.js.map" />
     <Content Include="scripts\angular\angular-resource.min.js.map" />
@@ -169,6 +172,9 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptModuleKind>amd</TypeScriptModuleKind>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
