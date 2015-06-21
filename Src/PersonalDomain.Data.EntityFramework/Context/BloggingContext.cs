@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using Framework.DataAcess.EntityFramework.Context;
+using Framework.DataAccess.EntityFramework.Context;
 using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Data.DataMapper;
 using PersonalDomain.Data.Initializer;

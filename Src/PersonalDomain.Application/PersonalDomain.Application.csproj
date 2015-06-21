@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonalDomain.Application</RootNamespace>
     <AssemblyName>PersonalDomain.Application</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,18 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Framework.Core.Application">
-      <HintPath>..\packages\Framework.Core.Application.1.0.0.0\lib\net45\Framework.Core.Application.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="TypeScriptGenerator.Seedwork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Build\TypeScriptGenerator\TypeScriptGenerator.Seedwork.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Blogging\Models\AuthorDTO.cs" />
     <Compile Include="Blogging\Operations\Command\ISaveComment.cs" />
     <Compile Include="Blogging\Operations\Command\ISavePost.cs" />
@@ -56,7 +45,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Core.Application, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Framework.Core.Application.1.0.0\lib\net45\Framework.Core.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+      <HintPath>..\packages\Framework.Core.Application.1.0.0\lib\net45\System.dll</HintPath>
+    </Reference>
+    <Reference Include="TypeScriptGenerator.Seedwork">
+      <HintPath>..\..\Build\TypeScriptGenerator\TypeScriptGenerator.Seedwork.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

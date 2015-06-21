@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonalDomain.Data</RootNamespace>
     <AssemblyName>PersonalDomain.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,19 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Data">
-      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Domain">
-      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Blogging\DataMappers\IAuthorMapper.cs" />
     <Compile Include="Blogging\DataMappers\ICommentMapper.cs" />
     <Compile Include="Blogging\DataMappers\IPostMapper.cs" />
@@ -53,13 +41,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PersonalDomain.Domain\PersonalDomain.Domain.csproj">
       <Project>{1881c8c5-d180-4346-8faa-8d9f6de5c841}</Project>
       <Name>PersonalDomain.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\Lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Core.Data">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.Core.Domain">
+      <HintPath>..\packages\Framework.Core.Domain.1.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0\lib\net45\System.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

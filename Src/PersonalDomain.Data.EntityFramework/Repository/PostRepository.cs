@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using Framework.DataAcess.EntityFramework.Repository;
+using Framework.DataAccess.EntityFramework.Repository;
 using PersonalDomain.Data.Blogging.Context;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Domain.Blogging.Post;

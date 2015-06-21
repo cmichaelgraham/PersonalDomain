@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.UI.Web", "PersonalDomain.UI.Web\PersonalDomain.UI.Web.csproj", "{E8DE76ED-4A64-407C-BAD1-C3B45F704F5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application.WebApi", "PersonalDomain.Application.WebApi\PersonalDomain.Application.WebApi.csproj", "{76C77360-97E3-4075-ACA4-E3790F34D4D6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{975C971A-816C-4BC8-BBED-7293DC01882D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Data", "2 - Data", "{F647B7E4-4214-4CFC-AAD7-4FBC6855EE8D}"
@@ -23,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Data", "Pers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application", "PersonalDomain.Application\PersonalDomain.Application.csproj", "{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application.Owin", "PersonalDomain.Application.Owin\PersonalDomain.Application.Owin.csproj", "{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,10 +33,6 @@ Global
 		{E8DE76ED-4A64-407C-BAD1-C3B45F704F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8DE76ED-4A64-407C-BAD1-C3B45F704F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8DE76ED-4A64-407C-BAD1-C3B45F704F5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76C77360-97E3-4075-ACA4-E3790F34D4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76C77360-97E3-4075-ACA4-E3790F34D4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76C77360-97E3-4075-ACA4-E3790F34D4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76C77360-97E3-4075-ACA4-E3790F34D4D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BB31D9BE-9E43-4AD3-A2B4-5BC4A30C15C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB31D9BE-9E43-4AD3-A2B4-5BC4A30C15C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB31D9BE-9E43-4AD3-A2B4-5BC4A30C15C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,16 +49,20 @@ Global
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E8DE76ED-4A64-407C-BAD1-C3B45F704F5B} = {0EF8259E-E152-489E-93A6-B71F9CCBF3EC}
-		{76C77360-97E3-4075-ACA4-E3790F34D4D6} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
 		{BB31D9BE-9E43-4AD3-A2B4-5BC4A30C15C6} = {F647B7E4-4214-4CFC-AAD7-4FBC6855EE8D}
 		{1881C8C5-D180-4346-8FAA-8D9F6DE5C841} = {975C971A-816C-4BC8-BBED-7293DC01882D}
 		{E4727D14-1AA2-4B25-8DA3-481BB87E348B} = {F647B7E4-4214-4CFC-AAD7-4FBC6855EE8D}
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
+		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
 	EndGlobalSection
 EndGlobal

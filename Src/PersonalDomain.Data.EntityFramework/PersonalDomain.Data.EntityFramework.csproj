@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonalDomain.Data</RootNamespace>
     <AssemblyName>PersonalDomain.Data.EntityFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,30 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Data">
-      <HintPath>..\packages\Framework.Core.Data.1.0.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.Core.Domain">
-      <HintPath>..\packages\Framework.Core.Domain.1.0.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
-    </Reference>
-    <Reference Include="Framework.DataAccess.EntityFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\Framework.DataAccess.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0.1\lib\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="DataMapper\AuthorDataMapper.cs" />
     <Compile Include="DataMapper\CommentDataMapper.cs" />
     <Compile Include="DataMapper\PostDataMapper.cs" />
@@ -71,13 +48,34 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PersonalDomain.Data\PersonalDomain.Data.csproj">
-      <Project>{E4727D14-1AA2-4B25-8DA3-481BB87E348B}</Project>
+      <Project>{e4727d14-1aa2-4b25-8da3-481bb87e348b}</Project>
       <Name>PersonalDomain.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\PersonalDomain.Domain\PersonalDomain.Domain.csproj">
-      <Project>{1881C8C5-D180-4346-8FAA-8D9F6DE5C841}</Project>
+      <Project>{1881c8c5-d180-4346-8faa-8d9f6de5c841}</Project>
       <Name>PersonalDomain.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.Core.Data">
+      <HintPath>..\packages\Framework.Core.Data.1.0.0\lib\net45\Framework.Core.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Framework.Core.Domain">
+      <HintPath>..\packages\Framework.Core.Domain.1.0.0\lib\net45\Framework.Core.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.DataAccess.EntityFramework">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0\lib\net45\Framework.DataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\packages\Framework.DataAccess.EntityFramework.1.0.0\lib\net45\System.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
