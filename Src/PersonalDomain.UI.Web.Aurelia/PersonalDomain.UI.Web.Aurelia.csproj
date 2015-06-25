@@ -107,12 +107,6 @@
     <Content Include="scripts\webcomponentsjs\webcomponents-lite.min.js" />
     <Content Include="scripts\webcomponentsjs\webcomponents.js" />
     <Content Include="scripts\webcomponentsjs\webcomponents.min.js" />
-    <Content Include="styles\bootstrap\css\bootstrap-theme.min.css" />
-    <Content Include="styles\bootstrap\css\bootstrap.min.css" />
-    <Content Include="styles\bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="styles\fontawesome\css\font-awesome.min.css" />
-    <Content Include="styles\fontawesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="styles\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,15 +138,6 @@
     <Content Include="scripts\core-js\client\shim.min.js.map" />
     <Content Include="scripts\core-js\client\shim.min.map" />
     <Content Include="scripts\webcomponentsjs\README.md" />
-    <Content Include="styles\bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="styles\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="styles\bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="styles\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="styles\fontawesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="styles\fontawesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="styles\fontawesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="styles\fontawesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="styles\fontawesome\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="web.config" />
