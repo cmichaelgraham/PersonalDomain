@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.UI.Web.Angular", "PersonalDomain.UI.Web.Angular\PersonalDomain.UI.Web.Angular.csproj", "{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.UI.Web.Aurelia", "PersonalDomain.UI.Web.Aurelia\PersonalDomain.UI.Web.Aurelia.csproj", "{3E9E31C7-3789-46C3-A76E-4780E2315709}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
 		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
 		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D} = {0EF8259E-E152-489E-93A6-B71F9CCBF3EC}
+		{3E9E31C7-3789-46C3-A76E-4780E2315709} = {0EF8259E-E152-489E-93A6-B71F9CCBF3EC}
 	EndGlobalSection
 EndGlobal
