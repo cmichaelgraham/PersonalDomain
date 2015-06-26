@@ -41,12 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\app.html" />
-    <Content Include="app\child-router.html" />
-    <Content Include="app\dyno-view.html" />
-    <Content Include="app\flickr.html" />
-    <Content Include="app\nav-bar.html" />
-    <Content Include="app\welcome.html" />
-    <Content Include="content\css\styles.css" />
+    <Content Include="app\under-construction.html" />
     <Content Include="main.js" />
     <Content Include="content\css\bootstrap\bootstrap-theme.css" />
     <Content Include="content\css\bootstrap\bootstrap-theme.min.css" />
@@ -113,11 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
-    <TypeScriptCompile Include="app\child-router.ts" />
-    <TypeScriptCompile Include="app\dyno-view.ts" />
-    <TypeScriptCompile Include="app\flickr.ts" />
-    <TypeScriptCompile Include="app\nav-bar.ts" />
-    <TypeScriptCompile Include="app\welcome.ts" />
+    <TypeScriptCompile Include="app\under-construction.ts" />
     <TypeScriptCompile Include="scripts\aurelia\aurelia-amd.d.ts" />
     <TypeScriptCompile Include="scripts\aurelia\aurelia.d.ts" />
     <TypeScriptCompile Include="scripts\core-js\client\core-js.d.ts" />

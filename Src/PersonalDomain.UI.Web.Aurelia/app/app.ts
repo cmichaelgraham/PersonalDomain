@@ -5,11 +5,11 @@ class App {
 
     constructor(private router: aur.Router) {
         this.router.configure((config) => {
-            config.title = "James P Chadwick";
+            config.title = "jamespchadwick.com";
             config.map([
-                { route: ["", "welcome"], moduleId: "app/welcome", nav: true, title: "Welcome to VS/TS" },
-                { route: "flickr", moduleId: "app/flickr", nav: true },
-                { route: "child-router", moduleId: "app/child-router", nav: true, title: "Child Router" }
+                { route: ["", "index"], moduleId: "app/under-construction", nav: true, title: "Blog" },
+                { route: "about",       moduleId: "app/under-construction", nav: true, title: "About" },
+                { route: "contact",     moduleId: "app/under-construction", nav: true, title: "Contact" }
             ]);
         });
     }
