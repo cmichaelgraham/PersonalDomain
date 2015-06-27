@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\app.html" />
+    <Content Include="app\layout\layout-content.html" />
+    <Content Include="app\layout\layout-footer.html" />
+    <Content Include="app\layout\layout-header.html" />
+    <Content Include="app\layout\navigation-bar.html" />
     <Content Include="app\under-construction.html" />
     <Content Include="main.js" />
     <Content Include="content\css\bootstrap\bootstrap-theme.css" />
@@ -108,6 +113,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\layout\layout-content.ts" />
+    <TypeScriptCompile Include="app\layout\layout-footer.ts" />
+    <TypeScriptCompile Include="app\layout\layout-header.ts" />
+    <TypeScriptCompile Include="app\layout\navigation-bar.ts" />
     <TypeScriptCompile Include="app\under-construction.ts" />
     <TypeScriptCompile Include="scripts\aurelia\aurelia-amd.d.ts" />
     <TypeScriptCompile Include="scripts\aurelia\aurelia.d.ts" />

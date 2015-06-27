@@ -51,3 +51,4 @@ Src/PersonalDomain.UI.Web.Angular/app/**/*.js
 Src/PersonalDomain.UI.Web.Angular/app/**/*.js.map
 Src/PersonalDomain.UI.Web.Aurelia/app/**/*.js
 Src/PersonalDomain.UI.Web.Aurelia/app/**/*.js.map
+/Src/PersonalDomain.UI.Web.Aurelia/app
