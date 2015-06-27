@@ -42,6 +42,7 @@
   <ItemGroup>
     <Content Include="app\app.html" />
     <Content Include="app\layout\layout-content.html" />
+    <Content Include="app\layout\layout-footer.html" />
     <Content Include="app\layout\layout-header.html" />
     <Content Include="app\layout\navigation-bar.html" />
     <Content Include="app\under-construction.html" />
