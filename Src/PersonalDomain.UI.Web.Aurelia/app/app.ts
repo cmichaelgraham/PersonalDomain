@@ -7,9 +7,10 @@ class App {
         this.router.configure((config) => {
             config.title = "jamespchadwick.com";
             config.map([
-                { route: ["", "blog"],  moduleId: "app/blog/index", nav: true, title: "Blog" },
-                { route: "about",       moduleId: "app/under-construction", nav: true, title: "About" },
-                { route: "contact",     moduleId: "app/under-construction", nav: true, title: "Contact" }
+                { route: ["", "blog/:id"],  moduleId: "app/blog/index",     nav: true, title: "Blog" },
+                { route: "detail/:id",      moduleId: "app/blog/detail" },
+                { route: "about",           moduleId: "app/blog/about",     nav: true, title: "About" },
+                { route: "contact",         moduleId: "app/blog/contact",   nav: true, title: "Contact" }
             ]);
         });
     }

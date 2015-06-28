@@ -41,6 +41,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app\app.html" />
+    <Content Include="app\blog\about.html" />
+    <Content Include="app\blog\contact.html" />
+    <Content Include="app\blog\detail.html" />
     <Content Include="app\blog\index.html" />
     <Content Include="app\layout\layout-content.html" />
     <Content Include="app\layout\layout-footer.html" />
@@ -113,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\blog\about.ts" />
+    <TypeScriptCompile Include="app\blog\contact.ts" />
+    <TypeScriptCompile Include="app\blog\detail.ts" />
     <TypeScriptCompile Include="app\blog\domain\enums.ts" />
     <TypeScriptCompile Include="app\blog\domain\models.d.ts" />
     <TypeScriptCompile Include="app\blog\domain\service.ts" />

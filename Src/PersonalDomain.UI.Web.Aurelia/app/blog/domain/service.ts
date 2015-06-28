@@ -13,25 +13,25 @@ class BlogService {
     }
 
     public SaveComment: (jsonRequest: PersonalDomain.Application.Blogging.Models.CommentDTO) => IPromise<PersonalDomain.Application.Operations.Response.OperationResponse> = (jsonRequest) => {
-        return this._httpClient.post(this._baseUrl + '/api/GetPostIndexByPage', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
+        return this._httpClient.post(this._baseUrl + '/api/SaveComment', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
             return JSON.parse(httpResponse.response);
         });
     }  
 
     public SavePost: (jsonRequest: PersonalDomain.Application.Blogging.Models.PostDTO) => IPromise<PersonalDomain.Application.Operations.Response.OperationResponse> = (jsonRequest) => {
-        return this._httpClient.post(this._baseUrl + '/api/GetPostIndexByPage', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
+        return this._httpClient.post(this._baseUrl + '/api/SavePost', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
             return JSON.parse(httpResponse.response);
         });
     }  
 
     public GetAuthorById: (jsonRequest: PersonalDomain.Application.Operations.Request.ByIdRequest) => IPromise<PersonalDomain.Application.Blogging.Models.AuthorDTO> = (jsonRequest) => {
-        return this._httpClient.post(this._baseUrl + '/api/GetPostIndexByPage', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
+        return this._httpClient.post(this._baseUrl + '/api/GetAuthorById', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
             return JSON.parse(httpResponse.response);
         });
     }  
 
     public GetPostDetailById: (jsonRequest: PersonalDomain.Application.Operations.Request.ByIdRequest) => IPromise<PersonalDomain.Application.Blogging.Models.PostDTO> = (jsonRequest) => {
-        return this._httpClient.post(this._baseUrl + '/api/GetPostIndexByPage', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
+        return this._httpClient.post(this._baseUrl + '/api/GetPostDetailById', jsonRequest).then((httpResponse: aureliaHttpClient.IHttpResponseMessage<string>) => {
             return JSON.parse(httpResponse.response);
         });
     }  

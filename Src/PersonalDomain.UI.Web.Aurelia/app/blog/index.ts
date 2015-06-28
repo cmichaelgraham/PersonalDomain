@@ -8,8 +8,8 @@ class Index {
 
     }
 
-    public activate() {
-        return this._blogService.GetPostIndexByPage({ PageId: 0, PageSize: 20 }).then((response) => {
+    public activate = (routeParams: any) =>  {
+        return this._blogService.GetPostIndexByPage({ PageId: routeParams["id"], PageSize: 20 }).then((response) => {
             this.Posts = response.PostSummaries;
         });
     }
