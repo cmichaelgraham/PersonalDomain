@@ -45,11 +45,10 @@
     <Content Include="app\blog\contact.html" />
     <Content Include="app\blog\detail.html" />
     <Content Include="app\blog\index.html" />
-    <Content Include="app\layout\layout-content.html" />
-    <Content Include="app\layout\layout-footer.html" />
-    <Content Include="app\layout\layout-header.html" />
-    <Content Include="app\layout\navigation-bar.html" />
-    <Content Include="app\under-construction.html" />
+    <Content Include="app\layout\header\about\about-header.html" />
+    <Content Include="app\layout\header\contact\contact-header.html" />
+    <Content Include="app\layout\header\default\default-header.html" />
+    <Content Include="app\layout\header\detail\detail-header.html" />
     <Content Include="main.js" />
     <Content Include="content\css\bootstrap\bootstrap-theme.css" />
     <Content Include="content\css\bootstrap\bootstrap-theme.min.css" />
@@ -123,11 +122,11 @@
     <TypeScriptCompile Include="app\blog\domain\models.d.ts" />
     <TypeScriptCompile Include="app\blog\domain\service.ts" />
     <TypeScriptCompile Include="app\blog\index.ts" />
-    <TypeScriptCompile Include="app\layout\layout-content.ts" />
-    <TypeScriptCompile Include="app\layout\layout-footer.ts" />
-    <TypeScriptCompile Include="app\layout\layout-header.ts" />
-    <TypeScriptCompile Include="app\layout\navigation-bar.ts" />
-    <TypeScriptCompile Include="app\under-construction.ts" />
+    <TypeScriptCompile Include="app\layout\header\about\about-header.ts" />
+    <TypeScriptCompile Include="app\layout\header\contact\contact-header.ts" />
+    <TypeScriptCompile Include="app\layout\header\default\default-header.ts" />
+    <TypeScriptCompile Include="app\layout\header\detail\detail-header.ts" />
+    <TypeScriptCompile Include="app\layout\header\layout-header.ts" />
     <TypeScriptCompile Include="scripts\aurelia\aurelia-amd.d.ts" />
     <TypeScriptCompile Include="scripts\aurelia\aurelia.d.ts" />
     <TypeScriptCompile Include="scripts\core-js\client\core-js.d.ts" />
@@ -168,6 +167,9 @@
     <TypeScriptModuleKind>amd</TypeScriptModuleKind>
     <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
     <TypeScriptTarget>ES5</TypeScriptTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

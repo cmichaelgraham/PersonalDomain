@@ -78,9 +78,10 @@ declare module "aurelia-router" {
 
     interface IRoute {
         route: string | Array<string>;
-        moduleId: string;
+        moduleId?: string;
         nav?: boolean | number;
         title?: string;
+        viewPorts?: any;
         settings?: any;
     }
 
