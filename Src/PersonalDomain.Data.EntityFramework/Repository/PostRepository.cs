@@ -17,7 +17,7 @@ namespace PersonalDomain.Data.Repository
 
         public override void Add(Post entity)
         {
-            entity.InsertDate = DateTime.Now;
+            entity.InsertDate = DateTime.UtcNow;
 
             Context.Posts.Add(entity);
         }
@@ -37,13 +37,18 @@ namespace PersonalDomain.Data.Repository
             return Context.Posts.Where(p => p.Id == id).Select(selector).Single();
         }
 
+        public TResult SelectBySlug<TResult>(String slug, Func<Post, TResult> selector)
+        {
+            return Context.Posts.Where(p => p.Slug == slug).Select(selector).Single();
+        }
+
         public override void Update(Post entity)
         {
             var dbPost = Context.Posts.Single(p => p.Id == entity.Id);
             dbPost.Title = entity.Title;
             dbPost.Subtitle = entity.Subtitle;
             dbPost.Content = entity.Content;
-            dbPost.UpdateDate = DateTime.Now;
+            dbPost.UpdateDate = DateTime.UtcNow;
         }
     }
 }

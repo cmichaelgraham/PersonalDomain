@@ -9,7 +9,7 @@ class DetailHeader extends LayoutHeaderViewModel {
     }
 
     public activate = (params: any) => {
-        return this._blogService.GetPostDetailById({ Id: params["id"] }).then((response: PersonalDomain.Application.Blogging.Models.PostDTO) => {
+        return this._blogService.GetPostDetailBySlug({ Slug: params["slug"] }).then((response: PersonalDomain.Application.Blogging.Models.PostDTO) => {
             this.Title = response.Title;
             this.SubTitle = response.Subtitle;
         });

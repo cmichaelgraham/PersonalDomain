@@ -8,8 +8,8 @@ class Detail {
 
     }
 
-    public activate = (routeParams: any) => {
-        return this._blogService.GetPostDetailById({ Id: routeParams["id"] }).then((response) => {
+    public activate = (params: any) => {
+        return this._blogService.GetPostDetailBySlug({ Slug: params["slug"] }).then((response) => {
             this.PostDetail = response;
         });
     }

@@ -35,7 +35,7 @@
     <Compile Include="Blogging\Operations\Command\ISaveComment.cs" />
     <Compile Include="Blogging\Operations\Command\ISavePost.cs" />
     <Compile Include="Blogging\Operations\Query\IGetAuthorById.cs" />
-    <Compile Include="Blogging\Operations\Query\IGetPostDetailById.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostDetailBySlug.cs" />
     <Compile Include="Blogging\Operations\Query\IGetPostIndexByPage.cs" />
     <Compile Include="Blogging\Services\IBloggingApplicationService.cs" />
     <Compile Include="Blogging\Models\CommentDTO.cs" />

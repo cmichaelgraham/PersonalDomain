@@ -8,5 +8,6 @@ namespace PersonalDomain.Data.Blogging.Repository
     public interface IPostRepository : IRepository<Post, IBloggingContext>
     {
         TResult SelectById<TResult>(Int32 id, Func<Post, TResult> selector);
+        TResult SelectBySlug<TResult>(String slug, Func<Post, TResult> selector);
     }
 }

@@ -9,6 +9,7 @@ namespace PersonalDomain.Domain.Blogging.Post
         public Int32 AuthorId { get; set; }
         public String Title { get; set; }
         public String Subtitle { get; set; }
+        public String Slug { get; set; }
         public String Content { get; set; }
         
         public Author Author { get; set; }

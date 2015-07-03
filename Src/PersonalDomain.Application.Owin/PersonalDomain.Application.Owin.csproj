@@ -55,6 +55,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operations\Request\GetPostDetailBySlugRequest.cs" />
     <Compile Include="PersonalDomainApplicationStartup.cs" />
     <Compile Include="Configuration\PersonalDomainWebApiConfig.cs" />
     <Compile Include="Controllers\PersonalDomainController.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="Operations\Command\SaveComment.cs" />
     <Compile Include="Operations\Command\SavePost.cs" />
     <Compile Include="Operations\Query\GetAuthorById.cs" />
-    <Compile Include="Operations\Query\GetPostDetailById.cs" />
+    <Compile Include="Operations\Query\GetPostDetailBySlug.cs" />
     <Compile Include="Operations\Query\GetPostIndexByPage.cs" />
     <Compile Include="Operations\Request\ByIdRequest.cs" />
     <Compile Include="Operations\Request\GetPostIndexByPageRequest.cs" />
@@ -212,7 +213,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>$(SolutionDir)..\Build\TypeScriptGenerator\TypeScriptGenerator.Application.exe --base-url http://blog.jamespchadwick.com --output-directory $(SolutionDir)PersonalDomain.UI.Web.Angular\app\blog\domain --source-directory $(SolutionDir)PersonalDomain.Application.Owin\bin\ --source-file-name PersonalDomain.Application.Owin.dll</PostBuildEvent>
+    <PostBuildEvent>$(SolutionDir)..\Build\TypeScriptGenerator\TypeScriptGenerator.Application.exe --base-url http://blog.jamespchadwick.com --output-directory $(SolutionDir)PersonalDomain.UI.Web.Aurelia\app\blog\domain --source-directory $(SolutionDir)PersonalDomain.Application.Owin\bin\ --source-file-name PersonalDomain.Application.Owin.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

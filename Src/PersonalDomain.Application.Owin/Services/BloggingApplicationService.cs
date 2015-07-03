@@ -25,9 +25,9 @@ namespace PersonalDomain.Application.Services
             return AuthorRepository.SelectById(id, a => new AuthorDTO { FullName = a.FirstName, Tagline = a.Tagline, Bio = a.Bio });
         }
 
-        public PostDTO GetPost(Int32 id)
+        public PostDTO GetPost(String slug)
         {
-            return PostRepository.SelectById(id, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
+            return PostRepository.SelectBySlug(slug, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
         }
 
         public Int32 GetPostCount()
@@ -37,7 +37,7 @@ namespace PersonalDomain.Application.Services
 
         public PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 25)
         {
-            return PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
+            return PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Slug = p.Slug, Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
                                  .Skip((pageNumber - 1) * pageSize)
                                  .Take(pageSize)
                                  .ToArray();
@@ -45,7 +45,7 @@ namespace PersonalDomain.Application.Services
 
         public void SavePost(PostDTO post)
         {
-            var postEntity = PostFactory.Create(post.Id, 1, post.Title, post.Subtitle, post.Content);
+            var postEntity = PostFactory.Create(post.Id, 1, post.Title, post.Subtitle, post.Slug, post.Content);
             if (postEntity.Id == 0)
             {
                 PostRepository.Add(postEntity);

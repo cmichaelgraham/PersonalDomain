@@ -26,7 +26,7 @@ class Index {
     }
 
     public GetPostUrl: (post: PersonalDomain.Application.Blogging.Models.PostSummaryDTO) => string = (post) => {
-        return '#/detail/' + post.Id;
+        return '#/blog/' + post.Slug;
     }
 
     public GetIsNextButtonVisible: () => boolean = () => {

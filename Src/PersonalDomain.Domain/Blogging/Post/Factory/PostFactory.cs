@@ -4,7 +4,7 @@ namespace PersonalDomain.Domain.Blogging.Post
 {
     public static class PostFactory
     {
-        public static Post Create(Int32 id, Int32 authorId, String title, String subtitle, String content)
+        public static Post Create(Int32 id, Int32 authorId, String title, String subtitle, String slug, String content)
         {
             return new Post
             {
@@ -12,6 +12,7 @@ namespace PersonalDomain.Domain.Blogging.Post
                 AuthorId = authorId,
                 Title = title,
                 Subtitle = subtitle,
+                Slug = slug,
                 Content = content
             };
         }

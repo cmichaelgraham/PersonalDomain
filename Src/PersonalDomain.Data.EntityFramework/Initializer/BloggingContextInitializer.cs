@@ -32,8 +32,11 @@ namespace PersonalDomain.Data.Initializer
             {
                 var title = String.Format("Blog Post {0}", i);
                 var subTitle = String.Format("Sub Title For Blog Post {0}", i);
+                var slug = String.Format("blog-post-{0}", i);
 
-                _context.Posts.Add(new Post { AuthorId = authorId, Title = title, Subtitle = subTitle, InsertDate = DateTime.Now });
+                var post = PostFactory.Create(0, authorId, title, subTitle, slug, "");
+                post.InsertDate = DateTime.UtcNow;
+                _context.Posts.Add(post);
             }
 
             _context.SaveChanges();
