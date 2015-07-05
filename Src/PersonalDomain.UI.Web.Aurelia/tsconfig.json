@@ -1,0 +1,17 @@
+{
+    "version": "1.5.1",
+    "compilerOptions": {
+        "target": "es6",
+        "module": "amd",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "noLib": true,
+        "emitDecoratorMetadata": true
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./jspm_packages/**/*.ts",
+        "!./node_modules/**/*.ts"        
+    ]
+}
