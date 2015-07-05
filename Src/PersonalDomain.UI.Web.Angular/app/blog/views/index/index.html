@@ -1,9 +1,0 @@
-﻿<div ng-repeat="post in vm.PostSummaries">
-    <hr ng-show="$index != 0">
-    <post-summary class="post-preview" post="post"></post-summary>
-</div>
-<ul class="pager">
-    <li class="next">
-        <a ng-show="vm.IsNextButtonVisible()" ng-click="vm.Next()" style="cursor: pointer">Older Posts &rarr;</a>
-    </li>
-</ul>

@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Data", "2 - Data", "{F6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - UI", "4 - UI", "{0EF8259E-E152-489E-93A6-B71F9CCBF3EC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Data.EntityFramework", "PersonalDomain.Data.EntityFramework\PersonalDomain.Data.EntityFramework.csproj", "{BB31D9BE-9E43-4AD3-A2B4-5BC4A30C15C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Domain", "PersonalDomain.Domain\PersonalDomain.Domain.csproj", "{1881C8C5-D180-4346-8FAA-8D9F6DE5C841}"
@@ -20,10 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application", "PersonalDomain.Application\PersonalDomain.Application.csproj", "{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.Application.Owin", "PersonalDomain.Application.Owin\PersonalDomain.Application.Owin.csproj", "{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.UI.Web.Angular", "PersonalDomain.UI.Web.Angular\PersonalDomain.UI.Web.Angular.csproj", "{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalDomain.UI.Web.Aurelia", "PersonalDomain.UI.Web.Aurelia\PersonalDomain.UI.Web.Aurelia.csproj", "{3E9E31C7-3789-46C3-A76E-4780E2315709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,14 +45,6 @@ Global
 		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E9E31C7-3789-46C3-A76E-4780E2315709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +55,5 @@ Global
 		{E4727D14-1AA2-4B25-8DA3-481BB87E348B} = {F647B7E4-4214-4CFC-AAD7-4FBC6855EE8D}
 		{4C9C19D3-95FE-4ED8-8EB6-49115E9D58FD} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
 		{2AF23523-84B1-4163-BE71-C4C3EE4D15AB} = {735F9E9B-F90F-48C6-A9C9-31D1FF7D06D8}
-		{DF7D2F1E-2E06-4CB5-AA0C-A460A1218D1D} = {0EF8259E-E152-489E-93A6-B71F9CCBF3EC}
-		{3E9E31C7-3789-46C3-A76E-4780E2315709} = {0EF8259E-E152-489E-93A6-B71F9CCBF3EC}
 	EndGlobalSection
 EndGlobal

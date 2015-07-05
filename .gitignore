@@ -47,7 +47,3 @@ Temporary Items
 Src/packages
 Src/*/bin
 Src/*/obj
-Src/PersonalDomain.UI.Web.Angular/app/**/*.js
-Src/PersonalDomain.UI.Web.Angular/app/**/*.js.map
-Src/PersonalDomain.UI.Web.Aurelia/app/**/*.js
-Src/PersonalDomain.UI.Web.Aurelia/app/**/*.js.map
