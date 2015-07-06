@@ -213,7 +213,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>$(SolutionDir)..\Build\TypeScriptGenerator\TypeScriptGenerator.Application.exe --base-url http://blog.jamespchadwick.com --output-directory $(SolutionDir)PersonalDomain.UI.Web.Aurelia\app\blog\domain --source-directory $(SolutionDir)PersonalDomain.Application.Owin\bin\ --source-file-name PersonalDomain.Application.Owin.dll</PostBuildEvent>
+    <PostBuildEvent>$(SolutionDir)..\Build\TypeScriptGenerator\TypeScriptGenerator.Application.exe --base-url http://blog.jamespchadwick.com --output-directory $(SolutionDir)PersonalDomain.UI.Web.Aurelia\src\blog\domain --source-directory $(SolutionDir)PersonalDomain.Application.Owin\bin\ --source-file-name PersonalDomain.Application.Owin.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
