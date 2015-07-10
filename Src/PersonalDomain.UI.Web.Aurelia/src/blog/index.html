@@ -2,7 +2,7 @@
     <template repeat.for="post of Posts">
         <hr if.bind="$index != 0">
         <div class="post-preview">
-            <a href.bind="$parent.GetPostUrl(post)">
+            <a route-href="route: posts; params.bind: {slug: post.Slug}">
                 <h2 class="post-title">
                     ${post.Title}
                 </h2>
@@ -10,7 +10,7 @@
                     ${post.Subtitle}
                 </h3>
             </a>
-            <p class="post-meta">Posted by <a href="#">${post.Author}</a> on ${post.PostedDate}</p>
+            <p class="post-meta">Posted by <a route-href="route: about">${post.Author}</a> on ${post.PostedDate}</p>
         </div>
     </template>
     <ul class="pager">

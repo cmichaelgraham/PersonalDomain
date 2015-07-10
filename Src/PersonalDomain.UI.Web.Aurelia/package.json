@@ -10,6 +10,7 @@
       "gulp-typescript": "^2.7.8",      
       "object.assign": "^3.0.1",                                 
       "require-dir": "^0.3.0",
+      "reflect-metadata": "^0.1.0",
       "run-sequence": "^1.1.1",
       "typescript": "^1.5.0-beta", 
       "vinyl-paths": "^1.0.0",           

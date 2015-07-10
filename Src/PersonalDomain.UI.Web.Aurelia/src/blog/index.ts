@@ -25,10 +25,6 @@ export class Index {
         return "replace";
     }
 
-    public GetPostUrl: (post: PersonalDomain.Application.Blogging.Models.PostSummaryDTO) => string = (post) => {
-        return '#/blog/' + post.Slug;
-    }
-
     public GetIsNextButtonVisible: () => boolean = () => {
         return this.Posts.length < this.PostCount;
     }
