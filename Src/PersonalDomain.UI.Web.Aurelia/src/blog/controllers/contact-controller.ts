@@ -9,6 +9,5 @@ export class ContactController {
     }	
 	
 	public activate = (params, routeConfig, navigationInstruction) => {
-		
 	}	
 }	

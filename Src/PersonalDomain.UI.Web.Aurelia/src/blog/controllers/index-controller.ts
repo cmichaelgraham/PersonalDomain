@@ -15,6 +15,13 @@ export class IndexController {
 	public activate = (params, routeConfig, navigationInstruction) => {
 		return this.LoadIndexByPageNumber(params.index, this._pageSize).then((response: PersonalDomain.Application.Blogging.Models.PostIndexDTO) => {
 			this.IndexViewModel = new Index(response.PostSummaries, response.PostSummaryCount);
+			this.IndexViewModel.OnNextButtonClick = () => {
+				this._pageNumber = this._pageNumber + 1;
+				this.LoadIndexByPageNumber(this._pageNumber, this._pageSize).then((response: PersonalDomain.Application.Blogging.Models.PostIndexDTO) => {
+					this.IndexViewModel.Posts = this.IndexViewModel.Posts.concat(response.PostSummaries);
+					this.IndexViewModel.TotalPostCount = response.PostSummaryCount;
+				});
+			};
 		});
 	}
 	
@@ -22,17 +29,3 @@ export class IndexController {
 		return this._blogService.GetPostIndexByPage({ PageId: pageNumber, PageSize: pageSize });
 	} 
 }
-
-// 
-//     public OnNextButtonClick = () => {
-//         this._pageIndex = this._pageIndex + 1;
-//         this.LoadPage(this._pageIndex).then((response: PersonalDomain.Application.Blogging.Models.PostIndexDTO) => {
-//             this.Posts = this.Posts.concat(response.PostSummaries);
-//             this.PostCount = response.PostSummaryCount;
-//             this.IsNextButtonVisible = this.GetIsNextButtonVisible();
-//         });
-//     }
-// 
-//     private LoadPage: (index: number) => Promise<PersonalDomain.Application.Blogging.Models.PostIndexDTO> = (index) => {
-//         return this._blogService.GetPostIndexByPage({ PageId: index, PageSize: this._pageSize });       
-//     }
