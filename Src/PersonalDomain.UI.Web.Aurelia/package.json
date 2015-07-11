@@ -1,24 +1,25 @@
 {
-    "devDependencies": {
-      "browser-sync": "^2.7.13",
-      "del": "^1.2.0", 
-      "gulp": "^3.9.0",
-      "gulp-babel": "^5.1.0", 
-      "gulp-changed": "^1.2.1",
-      "gulp-plumber": "^1.0.1", 
-      "gulp-sourcemaps": "^1.5.2",
-      "gulp-typescript": "^2.7.8",      
-      "object.assign": "^3.0.1",                                 
-      "require-dir": "^0.3.0",
-      "reflect-metadata": "^0.1.0",
-      "run-sequence": "^1.1.1",
-      "typescript": "^1.5.0-beta", 
-      "vinyl-paths": "^1.0.0",           
-      "yargs": "^3.14.0"      
+  "devDependencies": {
+    "browser-sync": "^2.7.13",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.7.8",
+    "object.assign": "^3.0.1",
+    "require-dir": "^0.3.0",
+    "reflect-metadata": "^0.1.0",
+    "run-sequence": "^1.1.1",
+    "typescript": "^1.5.0-beta",
+    "vinyl-paths": "^1.0.0",
+    "yargs": "^3.14.0"
   },
   "jspm": {
     "dependencies": {
       "aurelia-bootstrapper": "github:aurelia/bootstrapper@^0.14.0",
+      "aurelia-computed": "github:jdanyow/aurelia-computed@^0.3.0",
       "aurelia-framework": "github:aurelia/framework@^0.13.1",
       "aurelia-http-client": "github:aurelia/http-client@^0.10.0",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
