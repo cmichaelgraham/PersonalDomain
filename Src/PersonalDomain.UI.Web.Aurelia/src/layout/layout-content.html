@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <router-view></router-view>
+                <div if.bind="router.isNavigating" class="loading-spinner"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+                <router-view if.bind="!router.isNavigating"></router-view>
             </div>
         </div>
     </div>
