@@ -11,6 +11,9 @@ export class DetailController {
 	
 	public activate = (params, routeConfig, navigationInstruction) => {
 		return this.GetPostDetailBySlug(params.slug).then((postDetail: PersonalDomain.Application.Blogging.Models.PostDTO) => {
+			routeConfig.navModel.setTitle(postDetail.Title);
+			routeConfig.navModel.router.UpdateHeader(postDetail.Title, postDetail.Subtitle);
+			
 			this.DetailViewModel = new Detail(postDetail);
 		});
 	}

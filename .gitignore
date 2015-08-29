@@ -47,5 +47,6 @@ Temporary Items
 Src/packages
 Src/*/bin
 Src/*/obj
+Src/PersonalDomain.UI.Web.Aurelia/dist
 Src/PersonalDomain.UI.Web.Aurelia/jspm_packages
 Src/PersonalDomain.UI.Web.Aurelia/node_modules

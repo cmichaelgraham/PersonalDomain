@@ -10,7 +10,9 @@ export class AboutController {
     }	
 	
 	public activate = (params, routeConfig, navigationInstruction) => {
-		return this.GetAuthorById(params.id).then((author: PersonalDomain.Application.Blogging.Models.AuthorDTO) => {
+		routeConfig.navModel.router.UpdateHeader("About James", "TAGLINE GOES HERE");
+					
+		return this.GetAuthorById(params.id).then((author: PersonalDomain.Application.Blogging.Models.AuthorDTO) => {		
 			this.AboutViewModel = new About(author.Bio); 
 		});
 	}	

@@ -2,17 +2,23 @@
 
 export class Shell {
     public router: Router;
+    public HeaderTitle: string;
+    public HeaderSubTitle: string;
     
-    configureRouter(config, router: Router) {
+    public configureRouter = (config, router: Router) => {
         router.configure((config) => {
             config.title = "jamespchadwick.com";
             config.map([
-                { name: "index",    route: ["", "blog/:index"],   moduleId: "./blog/controllers/index-controller",         nav: true,  title: "Blog" },
+                { name: "home",     route: ["", "home"],          moduleId: "./blog/controllers/home-controller",       nav: true,  title: "Home" },
                 { name: "posts",    route: "posts/:slug",         moduleId: "./blog/controllers/detail-controller" },
-                { name: "about",    route: "about",               moduleId: "./blog/controllers/about-controller",         nav: true,  title: "About" },
-                { name: "contact",  route: "contact",             moduleId: "./blog/controllers/contact-controller",       nav: true,  title: "Contact" }
+                { name: "about",    route: "about",               moduleId: "./blog/controllers/about-controller",      nav: true,  title: "About" }
             ]);
         });
+        
+        (<any>router).UpdateHeader = (title, subtitle) => {
+            this.HeaderTitle = title;
+            this.HeaderSubTitle = subtitle;
+        };
         
         this.router = router;
     }
