@@ -58,7 +58,6 @@ IF DEFINED KUDU_SELECT_NODE_VERSION_CMD (
   SET NPM_CMD="!NODE_EXE!" "!NPM_JS_PATH!"
 ) ELSE (
   SET NPM_CMD=npm
-  SET JSPM_CMD=jspm
   SET NODE_EXE=node
 )
 
@@ -83,9 +82,16 @@ call :SelectNodeVersion
 :: 3. Install npm packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
-  echo "Installing NPM/JSPM Packages"
+  echo "Installing NPM Packages"
   call :ExecuteCmd !NPM_CMD! install
   IF !ERRORLEVEL! NEQ 0 goto error
+  
+  echo "Configuring JSPM GitHub Endpoint"
+  call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\jspm.cmd" config endpoints.github.username jpccontinuousdeployment
+  call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\jspm.cmd" config endpoints.github.password VGR@K9CrPP55v68u  
+  
+  echo "Installing JSPM Packages"
+  call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\jspm.cmd" install
   popd
 )
 
