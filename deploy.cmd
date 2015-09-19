@@ -87,7 +87,7 @@ goto :EOF
 
 :Deployment
 echo Handling node.js deployment.
-echo Deployment Souce is %DEPLOYMENT_SOURCE%
+
 :: 1. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   call :ExecuteCmd "%KUDU_SYNC_CMD%" -v 50 -f "%DEPLOYMENT_SOURCE%\Src\PersonalDomain.UI.Web.Aurelia" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
@@ -109,7 +109,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
   echo "Building web site using Gulp"
-  call :ExecuteCmd ".\node_modules\.bin\gulp.cmd"
+  call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\gulp.cmd"
   if !ERRORLEVEL! NEQ 0 goto error
   popd
 )
