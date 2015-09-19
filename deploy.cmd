@@ -7,7 +7,6 @@
 
 :: Prerequisites
 :: -------------
-
 :: Verify node.js installed
 where node 2>nul >nul
 IF %ERRORLEVEL% NEQ 0 (
@@ -17,23 +16,26 @@ IF %ERRORLEVEL% NEQ 0 (
 
 :: Setup
 :: -----
-
 setlocal enabledelayedexpansion
 
 SET ARTIFACTS=%~dp0%\artifacts
 
 IF NOT DEFINED DEPLOYMENT_SOURCE (
+  echo deployment source not defined
   SET DEPLOYMENT_SOURCE=%~dp0%\Src\PersonalDomain.UI.Web.Aurelia
 )
 
 IF NOT DEFINED DEPLOYMENT_TARGET (
+  echo deployment target not defined
   SET DEPLOYMENT_TARGET=%ARTIFACTS%\wwwroot
 )
 
 IF NOT DEFINED NEXT_MANIFEST_PATH (
+  echo next manifest not defined
   SET NEXT_MANIFEST_PATH=%ARTIFACTS%\manifest
 
   IF NOT DEFINED PREVIOUS_MANIFEST_PATH (
+	echo previous manifest not defined
     SET PREVIOUS_MANIFEST_PATH=%ARTIFACTS%\manifest
   )
 )
@@ -103,7 +105,6 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
   echo "Installing NPM/JSPM Packages"
   call :ExecuteCmd !NPM_CMD! install
-  REM call :ExecuteCmd !JSPM_CMD! install
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
@@ -112,7 +113,6 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
   echo "Building web site using Gulp"
-  echo Gulp cmd found at - "%DEPLOYMENT_TARGET%\node_modules\.bin\gulp.cmd"
   call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\gulp.cmd"
   if !ERRORLEVEL! NEQ 0 goto error
   popd
