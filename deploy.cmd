@@ -76,6 +76,7 @@ IF DEFINED KUDU_SELECT_NODE_VERSION_CMD (
   SET NPM_CMD="!NODE_EXE!" "!NPM_JS_PATH!"
 ) ELSE (
   SET NPM_CMD=npm
+  SET JSPM_CMD=jspm
   SET NODE_EXE=node
 )
 
@@ -100,7 +101,9 @@ call :SelectNodeVersion
 :: 3. Install npm packages
 IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
   pushd "%DEPLOYMENT_TARGET%"
+  echo "Installing NPM/JSPM Packages"
   call :ExecuteCmd !NPM_CMD! install
+  REM call :ExecuteCmd !JSPM_CMD! install
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
