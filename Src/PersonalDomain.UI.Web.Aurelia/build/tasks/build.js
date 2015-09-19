@@ -33,3 +33,5 @@ gulp.task('build', function(callback) {
     callback
   );
 });
+
+gulp.task('default', ['build']);
