@@ -1,4 +1,5 @@
 {
+  "engines": { "node": ">=0.12.4" },
   "devDependencies": {
     "azure-cli": "^0.9.9",
     "browser-sync": "^2.7.13",

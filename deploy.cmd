@@ -20,26 +20,6 @@ setlocal enabledelayedexpansion
 
 SET ARTIFACTS=%~dp0%\artifacts
 
-IF NOT DEFINED DEPLOYMENT_SOURCE (
-  echo deployment source not defined
-  SET DEPLOYMENT_SOURCE=%~dp0%\Src\PersonalDomain.UI.Web.Aurelia
-)
-
-IF NOT DEFINED DEPLOYMENT_TARGET (
-  echo deployment target not defined
-  SET DEPLOYMENT_TARGET=%ARTIFACTS%\wwwroot
-)
-
-IF NOT DEFINED NEXT_MANIFEST_PATH (
-  echo next manifest not defined
-  SET NEXT_MANIFEST_PATH=%ARTIFACTS%\manifest
-
-  IF NOT DEFINED PREVIOUS_MANIFEST_PATH (
-	echo previous manifest not defined
-    SET PREVIOUS_MANIFEST_PATH=%ARTIFACTS%\manifest
-  )
-)
-
 IF NOT DEFINED KUDU_SYNC_CMD (
   :: Install kudu sync
   echo Installing Kudu Sync
