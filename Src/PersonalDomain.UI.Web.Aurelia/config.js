@@ -1,30 +1,32 @@
 System.config({
-  "transpiler": "babel",
-  "babelOptions": {
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "es7.decorators",
       "es7.classProperties",
       "runtime"
     ]
   },
-  "paths": {
-    "*": "dist/*.js",
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js"
+  paths: {
+    "*": "dist/*",
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   }
-});
-
-System.config({
-  "map": {
+});  
+  
+System.config({  
+  map: {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.14.0",
     "aurelia-computed": "github:jdanyow/aurelia-computed@0.3.0",
     "aurelia-framework": "github:aurelia/framework@0.13.1",
     "aurelia-http-client": "github:aurelia/http-client@0.10.0",
-    "babel": "npm:babel-core@5.6.15",
-    "babel-runtime": "npm:babel-runtime@5.6.15",
+    "babel": "npm:babel-core@5.8.25",
+    "babel-runtime": "npm:babel-runtime@5.8.24",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
-    "core-js": "npm:core-js@0.9.18",
+    "core-js": "npm:core-js@1.1.4",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "text": "github:systemjs/plugin-text@0.0.2",
     "github:aurelia/binding@0.8.1": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
       "aurelia-metadata": "github:aurelia/metadata@0.7.0",
@@ -139,10 +141,15 @@ System.config({
     "github:twbs/bootstrap@3.3.5": {
       "jquery": "github:components/jquery@2.1.4"
     },
-    "npm:babel-runtime@5.6.15": {
+    "npm:babel-runtime@5.8.24": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:core-js@0.9.18": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:core-js@1.1.4": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -152,4 +159,3 @@ System.config({
     }
   }
 });
-

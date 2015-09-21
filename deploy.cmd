@@ -100,6 +100,8 @@ IF EXIST "%DEPLOYMENT_TARGET%\gulpfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
   echo "Building web site using Gulp"
   call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\gulp.cmd"
+  echo "Bundling and Minifying using Gulp"
+  call :ExecuteCmd "%DEPLOYMENT_TARGET%\node_modules\.bin\gulp.cmd" bundle
   if !ERRORLEVEL! NEQ 0 goto error
   popd
 )
