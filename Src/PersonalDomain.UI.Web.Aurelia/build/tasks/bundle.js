@@ -7,34 +7,25 @@ var config = {
 	bundles: {
 		"dist/app-build": {
 			includes: [
-				'*/**/*',
-				'*/**/*.html!text',
-				'*/**/*.css!text'
+				'**/*',
+				'**/*.html!text',
+				'**/*.css!text',			
 			],
-      		excludes: [
-				'npm:*',				  
-        		'github:*'
-      		],			
-			options: {
-				force: true,
-				inject: true,
-				minify: true,
-				mangle: true
-			}
+			options: { inject: true, minify: true }
 		},
 		"dist/aurelia": {
 			includes: [
 				"aurelia-bootstrapper",
-      			"aurelia-computed",
+      			"aurelia-computed",			  
       			"aurelia-framework",
-				"aurelia-http-client"				
+				"github:aurelia/history-browser",				  
+				"aurelia-http-client",
+				"github:aurelia/loader-default",
+				"github:aurelia/templating-binding",
+				"github:aurelia/templating-resources",
+				"github:aurelia/templating-router",									
 			],
-			options: {
-				force: true,
-				inject: true,
-				minify: true,
-				mangle: true				
-			}
+			options: { force: true, inject: true }
 		}		
 	}
 };
