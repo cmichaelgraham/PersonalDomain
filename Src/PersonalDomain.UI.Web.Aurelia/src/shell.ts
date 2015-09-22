@@ -13,6 +13,8 @@ export class Shell {
                 { name: "posts",    route: "posts/:slug",         moduleId: "./blog/controllers/detail-controller" },
                 { name: "about",    route: "about",               moduleId: "./blog/controllers/about-controller",      nav: true,  title: "About" }
             ]);
+            
+            return config;
         });
         
         (<any>router).UpdateHeader = (title, subtitle) => {
