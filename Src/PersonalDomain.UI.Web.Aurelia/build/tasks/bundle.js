@@ -21,6 +21,7 @@ var config = {
 				"github:aurelia/history-browser",				  
 				"aurelia-http-client",
 				"github:aurelia/loader-default",
+				"github:aurelia/logging-console",
 				"github:aurelia/templating-binding",
 				"github:aurelia/templating-resources",
 				"github:aurelia/templating-router",									
