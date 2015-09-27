@@ -1,6 +1,77 @@
 <template>
-    <compose view="layout/navigation-bar.html"></compose>
-    <compose view="layout/layout-header.html"></compose>
-    <compose view="layout/layout-content.html"></compose>      
-    <compose view="layout/layout-footer.html"></compose>            
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li repeat.for="row of router.navigation">
+                        <a href.bind="row.href">${row.title}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="intro-header" style="background-image: url(../images/home-bg.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>${Title || "James Chadwick"}</h1>
+                        <hr class="small">
+                        <span class="subheading">${SubTitle || "Full-Stack Developer"}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div if.bind="router.isNavigating" class="loading-spinner"><i class="fa fa-spinner fa-spin fa-2x"></i></div>
+                <router-view if.bind="!router.isNavigating"></router-view>
+            </div>
+        </div>
+    </div>      
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/jamespchadwick" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/jamespchadwick" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jamespchadwick" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; James Chadwick 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>            
 </template>
