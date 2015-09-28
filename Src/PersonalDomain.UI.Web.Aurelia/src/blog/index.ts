@@ -1,4 +1,4 @@
-import {BlogService} from 'blog/domain/data-service';
+import {BlogDataService} from 'blog/domain/data-service';
 
 export class Index {
 	public Posts: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
@@ -6,8 +6,8 @@ export class Index {
     private _pageNumber: number = 1;
     private _pageSize: number = 20;
         
-    static inject = [BlogService];
-    constructor(private _blogService: BlogService) {
+    static inject = [BlogDataService];
+    constructor(private _blogDataService: BlogDataService) {
 
     }
     
@@ -20,6 +20,6 @@ export class Index {
 	}    
     
 	private LoadIndexByPageNumber(pageNumber: number, pageSize: number): Promise<PersonalDomain.Application.Blogging.Models.PostIndexDTO> {
-		return this._blogService.GetPostIndexByPage({ PageId: pageNumber, PageSize: pageSize });
+		return this._blogDataService.GetPostIndexByPage({ PageId: pageNumber, PageSize: pageSize });
 	}    
 }

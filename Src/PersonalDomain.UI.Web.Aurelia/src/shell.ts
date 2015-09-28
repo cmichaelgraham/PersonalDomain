@@ -13,9 +13,9 @@ export class Shell {
             config.addPipelineStep("authorize", AuthorizationPipelineStep);
             config.map([
                 { name: "home",     route: ["", "home"],    moduleId: "blog/index",           nav: true,        title: "Home" },
-                { name: "posts",    route: "posts/:slug",   moduleId: "blog/detail/detail",   authorize: true },
-                { name: "about",    route: "about",         moduleId: "blog/about/about",     nav: true,        title: "About" },
-                { name: "Login",    route: "login",         moduleId: "account/index",        nav: true,        title: "Login" }
+                { name: "posts",    route: "posts/:slug",   moduleId: "blog/post/detail" },
+                { name: "about",    route: "about",         moduleId: "blog/author/detail",   nav: true,        title: "About" },
+                { name: "Login",    route: "login",         moduleId: "account/index",        title: "Login" }
             ]);
             
             return config;

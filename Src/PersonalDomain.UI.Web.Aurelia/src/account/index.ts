@@ -1,14 +1,16 @@
 import {AuthenticationDataService} from 'account/domain/data-service';
-import {LoginViewModel} from 'account/login/account-login';
-import {SocialLoginViewModel} from 'account/login/social-login';
 
 export class Index {
-	public LoginViewModel: LoginViewModel;
-	public SocialLoginViewModel: SocialLoginViewModel;
+	public UserName: string;
+	public Password: string;
 	
 	static inject = [AuthenticationDataService];
 	constructor(private _authenticationDataService: AuthenticationDataService) {
-		this.LoginViewModel = new LoginViewModel(_authenticationDataService);
-		this.SocialLoginViewModel = new SocialLoginViewModel(_authenticationDataService);
 	}
+	
+	public Login(): void {
+		this._authenticationDataService.GetToken({ UserName: this.UserName, Password: this.Password }).then((token) => {
+			localStorage.setItem("token", token);
+		});	
+	}		
 }

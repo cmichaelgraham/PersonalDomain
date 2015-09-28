@@ -1,20 +1,20 @@
-﻿import {BlogService} from 'blog/domain/data-service';
+import {BlogDataService} from 'blog/domain/data-service';
 
-export class About {
+export class AuthorDetailViewModel {
     public Bio: string;
     
-    static inject = [BlogService];
-    constructor(private _blogService: BlogService) {
+    static inject = [BlogDataService];
+    constructor(private _blogDataService: BlogDataService) {
     } 
     
 	public activate = (params, routeConfig) => {			
-		return this.GetAuthorById(params.id).then((author: PersonalDomain.Application.Blogging.Models.AuthorDTO) => {
+		return this.GetAuthorById(params.id).then((author) => {
 			routeConfig.navModel.router.UpdateHeader("About James", "The Man with the Methodology");					
 			this.Bio = author.Bio;
 		});
 	}
     
 	private GetAuthorById(id: number): Promise<PersonalDomain.Application.Blogging.Models.AuthorDTO> {
-        return this._blogService.GetAuthorById({ Id: 1 });			
+        return this._blogDataService.GetAuthorById({ Id: 1 });			
 	}         
 }

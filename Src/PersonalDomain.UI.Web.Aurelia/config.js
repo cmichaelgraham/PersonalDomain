@@ -12,11 +12,13 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.17.0",
     "aurelia-computed": "github:jdanyow/aurelia-computed@0.6.0",
     "aurelia-framework": "github:aurelia/framework@0.16.0",
     "aurelia-http-client": "github:aurelia/http-client@0.11.0",
+    "aurelia-validation": "github:aurelia/validation@0.3.1",
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.24",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
@@ -131,6 +133,13 @@ System.config({
       "aurelia-path": "github:aurelia/path@0.9.0",
       "aurelia-task-queue": "github:aurelia/task-queue@0.7.0",
       "core-js": "npm:core-js@0.9.18"
+    },
+    "github:aurelia/validation@0.3.1": {
+      "aurelia-binding": "github:aurelia/binding@0.9.1",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.10.1",
+      "aurelia-logging": "github:aurelia/logging@0.7.0",
+      "aurelia-metadata": "github:aurelia/metadata@0.8.0",
+      "aurelia-templating": "github:aurelia/templating@0.15.3"
     },
     "github:jdanyow/aurelia-computed@0.6.0": {
       "aurelia-binding": "github:aurelia/binding@0.9.1",

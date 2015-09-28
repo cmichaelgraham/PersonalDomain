@@ -6,13 +6,13 @@ using PersonalDomain.Application.Operations.Request;
 
 namespace PersonalDomain.Application.Operations
 {
-    public class GetAuthorById : OwinQuery<ByIdRequest, AuthorDTO>, IGetAuthorById<ByIdRequest, AuthorDTO>
+    public class GetPostById : OwinQuery<ByIdRequest, PostDTO>, IGetPostBySlug<ByIdRequest, PostDTO>
     {
         public IBloggingApplicationService BloggingApplicationService { get; set; }
 
-        public override AuthorDTO Execute(ByIdRequest request)
+        public override PostDTO Execute(ByIdRequest request)
         {
-            return BloggingApplicationService.GetAuthorById(request.Id);
+            return BloggingApplicationService.GetPostById(request.Id);
         }
     }
 }

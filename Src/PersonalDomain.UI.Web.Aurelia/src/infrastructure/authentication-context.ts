@@ -4,7 +4,7 @@ export class AuthenticationContext {
 	public static IsAuthenticated(): boolean {
 		return localStorage["token"] !== undefined;
 	}
-	public static Authorization(): string {
+	public static Token(): string {
 		if (this.IsAuthenticated()) {
 			var token = JSON.parse(localStorage["token"]);
 			return token["token_type"] + " " + token["access_token"];

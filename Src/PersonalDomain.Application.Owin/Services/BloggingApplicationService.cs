@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Framework.Core.Application.Operations;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Services;
-using PersonalDomain.Application.Operations.Response;
 using PersonalDomain.Data.Blogging.Repository;
 using PersonalDomain.Domain.Blogging.Post;
 
@@ -20,12 +18,17 @@ namespace PersonalDomain.Application.Services
             PostRepository = postRepository;
         }
 
-        public AuthorDTO GetAuthor(Int32 id)
+        public AuthorDTO GetAuthorById(Int32 id)
         {
             return AuthorRepository.SelectById(id, a => new AuthorDTO { FullName = a.FirstName, Tagline = a.Tagline, Bio = a.Bio });
         }
 
-        public PostDTO GetPost(String slug)
+        public PostDTO GetPostById(Int32 id)
+        {
+            return PostRepository.SelectById(id, p => new PostDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
+        }
+
+        public PostDTO GetPostBySlug(String slug)
         {
             return PostRepository.SelectBySlug(slug, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
         }

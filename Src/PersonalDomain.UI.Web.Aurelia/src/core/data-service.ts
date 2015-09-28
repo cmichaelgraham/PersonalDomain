@@ -12,7 +12,7 @@ export class CoreDataService {
 										 .withContent(jsonRequest);
 		
 		if (AuthenticationContext.IsAuthenticated()) {
-			post = post.withHeader("Authorization", AuthenticationContext.Authorization());
+			post = post.withHeader("Authorization", AuthenticationContext.Token());
 		}	
 											
 		return post.send().then((httpResponse) => { return JSON.parse(httpResponse.response); });
