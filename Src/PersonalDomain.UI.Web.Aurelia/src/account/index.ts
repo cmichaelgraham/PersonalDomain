@@ -1,10 +1,11 @@
+import {inject} from 'aurelia-framework';
 import {AuthenticationDataService} from 'account/domain/data-service';
 
+@inject(AuthenticationDataService)
 export class Index {
 	public UserName: string;
 	public Password: string;
 	
-	static inject = [AuthenticationDataService];
 	constructor(private _authenticationDataService: AuthenticationDataService) {
 	}
 	

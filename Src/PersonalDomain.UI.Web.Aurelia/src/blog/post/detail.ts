@@ -1,11 +1,11 @@
+import {inject} from 'aurelia-framework';
 import {BlogDataService} from 'blog/domain/data-service';
 
+@inject(BlogDataService)
 export class PostDetailViewModel {
     public Content: string;
     
-    static inject = [BlogDataService];
     constructor(private _blogDataService: BlogDataService) {
-
     }  
     
 	public activate = (params, routeConfig) => {

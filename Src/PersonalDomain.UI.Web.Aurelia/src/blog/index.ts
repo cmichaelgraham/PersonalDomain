@@ -1,12 +1,13 @@
+import {inject} from 'aurelia-framework';
 import {BlogDataService} from 'blog/domain/data-service';
 
+@inject(BlogDataService)
 export class Index {
 	public Posts: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
 	public TotalPostCount: number;	
     private _pageNumber: number = 1;
     private _pageSize: number = 20;
         
-    static inject = [BlogDataService];
     constructor(private _blogDataService: BlogDataService) {
 
     }

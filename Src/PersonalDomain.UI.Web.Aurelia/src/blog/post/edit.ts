@@ -1,14 +1,23 @@
+import {inject} from 'aurelia-framework';
+import {ensure, Validation, ValidationGroup} from 'aurelia-validation';
 import {BlogDataService} from 'blog/domain/data-service';
 
+@inject(BlogDataService, Validation)
 export class PostEditViwModel {
 	public Id: number;
+	@ensure((title) => { title.isNotEmpty(); })
 	public Title: string;
+	@ensure((subtitle) => { subtitle.isNotEmpty(); })
 	public SubTitle: string;
+	@ensure((content) => { content.isNotEmpty(); })
 	public Content: string;
+	@ensure((slug) => { slug.isNotEmpty(); })
 	public Slug: string;
+
+	public Validator: ValidationGroup;
 	
-	static inject = [BlogDataService];
-	constructor(private _blogDataService: BlogDataService) {
+	constructor(private _blogDataService: BlogDataService, private _validation: Validation) {
+		this.Validator = _validation.on(this);
 	}
 	
 	public activate = (params) => {
@@ -19,7 +28,7 @@ export class PostEditViwModel {
 				this.Title = post.Title;
 				this.SubTitle = post.Subtitle;
 				this.Content = post.Content;
-				this.Slug = post.Slug;
+				this.Slug = post.Slug == null ? '' : post.Slug;
 			});
 		}	
 	}
@@ -29,19 +38,21 @@ export class PostEditViwModel {
 	}
 	
 	private SavePost() {
-		var request: PersonalDomain.Application.Blogging.Models.PostDTO = {
-			Id: this.Id,
-			Title: this.Title,
-			Subtitle: this.SubTitle,
-			Slug: this.Slug,
-			Content: this.Content,
-			Comments: []
-		};
-		
-		this._blogDataService.SavePost(request).then((response) => {
-			if (response.IsSuccess) {
-				alert("Saved!!");
-			}
+		this.Validator.validate().then(() => {
+			var request: PersonalDomain.Application.Blogging.Models.PostDTO = {
+				Id: this.Id,
+				Title: this.Title,
+				Subtitle: this.SubTitle,
+				Slug: this.Slug,
+				Content: this.Content,
+				Comments: []
+			};
+			
+			this._blogDataService.SavePost(request).then((response) => {
+				if (response.IsSuccess) {
+					alert("Saved!!");
+				}
+			});				
 		});
 	}
 }
