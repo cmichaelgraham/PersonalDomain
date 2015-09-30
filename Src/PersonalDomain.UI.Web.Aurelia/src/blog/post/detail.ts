@@ -17,7 +17,7 @@ export class PostDetailViewModel {
 		});
 	}    
     
-	private LoadPost(slug: string): Promise<PersonalDomain.Application.Blogging.Models.PostDTO> {
+	private LoadPost(slug: string): Promise<PersonalDomain.Application.Blogging.Models.PostDetailDTO> {
 		return this._blogDataService.GetPostBySlug({ Slug: slug });
 	}  
 } 

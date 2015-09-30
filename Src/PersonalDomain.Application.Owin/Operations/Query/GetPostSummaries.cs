@@ -1,4 +1,4 @@
-﻿using Framework.Application.Owin.Operations;
+using Framework.Application.Owin.Operations;
 using PersonalDomain.Application.Blogging.Models;
 using PersonalDomain.Application.Blogging.Operations;
 using PersonalDomain.Application.Blogging.Services;
@@ -6,13 +6,13 @@ using PersonalDomain.Application.Operations.Request;
 
 namespace PersonalDomain.Application.Operations
 {
-    public class GetPostBySlug : OwinQuery<GetPostDetailBySlugRequest, PostDetailDTO>, IGetPostBySlug<GetPostDetailBySlugRequest, PostDetailDTO>
+    public class GetPostSummaries : OwinQuery<NullRequest, PostSummaryDTO[]>, IGetPostSummaries<NullRequest, PostSummaryDTO[]>
     {
         public IBloggingApplicationService BloggingApplicationService { get; set; }
 
-        public override PostDetailDTO Execute(GetPostDetailBySlugRequest request)
+        public override PostSummaryDTO[] Execute(NullRequest request)
         {
-            return BloggingApplicationService.GetPostBySlug(request.Slug);
+            return BloggingApplicationService.GetPostSummaries(null, null);
         }
     }
 }

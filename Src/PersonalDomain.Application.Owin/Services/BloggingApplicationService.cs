@@ -18,19 +18,24 @@ namespace PersonalDomain.Application.Services
             PostRepository = postRepository;
         }
 
+        public void DeletePostById(Int32 id)
+        {
+            PostRepository.DeleteById(id);
+        }
+
         public AuthorDTO GetAuthorById(Int32 id)
         {
             return AuthorRepository.SelectById(id, a => new AuthorDTO { FullName = a.FirstName, Tagline = a.Tagline, Bio = a.Bio });
         }
 
-        public PostDTO GetPostById(Int32 id)
+        public PostDetailDTO GetPostById(Int32 id)
         {
-            return PostRepository.SelectById(id, p => new PostDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
+            return PostRepository.SelectById(id, p => new PostDetailDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Slug = p.Slug, Content = p.Content });
         }
 
-        public PostDTO GetPostBySlug(String slug)
+        public PostDetailDTO GetPostBySlug(String slug)
         {
-            return PostRepository.SelectBySlug(slug, p => new PostDTO{ Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Content = p.Content });
+            return PostRepository.SelectBySlug(slug, p => new PostDetailDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Slug = p.Slug, Content = p.Content });
         }
 
         public Int32 GetPostCount()
@@ -38,15 +43,21 @@ namespace PersonalDomain.Application.Services
             return PostRepository.Select(p => p.Id).Count();
         }
 
-        public PostSummaryDTO[] GetPostSummariesByPage(Int32 pageNumber, Int32 pageSize = 25)
+        public PostSummaryDTO[] GetPostSummaries(Int32? pageNumber, Int32? pageSize)
         {
-            return PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Slug = p.Slug, Title = p.Title, Subtitle = p.Subtitle, Author = p.Author.FullName, PostedDate = p.InsertDate.ToShortDateString()})
-                                 .Skip((pageNumber - 1) * pageSize)
-                                 .Take(pageSize)
-                                 .ToArray();
+            var page = pageNumber.HasValue ? pageNumber.Value : 1;
+            var size = pageSize.HasValue ? pageSize.Value : 0;
+
+            var query = PostRepository.Select(p => new PostSummaryDTO { Id = p.Id, Title = p.Title, Subtitle = p.Subtitle, Slug = p.Slug, PostedDate = p.InsertDate.ToShortDateString(), Author = p.Author.FullName })
+                                      .Skip((page - 1) * size);
+
+            if (size != 0)
+                query = query.Take(size);
+
+            return query.ToArray();
         }
 
-        public void SavePost(PostDTO post)
+        public void SavePost(PostDetailDTO post)
         {
             var postEntity = PostFactory.Create(post.Id, 1, post.Title, post.Subtitle, post.Slug, post.Content);
             if (postEntity.Id == 0)
@@ -61,7 +72,7 @@ namespace PersonalDomain.Application.Services
 
         public void SaveComment(CommentDTO comment)
         {
-            var post = PostRepository.SelectById(comment.PostId, p => new PostDTO());
+            var post = PostRepository.SelectById(comment.PostId, p => new PostDetailDTO());
             post.Comments.Add(comment);
         }
     }

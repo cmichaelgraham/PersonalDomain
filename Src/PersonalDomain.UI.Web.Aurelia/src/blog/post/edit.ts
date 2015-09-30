@@ -33,13 +33,13 @@ export class PostEditViwModel {
 		}	
 	}
 	
-	private LoadPost(id: number): Promise<PersonalDomain.Application.Blogging.Models.PostDTO> {
+	private LoadPost(id: number): Promise<PersonalDomain.Application.Blogging.Models.PostDetailDTO> {
 		return this._blogDataService.GetPostById({ Id: id });
 	}
 	
 	private SavePost() {
 		this.Validator.validate().then(() => {
-			var request: PersonalDomain.Application.Blogging.Models.PostDTO = {
+			var request: PersonalDomain.Application.Blogging.Models.PostDetailDTO = {
 				Id: this.Id,
 				Title: this.Title,
 				Subtitle: this.SubTitle,

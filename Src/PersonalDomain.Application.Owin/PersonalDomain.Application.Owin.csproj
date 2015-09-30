@@ -55,7 +55,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operations\Command\DeletePostById.cs" />
     <Compile Include="Operations\Query\GetPostById.cs" />
+    <Compile Include="Operations\Query\GetPostSummaries.cs" />
     <Compile Include="Operations\Request\GetPostDetailBySlugRequest.cs" />
     <Compile Include="PersonalDomainApplicationStartup.cs" />
     <Compile Include="Configuration\PersonalDomainWebApiConfig.cs" />
@@ -65,9 +67,9 @@
     <Compile Include="Operations\Command\SavePost.cs" />
     <Compile Include="Operations\Query\GetAuthorById.cs" />
     <Compile Include="Operations\Query\GetPostBySlug.cs" />
-    <Compile Include="Operations\Query\GetPostIndexByPage.cs" />
+    <Compile Include="Operations\Query\GetPostSummariesByPage.cs" />
     <Compile Include="Operations\Request\ByIdRequest.cs" />
-    <Compile Include="Operations\Request\GetPostIndexByPageRequest.cs" />
+    <Compile Include="Operations\Request\GetPostSummariesByPageRequest.cs" />
     <Compile Include="Operations\Request\NullRequest.cs" />
     <Compile Include="Operations\Response\OperationResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

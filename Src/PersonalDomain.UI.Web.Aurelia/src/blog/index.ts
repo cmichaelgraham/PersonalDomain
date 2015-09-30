@@ -21,6 +21,6 @@ export class Index {
 	}    
     
 	private LoadIndexByPageNumber(pageNumber: number, pageSize: number): Promise<PersonalDomain.Application.Blogging.Models.PostIndexDTO> {
-		return this._blogDataService.GetPostIndexByPage({ PageId: pageNumber, PageSize: pageSize });
+		return this._blogDataService.GetPostSummariesByPage({ PageId: pageNumber, PageSize: pageSize });
 	}    
 }

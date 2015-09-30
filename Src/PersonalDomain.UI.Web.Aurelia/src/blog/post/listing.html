@@ -1,0 +1,23 @@
+<template>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td class="col-xs-10"></td>
+				<td class="col-xs-1"></td>
+				<td class="col-xs-1"></td>				
+			</tr>
+		</thead>
+		<tbody>
+			<tr repeat.for="postSummary of PostSummaries">
+				<td>
+					${postSummary.Title}<br/>
+					${postSummary.Subtitle}
+				</td>
+				<td>
+					
+				</td>
+				<td></td>							
+			</tr>
+		</tbody>
+	</table>
+</template>

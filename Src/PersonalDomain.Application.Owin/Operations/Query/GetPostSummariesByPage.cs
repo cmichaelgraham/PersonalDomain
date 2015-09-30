@@ -6,13 +6,13 @@ using PersonalDomain.Application.Operations.Request;
 
 namespace PersonalDomain.Application.Operations
 {
-    public class GetPostIndexByPage : OwinQuery<GetPostIndexByPageRequest, PostIndexDTO>, IGetPostIndexByPage<GetPostIndexByPageRequest, PostIndexDTO>
+    public class GetPostSummariesByPage : OwinQuery<GetPostSummariesByPageRequest, PostIndexDTO>, IGetPostSummariesByPage<GetPostSummariesByPageRequest, PostIndexDTO>
     {
         public IBloggingApplicationService BloggingApplicationService { get; set; }
 
-        public override PostIndexDTO Execute(GetPostIndexByPageRequest request)
+        public override PostIndexDTO Execute(GetPostSummariesByPageRequest request)
         {
-            var postSummaries = BloggingApplicationService.GetPostSummariesByPage(request.PageId, request.PageSize);
+            var postSummaries = BloggingApplicationService.GetPostSummaries(request.PageId, request.PageSize);
             var postSummaryCount = BloggingApplicationService.GetPostCount();
 
             return new PostIndexDTO

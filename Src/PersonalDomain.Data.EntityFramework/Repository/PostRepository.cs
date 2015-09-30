@@ -27,6 +27,12 @@ namespace PersonalDomain.Data.Repository
             Context.Posts.Remove(entity);
         }
 
+        public void DeleteById(Int32 id)
+        {
+            var post = Context.Posts.SingleOrDefault(p => p.Id == id);
+            Delete(post);
+        }
+
         public override IEnumerable<TResult> Select<TResult>(Func<Post, TResult> selector)
         {
             return Context.Posts.Include("Author").Select(selector);

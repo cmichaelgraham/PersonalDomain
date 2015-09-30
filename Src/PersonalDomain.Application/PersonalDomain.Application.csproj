@@ -32,15 +32,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Blogging\Models\AuthorDTO.cs" />
+    <Compile Include="Blogging\Operations\Command\IDeletePostById.cs" />
     <Compile Include="Blogging\Operations\Command\ISaveComment.cs" />
     <Compile Include="Blogging\Operations\Command\ISavePost.cs" />
     <Compile Include="Blogging\Operations\Query\IGetAuthorById.cs" />
     <Compile Include="Blogging\Operations\Query\IGetPostById.cs" />
     <Compile Include="Blogging\Operations\Query\IGetPostBySlug.cs" />
-    <Compile Include="Blogging\Operations\Query\IGetPostIndexByPage.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostSummaries.cs" />
+    <Compile Include="Blogging\Operations\Query\IGetPostSummariesByPage.cs" />
     <Compile Include="Blogging\Services\IBloggingApplicationService.cs" />
     <Compile Include="Blogging\Models\CommentDTO.cs" />
-    <Compile Include="Blogging\Models\PostDTO.cs" />
+    <Compile Include="Blogging\Models\PostDetailDTO.cs" />
     <Compile Include="Blogging\Models\PostIndexDTO.cs" />
     <Compile Include="Blogging\Models\PostSummaryDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
