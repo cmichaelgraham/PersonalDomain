@@ -3,20 +3,13 @@
 		<thead>
 			<tr>
 				<td class="col-xs-10"></td>
-				<td class="col-xs-1"></td>
-				<td class="col-xs-1"></td>				
+				<td class="col-xs-2"></td>				
 			</tr>
 		</thead>
 		<tbody>
 			<tr repeat.for="postSummary of PostSummaries">
-				<td>
-					${postSummary.Title}<br/>
-					${postSummary.Subtitle}
-				</td>
-				<td>
-					
-				</td>
-				<td></td>							
+				<td>${postSummary.Title}<br/>${postSummary.Subtitle}</td>
+				<td><button click.delegate="$parent.DeletePost(postSummary.Id)">Delete</button></td>							
 			</tr>
 		</tbody>
 	</table>
