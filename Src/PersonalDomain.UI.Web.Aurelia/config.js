@@ -24,6 +24,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "core-js": "npm:core-js@1.1.4",
     "font-awesome": "npm:font-awesome@4.4.0",
+    "leaflet": "github:Leaflet/Leaflet@0.7.7",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:aurelia/binding@0.9.1": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.10.1",

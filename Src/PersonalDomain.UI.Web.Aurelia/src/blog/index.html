@@ -1,4 +1,5 @@
 <template>
+    <compose model.bind="Map" view-model="maps/leaflet-map"></compose>
     <template repeat.for="post of Posts">
         <hr if.bind="$index != 0">
         <div class="post-preview">
