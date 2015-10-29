@@ -3,11 +3,13 @@ import * as L from 'leaflet';
 import {Map} from 'maps/map';
 
 export class ZoomToLocationControl extends LeafletControl {
-	public ControlOptions: L.ControlOptions = [{ position: 'topleft' }];
-	public Icon: string = "fa-crosshairs";
-	public Description: string = "Description of the Control";
-	
-	public constructor(map: Map<L.Map>) {
+	public ControlOptions(): L.ControlOptions { return [{ position: 'topleft' }]; }
+	public Icon(): string { return "fa-crosshairs"; }
+	public Description(): string { return "Description of the Control"; }
+	public IsEnabled(): boolean { return true; }
+	public IsSelected(): boolean { return true; }
+
+	public constructor(map: Map<L.Map>) {	
 		super(map);	
 	}
 		
