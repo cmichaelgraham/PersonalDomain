@@ -1,4 +1,4 @@
-import {MapComponent} from 'maps/map-component';
+import {MapComponent} from 'maps/components/map-component';
 import {MapControl} from 'maps/controls/map-control';
 
 export abstract class Map<TMap> extends MapComponent<TMap> {

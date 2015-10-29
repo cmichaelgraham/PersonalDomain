@@ -1,4 +1,3 @@
-import lodash from 'lodash';
 import * as L from 'leaflet';
 import {Map} from 'maps/map';
 import {MapControl} from 'maps/controls/map-control';
@@ -11,7 +10,7 @@ export abstract class LeafletControl extends MapControl<L.IControl> {
 		super(map);	
 		
 		this.Component = new L.Control(this.ControlOptions);
-		
+		(<any>this.Component).parent = this.parent;
 		this.Component.onAdd = this.onAdd;
 		(<any>this.Component).onMenuButtonClicked = this.onMenuButtonClicked;
 	}
@@ -39,9 +38,7 @@ export abstract class LeafletControl extends MapControl<L.IControl> {
 		return container;
 	} 
 	
-	public onMenuButtonClicked(e: any) : void {
-		alert("Hi");
-	}
+	public abstract onMenuButtonClicked(e: Event) : void;
 	
 	// public RemoveLayer(layer: MapLayer<L.ILayer>): void {
 	// 	(<Map<L.Map>>this.parent).Component.removeLayer(layer.Component);

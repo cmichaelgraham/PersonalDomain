@@ -1,4 +1,4 @@
-import {MapComponent} from 'maps/map-component';
+import {MapComponent} from 'maps/components/map-component';
 import {Map} from 'maps/map'
 // import {MapLayer} from 'maps/layers/map-layer';
 
