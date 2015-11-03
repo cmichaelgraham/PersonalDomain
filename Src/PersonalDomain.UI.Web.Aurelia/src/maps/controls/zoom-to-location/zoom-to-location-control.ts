@@ -14,6 +14,14 @@ export class ZoomToLocationControl extends LeafletControl {
 	}
 		
 	public onMenuButtonClicked(e: Event) : void {
-		(<L.Map>this.parent.Component).setView([38.93778133670863, -77.34272003173828], 8, { reset: false, animate: true, pan: { duration: 0.75 } });	
+		var coordinates = [38.93778133670863, -77.34272003173828];
+		(<L.Map>this.parent.Component).setView(coordinates, 8, { reset: false, animate: true, pan: { duration: 0.75 } });
+			
+		var geoJson = {
+			'type': 'FeatureCollection',
+			'features': [{  'type': 'Feature', 'geometry': { 'type': 'Point', 'coordinates': coordinates } }]
+		};
+		
+		var geoJsonLayer = L.geoJson(geoJson);		
 	}
 }

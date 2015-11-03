@@ -1,17 +1,14 @@
 import {inject} from 'aurelia-framework';
 import {BlogDataService} from 'blog/domain/data-service';
 
-import {LeafletMap} from 'maps/leaflet-map';
-
-
-@inject(BlogDataService, LeafletMap)
+@inject(BlogDataService)
 export class Index {
 	public Posts: PersonalDomain.Application.Blogging.Models.PostSummaryDTO[];
 	public TotalPostCount: number;	
     private _pageNumber: number = 1;
     private _pageSize: number = 20;
         
-    constructor(private _blogDataService: BlogDataService, public Map: LeafletMap) {
+    constructor(private _blogDataService: BlogDataService) {
 
     }
     
@@ -20,8 +17,6 @@ export class Index {
 			routeConfig.navModel.router.UpdateHeader("James Chadwick", "Full-Stack Developer");					
 			this.Posts = response.PostSummaries;
 			this.TotalPostCount = response.PostSummaryCount;
-						
-			this.Map = new LeafletMap();
 		});
 	}    
     
