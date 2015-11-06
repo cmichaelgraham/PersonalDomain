@@ -1,10 +1,15 @@
 import {inject} from 'aurelia-framework';
 import {BlogDataService} from 'blog/domain/data-service';
+import {MarkupGenerator} from 'infrastructure/markup-generator';
 
 @inject(BlogDataService)
 export class PostDetailViewModel {
     public Content: string;
     
+	get Markup() : string {
+		return MarkupGenerator.GenerateMarkup(this.Content);
+	}
+		    
     constructor(private _blogDataService: BlogDataService) {
     }  
     
@@ -15,8 +20,8 @@ export class PostDetailViewModel {
 						
 			this.Content = post.Content;
 		});
-	}    
-    
+	}
+	
 	private LoadPost(slug: string): Promise<PersonalDomain.Application.Blogging.Models.PostDetailDTO> {
 		return this._blogDataService.GetPostBySlug({ Slug: slug });
 	}  

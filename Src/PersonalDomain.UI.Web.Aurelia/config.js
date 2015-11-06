@@ -24,7 +24,9 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "core-js": "npm:core-js@1.1.4",
     "font-awesome": "npm:font-awesome@4.4.0",
+    "highlight.js": "npm:highlight.js@8.9.1",
     "leaflet": "github:Leaflet/Leaflet@0.7.7",
+    "marked": "npm:marked@0.3.5",
     "text": "github:systemjs/plugin-text@0.0.2",
     "toastr": "github:CodeSeven/toastr@2.1.2",
     "github:CodeSeven/toastr@2.1.2": {
@@ -152,14 +154,34 @@ System.config({
       "aurelia-logging": "github:aurelia/logging@0.7.0",
       "core-js": "npm:core-js@0.9.18"
     },
+    "github:jspm/nodelibs-assert@0.1.0": {
+      "assert": "npm:assert@1.3.0"
+    },
+    "github:jspm/nodelibs-buffer@0.1.0": {
+      "buffer": "npm:buffer@3.5.1"
+    },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
+    },
+    "github:jspm/nodelibs-process@0.1.2": {
+      "process": "npm:process@0.11.2"
+    },
+    "github:jspm/nodelibs-util@0.1.0": {
+      "util": "npm:util@0.10.3"
     },
     "github:twbs/bootstrap@3.3.5": {
       "jquery": "github:components/jquery@2.1.4"
     },
+    "npm:assert@1.3.0": {
+      "util": "npm:util@0.10.3"
+    },
     "npm:babel-runtime@5.8.24": {
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:buffer@3.5.1": {
+      "base64-js": "npm:base64-js@0.0.8",
+      "ieee754": "npm:ieee754@1.1.6",
+      "is-array": "npm:is-array@1.0.1"
     },
     "npm:core-js@0.9.18": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -173,6 +195,20 @@ System.config({
     },
     "npm:font-awesome@4.4.0": {
       "css": "github:systemjs/plugin-css@0.1.17"
+    },
+    "npm:highlight.js@8.9.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:inherits@2.0.1": {
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:process@0.11.2": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0"
+    },
+    "npm:util@0.10.3": {
+      "inherits": "npm:inherits@2.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     }
   }
 });

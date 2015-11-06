@@ -2,6 +2,8 @@ import {inject} from 'aurelia-framework';
 import {ensure, Validation, ValidationGroup} from 'aurelia-validation';
 import {BlogDataService} from 'blog/domain/data-service';
 import * as toastr from 'toastr';
+import * as marked from 'marked';
+import {MarkupGenerator} from 'infrastructure/markup-generator';
 
 @inject(BlogDataService, Validation)
 export class PostEditViwModel {
@@ -36,6 +38,10 @@ export class PostEditViwModel {
 	
 	private LoadPost(id: number): Promise<PersonalDomain.Application.Blogging.Models.PostDetailDTO> {
 		return this._blogDataService.GetPostById({ Id: id });
+	}
+	
+	get Markup() : string {
+		return MarkupGenerator.GenerateMarkup(this.Content);
 	}
 	
 	private SavePost() {
