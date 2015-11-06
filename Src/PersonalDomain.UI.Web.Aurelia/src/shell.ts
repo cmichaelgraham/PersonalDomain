@@ -1,5 +1,4 @@
 ﻿import {Router} from "aurelia-router";
-import {AuthenticationContext} from "infrastructure/authentication-context";
 import {AuthorizationPipelineStep} from "infrastructure/authorization-pipeline-step";
 
 export class Shell {
@@ -15,8 +14,7 @@ export class Shell {
                 { name: "home",     route: ["", "home"],    moduleId: "blog/index",           nav: true,        title: "Home" },
                 { name: "posts",    route: "posts/:slug",   moduleId: "blog/post/detail" },
                 { name: "about",    route: "about",         moduleId: "blog/author/detail",   nav: true,        title: "About" },
-                { name: "login",    route: "login",         moduleId: "account/index",                          title: "Login" },
-                { name: "maps",     route: "maps",          moduleId: "mapping/map",          nav: true,        title: "Map" }
+                { name: "admin",    route: "admin",         moduleId: "account/index",                          title: "Administration" },
             ]);
             
             return config;

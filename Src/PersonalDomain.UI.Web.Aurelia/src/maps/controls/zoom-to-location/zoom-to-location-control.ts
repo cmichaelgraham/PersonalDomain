@@ -22,6 +22,7 @@ export class ZoomToLocationControl extends LeafletControl {
 			'features': [{  'type': 'Feature', 'geometry': { 'type': 'Point', 'coordinates': coordinates } }]
 		};
 		
-		var geoJsonLayer = L.geoJson(geoJson);		
+		var geoJsonLayer = L.geoJson(geoJson);
+			
 	}
 }

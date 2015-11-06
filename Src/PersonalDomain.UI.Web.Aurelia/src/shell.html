@@ -11,9 +11,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li repeat.for="row of router.navigation">
-                        <a href.bind="row.href">${row.title}</a>
-                    </li>
+                    <li><a route-href="route: home">Blog</a></li>
+                    <li><a route-href="route: about">About</a></li>                    
                 </ul>
             </div>
         </div>

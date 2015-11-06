@@ -1,17 +1,20 @@
-import {inject} from 'aurelia-framework';
-import {AuthenticationDataService} from 'account/domain/data-service';
+import {Router} from "aurelia-router";
 
-@inject(AuthenticationDataService)
 export class Index {
-	public UserName: string;
-	public Password: string;
-	
-	constructor(private _authenticationDataService: AuthenticationDataService) {
-	}
-	
-	public Login(): void {
-		this._authenticationDataService.GetToken({ UserName: this.UserName, Password: this.Password }).then((token) => {
-			localStorage.setItem("token", token);
-		});	
-	}		
+    public router: Router;
+        
+    public configureRouter = (config, router: Router) => {
+        router.configure((config) => {
+            config.title = "Admin | jamespchadwick.com";
+            config.map([
+                { name: "log-in",        route: ["","log-in"],     moduleId: "account/log-in/log-in",      nav: true,      title: "Log In" },
+                { name: "posts",         route: "posts",           moduleId: "blog/post/listing",          nav: true,      title: "Posts",     authorize: true },
+                { name: "post",          route: "post/:id",        moduleId: "blog/post/edit",                             title: "Edit Post", authorize: true }          
+            ]);
+            
+            return config;
+        });
+        
+        this.router = router;
+    }     
 }

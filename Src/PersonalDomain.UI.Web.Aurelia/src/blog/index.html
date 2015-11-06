@@ -1,12 +1,12 @@
 <template>
-    <template repeat.for="post of Posts">
-        <hr if.bind="$index != 0">
-        <div class="post-preview">
-            <a route-href="route: posts; params.bind: {slug: post.Slug}">
-                <h2 class="post-title">${post.Title}</h2>
-                <h3 class="post-subtitle">${post.Subtitle}</h3>
-            </a>
-            <p class="post-meta">Posted on ${post.PostedDate}</p>
-        </div>
-    </template>
+  <template repeat.for="post of Posts">
+      <hr if.bind="$index != 0">
+      <div class="post-preview">
+          <a route-href="route: posts; params.bind: {slug: post.Slug}">
+              <h2 class="post-title">${post.Title}</h2>
+              <h3 class="post-subtitle">${post.Subtitle}</h3>
+          </a>
+          <p class="post-meta">Posted on ${post.PostedDate}</p>
+      </div>
+  </template>  
 </template>
