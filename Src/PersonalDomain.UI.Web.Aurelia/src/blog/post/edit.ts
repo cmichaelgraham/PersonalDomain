@@ -1,6 +1,7 @@
 import {inject} from 'aurelia-framework';
 import {ensure, Validation, ValidationGroup} from 'aurelia-validation';
 import {BlogDataService} from 'blog/domain/data-service';
+import * as toastr from 'toastr';
 
 @inject(BlogDataService, Validation)
 export class PostEditViwModel {
@@ -50,7 +51,7 @@ export class PostEditViwModel {
 			
 			this._blogDataService.SavePost(request).then((response) => {
 				if (response.IsSuccess) {
-					alert("Saved!!");
+					toastr.info("hey");
 				}
 			});				
 		});

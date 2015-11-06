@@ -26,6 +26,11 @@ System.config({
     "font-awesome": "npm:font-awesome@4.4.0",
     "leaflet": "github:Leaflet/Leaflet@0.7.7",
     "text": "github:systemjs/plugin-text@0.0.2",
+    "toastr": "github:CodeSeven/toastr@2.1.2",
+    "github:CodeSeven/toastr@2.1.2": {
+      "css": "github:systemjs/plugin-css@0.1.19",
+      "jquery": "github:components/jquery@2.1.4"
+    },
     "github:aurelia/binding@0.9.1": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.10.1",
       "aurelia-metadata": "github:aurelia/metadata@0.8.0",
