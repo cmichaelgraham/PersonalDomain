@@ -6,7 +6,7 @@ import {AuthorizationInterceptor} from 'infrastructure/authorization-interceptor
 export class BlogDataService extends CoreDataService {
 	static inject = [HttpClient, AuthorizationInterceptor];
     constructor(_httpClient: HttpClient, _authorizationInterceptor: AuthorizationInterceptor) {
-        super("http://localhost:1317", _httpClient, _authorizationInterceptor);
+        super("http://blog.jamespchadwick.com", _httpClient, _authorizationInterceptor);
     }
     
     public DeletePostById(jsonRequest: PersonalDomain.Application.Operations.Request.ByIdRequest): Promise<PersonalDomain.Application.Operations.Response.OperationResponse> {
