@@ -12,6 +12,7 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.17.0",
     "aurelia-computed": "github:jdanyow/aurelia-computed@0.6.0",
@@ -26,6 +27,7 @@ System.config({
     "core-js": "npm:core-js@1.1.4",
     "font-awesome": "npm:font-awesome@4.4.0",
     "highlight.js": "npm:highlight.js@8.9.1",
+    "jquery": "github:components/jquery@2.1.4",
     "leaflet": "github:Leaflet/Leaflet@0.7.7",
     "marked": "npm:marked@0.3.5",
     "text": "github:systemjs/plugin-text@0.0.2",

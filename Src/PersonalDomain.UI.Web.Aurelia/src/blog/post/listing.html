@@ -1,19 +1,12 @@
 <template>
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<td class="col-xs-10"></td>
-				<td class="col-xs-2"></td>				
-			</tr>
-		</thead>
-		<tbody>
-			<tr repeat.for="postSummary of PostSummaries">
-				<td>${postSummary.Title}<br/>${postSummary.Subtitle}</td>
-				<td>
-					<a route-href="route: post; params.bind: { id: postSummary.Id }">Edit</a>
-					<button click.delegate="$parent.DeletePost(postSummary.Id)">Delete</button>
-				</td>							
-			</tr>
-		</tbody>
-	</table>
+	<div>
+		<div repeat.for="postSummary of PostSummaries">
+			<p>
+				${postSummary.Title}<br/>
+				<em>${postSummary.Subtitle}</em>				
+			</p>
+			<a class="btn btn-warning btn-sm" role="button" route-href="route: post; params.bind: { id: postSummary.Id }">Edit</a>
+			<button class="btn btn-danger btn-sm" type="button" click.delegate="$parent.DeletePost(postSummary.Id)">Delete</button>							
+		</div>
+	</div>
 </template>
