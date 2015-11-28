@@ -1,18 +1,14 @@
 {
-    "version": "1.6.2",
-    "compilerOptions": {
-        "target": "es6",
-        "module": "amd",
-        "declaration": false,
-        "noImplicitAny": false,
-        "removeComments": false,
-        "noLib": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
-    },
-    "filesGlob": [
-        "./**/*.ts",
-        "!./jspm_packages/**/*.ts",
-        "!./node_modules/**/*.ts"        
-    ]
+  "version": "1.6.2",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "system",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "filesGlob": [
+      "./src/**/*.ts",
+      "./build/typings/*.d.ts",
+      "./jspm_packages/**/*.d.ts"       
+  ]
 }
