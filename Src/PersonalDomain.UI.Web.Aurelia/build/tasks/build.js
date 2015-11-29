@@ -8,10 +8,22 @@ var runSequence = require('run-sequence');
 var sourcemaps = require('gulp-sourcemaps');
 var to5 = require('gulp-babel');
 var typescript = require('gulp-typescript');
+var tsconfigGlob = require('tsconfig-glob');
+var tsc = require('typescript');
+
+var tsProject = typescript.createProject('./tsconfig.json', { typescript: tsc });
+
+gulp.task('expand-tsconfig-globs', function(done) {
+    tsconfigGlob({
+      configPath: '.',
+      cwd: process.cwd(),
+      indent: 2
+    }, done);
+});
 
 gulp.task('build-system', function () {
-  return gulp.src(paths.source)
-    .pipe(typescript(typescript.createProject('tsconfig.json', { typescript: require('typescript') })))  
+  return tsProject.src()
+    .pipe(typescript(tsProject))  
     .pipe(plumber())
     .pipe(changed(paths.output, {extension: '.js'}))
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -29,6 +41,7 @@ gulp.task('build-html', function () {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
+    'expand-tsconfig-globs',
     ['build-system', 'build-html'],
     callback
   );
